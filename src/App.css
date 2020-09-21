@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Boston, Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -28,21 +28,169 @@ h3 {
 
 h4 {
   font-size: 24px;
-  font-style: normal;
   font-weight: 400;
   line-height: 32px;
   letter-spacing: 0px;
 }
 
 button {
+  text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
   line-height: 18px;
   letter-spacing: 3.4000000953674316px;
 }
 
+.font-body {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 26px;
+  letter-spacing: 0px;
+}
+
+.font-subtitle {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 3.4000000953674316px;
+}
+
+.font-subtitle-bold {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 1.600000023841858px;
+}
+
+.font-caption {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 1px;
+}
+
+.font-caption-alt {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0px;
+}
+
 .main-header {
+  color: white;
   height: 100vh;
   width: 100vw;
+  background: linear-gradient(197.36deg, #0a2040 33.42%, #00b7cc 93.86%);
+  background-image: url("./img/homepage-hero-bg.jpg");
+  background-size: cover;
+}
+
+.main-header .main-logo {
+  position: absolute;
+  left: 30vw;
+  top: 40vh;
+}
+
+.main-header .contact-us {
+  color: #09b5ca;
+  position: absolute;
+  left: 5vw;
+  top: 5vh;
+}
+
+.main-header .investor-login {
+  color: #09b5ca;
+  position: absolute;
+  right: 10vw;
+  top: 5vh;
+}
+
+.main-header h4 {
+  width: 780px;
+  text-align: center;
+  position: absolute;
+  top: 70vh;
+  left: 50vw;
+  margin-left: -390px;
+}
+
+.main-header h4 em {
+  font-style: normal;
+  color: #09b5ca;
+}
+
+.main-header .coordinates {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.02em;
+  position: absolute;
+  left: 5vw;
+  bottom: 5vh;
+}
+
+.main-header svg {
+  width: 80vh;
+  position: absolute;
+  right: 5vw;
+  margin-right: -40vh;
+  top: 50vh;
+  margin-top: -40vh;
+}
+
+.main-header svg path {
+  fill: #09b5ca;
+}
+
+.hamburger {
+  position: absolute;
+  height: 48px;
+  width: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.31);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.hamburger .layers {
+  position: absolute;
+  width: 14px;
+  height: 1px;
+  background-color: white;
+  border-radius: 1px;
+}
+
+.hamburger .layers:first-of-type {
+  left: 17px;
+  top: 19px;
+}
+
+.hamburger .layers:nth-of-type(2) {
+  left: 17px;
+  top: 23px;
+}
+
+.hamburger .layers:nth-of-type(3) {
+  left: 17px;
+  top: 27px;
+}
+
+.hamburger:hover {
+  background-color: white;
+}
+
+.hamburger:hover .layers {
+  background-color: #0b2142;
+}
+
+.main-burger {
+  right: 5vw;
+  border-right: -24px;
+  top: 5vh;
+  border-top: -24px;
 }
 /*# sourceMappingURL=App.css.map */
