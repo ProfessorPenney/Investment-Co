@@ -9,6 +9,7 @@ body {
    font-family: Boston, Arial, Helvetica, sans-serif;
    margin: 0;
    padding: 0;
+   overflow: hidden;
 }
 
 h1 {
@@ -48,6 +49,10 @@ button {
    font-weight: 700;
    line-height: 18px;
    letter-spacing: 3.4000000953674316px;
+}
+
+p {
+   margin: 0;
 }
 
 .font-body {
@@ -98,22 +103,24 @@ button {
 
    .main-logo {
       position: absolute;
-      left: 30vw;
-      top: 40vh;
+      top: 40%;
+      width: 100%;
+      text-align: center;
+      font-size: 80px;
    }
 
    .contact-us {
       color: #09b5ca;
       position: absolute;
-      left: 5vw;
-      top: 5vh;
+      left: 5.5%;
+      top: 7%;
    }
 
    .investor-login {
       color: $header-green;
       position: absolute;
       right: 10vw;
-      top: 5vh;
+      top: 7vh;
    }
 
    h4 {
@@ -137,26 +144,66 @@ button {
       line-height: 14px;
       letter-spacing: -0.02em;
       position: absolute;
-      left: 5vw;
-      bottom: 5vh;
+      left: 5.5%;
+      bottom: 5%;
    }
 
    svg {
-      width: 80vh;
+      width: 70vh;
       position: absolute;
       right: 5vw;
-      margin-right: -40vh;
+      margin-right: -35vh;
       top: 50vh;
-      margin-top: -40vh;
+      margin-top: -35vh;
 
       path {
          fill: $header-green;
       }
    }
+
+   .line1 {
+      position: absolute;
+      left: 5%;
+      height: 100%;
+      width: 1px;
+      background-color: rgba(255, 255, 255, 0.16);
+   }
+   .line2 {
+      position: absolute;
+      left: 27.5%;
+      height: 100%;
+      width: 1px;
+      background-color: rgba(255, 255, 255, 0.16);
+   }
+   .line3 {
+      position: absolute;
+      left: 50%;
+      height: 100%;
+      width: 1px;
+      background-color: rgba(255, 255, 255, 0.16);
+   }
+   .line4 {
+      position: absolute;
+      right: 27.5%;
+      height: 100%;
+      width: 1px;
+      background-color: rgba(255, 255, 255, 0.16);
+   }
+   .line5 {
+      position: absolute;
+      right: 5%;
+      height: 100%;
+      width: 1px;
+      background-color: rgba(255, 255, 255, 0.16);
+   }
 }
 
 .hamburger {
    position: absolute;
+   right: 5vw;
+   top: 7vh;
+   margin-top: -18px;
+   margin-right: -24px;
    height: 48px;
    width: 48px;
    border: 1px solid rgba(255, 255, 255, 0.31);
@@ -167,7 +214,7 @@ button {
       width: 14px;
       height: 1px;
       background-color: white;
-      border-radius: 1px;
+      border-radius: 10px;
    }
    .layers:first-of-type {
       left: 17px;
