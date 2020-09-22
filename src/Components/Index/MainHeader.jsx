@@ -9,15 +9,11 @@ const MainHeader = () => {
    const [showMenu, setshowMenu] = useState(false)
 
    useEffect(() => {
-      window.addEventListener('load', handleLoad)
+      window.addEventListener('load', setisLoading(false))
       return () => {
-         window.removeEventListener('load', handleLoad)
+         window.removeEventListener('load', setisLoading(false))
       }
    }, [])
-
-   const handleLoad = () => {
-      setisLoading(false)
-   }
 
    return isLoading ? (
       <div className='empty-black-loading-div'></div>
@@ -78,6 +74,7 @@ const MainHeader = () => {
                73° 56' 6.8712" W<br />
             </p>
          </CSSTransition>
+         <div className='spacer-div'></div>
          {showMenu && <HeroMenu />}
       </header>
    )
