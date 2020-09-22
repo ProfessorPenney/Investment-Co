@@ -285,33 +285,53 @@ p {
   height: 100%;
 }
 
-.main-header .hero-menu {
+.main-header .hero-menu-wrapper {
+  background-color: linear-gradient(197.36deg, #0a2040 33.42%, #00b7cc 93.86%);
   position: absolute;
   left: 0;
   top: 0;
   z-index: 1;
+  height: 100vh;
+  width: 100vw;
+}
+
+.main-header .hero-menu-wrapper .hero-menu-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0b2142;
+  -webkit-transition: height 300ms linear, opacity 400ms ease-in;
+  transition: height 300ms linear, opacity 400ms ease-in;
+}
+
+.main-header .hero-menu-wrapper .hero-menu-flexbox {
+  position: relative;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
-  width: 100vw;
-  background-color: #0b2142;
 }
 
-.main-header .hero-menu .left-hero-menu {
+.main-header .hero-menu-wrapper .hero-menu-flexbox .left-hero-menu {
   width: 50%;
   height: 100%;
   border-right: 1px solid rgba(255, 255, 255, 0.15);
+  -webkit-transition: height 300ms linear;
+  transition: height 300ms linear;
 }
 
-.main-header .hero-menu .left-hero-menu h4 {
+.main-header .hero-menu-wrapper .hero-menu-flexbox .left-hero-menu h4 {
   position: absolute;
   left: 2.5%;
   top: 5%;
   font-size: 60px;
+  -webkit-transition: opacity 300ms ease-in 100ms;
+  transition: opacity 300ms ease-in 100ms;
 }
 
-.main-header .hero-menu .left-hero-menu .address-flex {
+.main-header .hero-menu-wrapper .hero-menu-flexbox .left-hero-menu .address-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -322,9 +342,11 @@ p {
   position: absolute;
   bottom: 5%;
   left: 2.5%;
+  -webkit-transition: opacity 300ms ease-in 200ms;
+  transition: opacity 300ms ease-in 200ms;
 }
 
-.main-header .hero-menu .left-hero-menu .address-flex address {
+.main-header .hero-menu-wrapper .hero-menu-flexbox .left-hero-menu .address-flex address {
   font-style: normal;
   color: rgba(255, 255, 255, 0.4);
   font-family: 'Roboto Mono', monospace;
@@ -333,13 +355,21 @@ p {
   line-height: 12px;
 }
 
-.main-header .hero-menu .right-hero-menu {
+.main-header .hero-menu-wrapper .hero-menu-flexbox .hero-menu-center-line-appear {
+  height: 0;
+}
+
+.main-header .hero-menu-wrapper .hero-menu-flexbox .hero-menu-center-line-appear-active {
+  height: 100%;
+}
+
+.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu {
   width: 49%;
   padding: 0;
   margin: 0;
 }
 
-.main-header .hero-menu .right-hero-menu ul {
+.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul {
   margin: 0 auto 0 15%;
   width: 90%;
   padding-top: 17%;
@@ -354,18 +384,17 @@ p {
   text-transform: uppercase;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: start;
+          justify-content: flex-start;
 }
 
-.main-header .hero-menu .right-hero-menu ul li {
+.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul li {
   padding: 3.5vh 0;
-  border-bottom: solid 1px rgba(255, 255, 255, 0.15);
   font-weight: bold;
   font-size: 24px;
   letter-spacing: 0.24em;
 }
 
-.main-header .hero-menu .right-hero-menu ul li .wc-arrow-svg {
+.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul li .wc-arrow-svg {
   opacity: 0;
   width: 15px;
   position: relative;
@@ -375,25 +404,148 @@ p {
   transition: all 200ms linear;
 }
 
-.main-header .hero-menu .right-hero-menu ul li:hover {
+.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul li:hover {
   color: #f7941d;
 }
 
-.main-header .hero-menu .right-hero-menu ul li:hover .wc-arrow-svg {
+.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul li:hover .wc-arrow-svg {
   opacity: 1;
   top: -14px;
   left: -2px;
 }
 
-.main-header .hero-menu .right-hero-menu ul .green-text {
+.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .borders {
+  background-color: rgba(255, 255, 255, 0.15);
+  height: 1px;
+}
+
+.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .border1 {
+  -webkit-transition: -webkit-transform 300ms linear 200ms;
+  transition: -webkit-transform 300ms linear 200ms;
+  transition: transform 300ms linear 200ms;
+  transition: transform 300ms linear 200ms, -webkit-transform 300ms linear 200ms;
+}
+
+.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .border2 {
+  -webkit-transition: -webkit-transform 300ms linear 240ms;
+  transition: -webkit-transform 300ms linear 240ms;
+  transition: transform 300ms linear 240ms;
+  transition: transform 300ms linear 240ms, -webkit-transform 300ms linear 240ms;
+}
+
+.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .border3 {
+  -webkit-transition: -webkit-transform 300ms linear 280ms;
+  transition: -webkit-transform 300ms linear 280ms;
+  transition: transform 300ms linear 280ms;
+  transition: transform 300ms linear 280ms, -webkit-transform 300ms linear 280ms;
+}
+
+.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .border4 {
+  -webkit-transition: -webkit-transform 300ms linear 320ms;
+  transition: -webkit-transform 300ms linear 320ms;
+  transition: transform 300ms linear 320ms;
+  transition: transform 300ms linear 320ms, -webkit-transform 300ms linear 320ms;
+}
+
+.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .border5 {
+  -webkit-transition: -webkit-transform 300ms linear 360ms;
+  transition: -webkit-transform 300ms linear 360ms;
+  transition: transform 300ms linear 360ms;
+  transition: transform 300ms linear 360ms, -webkit-transform 300ms linear 360ms;
+}
+
+.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .hero-menu-border-appear {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .hero-menu-border-appear-active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .item1 {
+  -webkit-transition: opacity 300ms linear 60ms, -webkit-transform 300ms linear 60ms;
+  transition: opacity 300ms linear 60ms, -webkit-transform 300ms linear 60ms;
+  transition: opacity 300ms linear 60ms, transform 300ms linear 60ms;
+  transition: opacity 300ms linear 60ms, transform 300ms linear 60ms, -webkit-transform 300ms linear 60ms;
+}
+
+.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .item2 {
+  -webkit-transition: opacity 300ms linear 100ms, -webkit-transform 300ms linear 100ms;
+  transition: opacity 300ms linear 100ms, -webkit-transform 300ms linear 100ms;
+  transition: opacity 300ms linear 100ms, transform 300ms linear 100ms;
+  transition: opacity 300ms linear 100ms, transform 300ms linear 100ms, -webkit-transform 300ms linear 100ms;
+}
+
+.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .item3 {
+  -webkit-transition: opacity 300ms linear 140ms, -webkit-transform 300ms linear 140ms;
+  transition: opacity 300ms linear 140ms, -webkit-transform 300ms linear 140ms;
+  transition: opacity 300ms linear 140ms, transform 300ms linear 140ms;
+  transition: opacity 300ms linear 140ms, transform 300ms linear 140ms, -webkit-transform 300ms linear 140ms;
+}
+
+.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .item4 {
+  -webkit-transition: opacity 300ms linear 180ms, -webkit-transform 300ms linear 180ms;
+  transition: opacity 300ms linear 180ms, -webkit-transform 300ms linear 180ms;
+  transition: opacity 300ms linear 180ms, transform 300ms linear 180ms;
+  transition: opacity 300ms linear 180ms, transform 300ms linear 180ms, -webkit-transform 300ms linear 180ms;
+}
+
+.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .item5 {
   color: #09b5ca;
+  -webkit-transition: opacity 300ms linear 220ms, -webkit-transform 300ms linear 220ms;
+  transition: opacity 300ms linear 220ms, -webkit-transform 300ms linear 220ms;
+  transition: opacity 300ms linear 220ms, transform 300ms linear 220ms;
+  transition: opacity 300ms linear 220ms, transform 300ms linear 220ms, -webkit-transform 300ms linear 220ms;
 }
 
-.main-header .hero-menu .right-hero-menu ul li:last-of-type {
-  border-bottom: none;
+.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .item6 {
+  -webkit-transition: opacity 300ms linear 260ms, -webkit-transform 300ms linear 260ms;
+  transition: opacity 300ms linear 260ms, -webkit-transform 300ms linear 260ms;
+  transition: opacity 300ms linear 260ms, transform 300ms linear 260ms;
+  transition: opacity 300ms linear 260ms, transform 300ms linear 260ms, -webkit-transform 300ms linear 260ms;
 }
 
-.hamburger {
+.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .hero-menu-list-appear {
+  opacity: 0;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .hero-menu-list-appear-active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.main-header .hero-menu-wrapper .hero-menu-background-appear {
+  height: 0;
+  opacity: 0.2;
+}
+
+.main-header .hero-menu-wrapper .hero-menu-background-appear-active {
+  height: 100vh;
+  opacity: 1;
+}
+
+.main-header .hero-menu-wrapper .hero-menu-logo-appear {
+  opacity: 0;
+}
+
+.main-header .hero-menu-wrapper .hero-menu-logo-appear-active {
+  opacity: 1;
+}
+
+.main-header .hero-menu-wrapper .hero-menu-address-appear {
+  opacity: 0;
+}
+
+.main-header .hero-menu-wrapper .hero-menu-address-appear-active {
+  opacity: 1;
+}
+
+.burger {
   z-index: 2;
   position: absolute;
   right: 5vw;
@@ -407,35 +559,63 @@ p {
   background-color: rgba(255, 255, 255, 0.08);
 }
 
-.hamburger .layers {
+.burger .layers {
   position: absolute;
   width: 14px;
   height: 1px;
   background-color: white;
   border-radius: 10px;
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
 
-.hamburger .layers:first-of-type {
+.burger .layer1 {
   left: 17px;
   top: 19px;
+  -webkit-transition: width 100ms linear, -webkit-transform 100ms linear;
+  transition: width 100ms linear, -webkit-transform 100ms linear;
+  transition: transform 100ms linear, width 100ms linear;
+  transition: transform 100ms linear, width 100ms linear, -webkit-transform 100ms linear;
 }
 
-.hamburger .layers:nth-of-type(2) {
+.burger .layer2 {
   left: 17px;
   top: 23px;
+  -webkit-transition: opacity 100ms linear;
+  transition: opacity 100ms linear;
 }
 
-.hamburger .layers:nth-of-type(3) {
+.burger .layer3 {
   left: 17px;
   top: 27px;
+  -webkit-transition: width 100ms linear, -webkit-transform 100ms linear;
+  transition: width 100ms linear, -webkit-transform 100ms linear;
+  transition: transform 100ms linear, width 100ms linear;
+  transition: transform 100ms linear, width 100ms linear, -webkit-transform 100ms linear;
 }
 
-.hamburger:hover {
+.burger:hover {
   background-color: white;
 }
 
-.hamburger:hover .layers {
+.burger:hover .layers {
   background-color: #0b2142;
+}
+
+.transform-burger .layer2 {
+  opacity: 0;
+}
+
+.transform-burger .layer1 {
+  -webkit-transform: rotate(45deg) translateY(-2px) translateX(-1px);
+          transform: rotate(45deg) translateY(-2px) translateX(-1px);
+  width: 17px;
+}
+
+.transform-burger .layer3 {
+  -webkit-transform: rotate(-45deg) translateY(2px) translateX(-1px);
+          transform: rotate(-45deg) translateY(2px) translateX(-1px);
+  width: 17px;
 }
 
 @-webkit-keyframes spin-compass {
