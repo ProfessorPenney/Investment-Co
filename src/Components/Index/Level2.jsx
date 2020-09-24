@@ -7,8 +7,9 @@ const Level2 = () => {
    return (
       <CSSTransition classNames='level2' timeout={3500} in={true} appear>
          <section className='level2'>
-            <div className='rotating-background'></div>
-
+            <div className='rotating-background'>
+               <div className='background-color'></div>
+            </div>
             <div className='svg-container'>
                <Years20SVG />
                <TogetherCircleSVG />

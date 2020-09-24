@@ -3,7 +3,7 @@ import React from 'react'
 const Years20SVG = () => {
    return (
       <svg
-         className='years-svg slow-fade'
+         className='years-svg'
          width='194'
          height='172'
          viewBox='0 0 194 172'

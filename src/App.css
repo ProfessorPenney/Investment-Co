@@ -63,7 +63,7 @@ p {
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
-  letter-spacing: 3.4000000953674316px;
+  letter-spacing: 3.4px;
 }
 
 .font-subtitle-bold {
@@ -646,16 +646,78 @@ p {
 }
 
 .level2 .rotating-background {
-  width: 100vw;
   height: 100vh;
-  background-color: white;
+  width: 100vw;
   background-repeat: no-repeat;
   background-size: cover;
   position: fixed;
   top: 0;
+  -webkit-transition: background-image 500ms linear;
+  transition: background-image 500ms linear;
+}
+
+.level2 .rotating-background .background-color {
+  background-color: white;
+  -webkit-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.level2 .rotating-background .fade-out-white {
+  background-color: transparent;
+}
+
+.level2 .background1 {
+  background-color: transparent;
+  background-image: url("./img/homepage/optimized/thematic-intro-bg.jpg");
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.level2 .background2 {
+  background-image: url("./img/homepage/optimized/fintech-bg.jpg");
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.level2 .background3 {
+  background-image: url("./img/homepage/optimized/retech-bg.jpg");
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.level2 .background4 {
+  background-image: url("./img/homepage/optimized/extech-bg.jpg");
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.level2 .background5 {
+  background-image: url("./img/homepage/optimized/lifetech-bg.jpg");
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
 }
 
 .level2 .svg-container {
+  -webkit-transition: opacity 500ms linear 500ms;
+  transition: opacity 500ms linear 500ms;
   position: relative;
   height: 120vh;
   width: 100vw;
@@ -677,10 +739,10 @@ p {
   left: 50%;
   margin-top: -256px;
   margin-left: -256px;
-  -webkit-transition: opacity 500ms linear 500ms, -webkit-transform 1s linear;
-  transition: opacity 500ms linear 500ms, -webkit-transform 1s linear;
-  transition: opacity 500ms linear 500ms, transform 1s linear;
-  transition: opacity 500ms linear 500ms, transform 1s linear, -webkit-transform 1s linear;
+  -webkit-transition: -webkit-transform 1s linear;
+  transition: -webkit-transform 1s linear;
+  transition: transform 1s linear;
+  transition: transform 1s linear, -webkit-transform 1s linear;
 }
 
 .level2 .svg-container .vert-line {
@@ -689,18 +751,18 @@ p {
   height: 107px;
   width: 1px;
   background-color: #0b2142;
+  -webkit-transition: height 1s linear 1s;
+  transition: height 1s linear 1s;
 }
 
 .level2 .svg-container .line1 {
-  bottom: 85%;
-  -webkit-transition: opacity 500ms linear 500ms, height 1s linear 1s;
-  transition: opacity 500ms linear 500ms, height 1s linear 1s;
+  bottom: 50%;
+  margin-bottom: 290px;
 }
 
 .level2 .svg-container .line2 {
-  top: 85%;
-  -webkit-transition: opacity 500ms linear 500ms, height 1s linear 1s;
-  transition: opacity 500ms linear 500ms, height 1s linear 1s;
+  top: 50%;
+  margin-top: 290px;
 }
 
 .level2 .svg-container .wings {
@@ -715,29 +777,20 @@ p {
   line-height: 32px;
   width: 89px;
   text-align: center;
+  -webkit-transition: -webkit-transform 1s linear;
+  transition: -webkit-transform 1s linear;
+  transition: transform 1s linear;
+  transition: transform 1s linear, -webkit-transform 1s linear;
 }
 
 .level2 .svg-container .estd {
   right: 50%;
   margin-right: 290px;
-  -webkit-transition: opacity 500ms linear 500ms, -webkit-transform 1s linear;
-  transition: opacity 500ms linear 500ms, -webkit-transform 1s linear;
-  transition: opacity 500ms linear 500ms, transform 1s linear;
-  transition: opacity 500ms linear 500ms, transform 1s linear, -webkit-transform 1s linear;
 }
 
 .level2 .svg-container .year-est {
   left: 50%;
   margin-left: 290px;
-  -webkit-transition: opacity 500ms linear 500ms, -webkit-transform 1s linear;
-  transition: opacity 500ms linear 500ms, -webkit-transform 1s linear;
-  transition: opacity 500ms linear 500ms, transform 1s linear;
-  transition: opacity 500ms linear 500ms, transform 1s linear, -webkit-transform 1s linear;
-}
-
-.level2 .svg-container .slow-fade {
-  -webkit-transition: opacity 500ms linear 500ms;
-  transition: opacity 500ms linear 500ms;
 }
 
 .level2 .meet-team-caption {
@@ -960,34 +1013,25 @@ p {
   opacity: 0;
 }
 
-.level2-appear .slow-fade {
+.level2-appear .svg-container {
   opacity: 0;
 }
 
-.level2-appear .line1 {
-  opacity: 0;
+.level2-appear .svg-container .vert-line {
   height: 0;
 }
 
-.level2-appear .line2 {
-  opacity: 0;
-  height: 0;
-}
-
-.level2-appear .together-circle-svg {
-  opacity: 0;
+.level2-appear .svg-container .together-circle-svg {
   -webkit-transform: rotate(-15deg) scale(1.3);
           transform: rotate(-15deg) scale(1.3);
 }
 
-.level2-appear .estd {
-  opacity: 0;
+.level2-appear .svg-container .estd {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
 }
 
-.level2-appear .year-est {
-  opacity: 0;
+.level2-appear .svg-container .year-est {
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
 }
@@ -996,90 +1040,239 @@ p {
   opacity: 1;
 }
 
-.level2-appear-active .slow-fade {
+.level2-appear-active .svg-container {
   opacity: 1;
 }
 
-.level2-appear-active .line1 {
-  opacity: 1;
+.level2-appear-active .svg-container .vert-line {
   height: 107px;
 }
 
-.level2-appear-active .line2 {
-  opacity: 1;
-  height: 107px;
-}
-
-.level2-appear-active .together-circle-svg {
-  opacity: 1;
+.level2-appear-active .svg-container .together-circle-svg {
   -webkit-transform: rotate(0deg) scale(1);
           transform: rotate(0deg) scale(1);
 }
 
-.level2-appear-active .estd {
-  opacity: 1;
+.level2-appear-active .svg-container .wings {
   -webkit-transform: translateX(0);
           transform: translateX(0);
-}
-
-.level2-appear-active .year-est {
-  opacity: 1;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-
-.background1 {
-  background-image: url("./img/homepage/optimized/thematic-intro-bg.jpg");
-  background-size: cover;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  -webkit-transition: background-image 1s linear;
-  transition: background-image 1s linear;
 }
 
 .level3 {
   width: 100%;
-  height: 120vh;
   position: relative;
-  z-index: 2.5;
+  z-index: 4;
 }
 
-.level3 .background2 {
-  background-image: url("./img/homepage/optimized/fintech-bg.jpg");
-  background-size: cover;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100vh;
+.level3 .content {
+  display: inline-block;
+  color: white;
+  height: 80vh;
+  width: 57%;
+  margin-top: 30vh;
+  margin-left: 13vw;
 }
 
-.level3 .background3 {
-  background-image: url("./img/homepage/optimized/retech-bg.jpg");
-  background-size: cover;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100vh;
+.level3 .content h2 {
+  width: 481px;
 }
 
-.level3 .background4 {
-  background-image: url("./img/homepage/optimized/extech-bg.jpg");
-  background-size: cover;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100vh;
+.level3 .content h3 {
+  width: 483px;
 }
 
-.level3 .background5 {
-  background-image: url("./img/homepage/optimized/lifetech-bg.jpg");
-  background-size: cover;
+.level3 .content p {
+  width: 599px;
+}
+
+.level3 .sticky-menu {
   position: fixed;
+  width: 29vw;
+  right: 0;
   top: 0;
-  width: 100%;
   height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.level3 .sticky-menu .vertical-line {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.32);
+  -webkit-transition: height 1000ms linear 200ms, opacity 500ms linear 200ms;
+  transition: height 1000ms linear 200ms, opacity 500ms linear 200ms;
+}
+
+.level3 .sticky-menu .menu-flexbox {
+  width: 99%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  color: white;
+}
+
+.level3 .sticky-menu .menu-flexbox .h-line {
+  height: 1px;
+  width: 99%;
+  background-color: rgba(255, 255, 255, 0.32);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.level3 .sticky-menu .menu-flexbox .menu-item {
+  opacity: 0;
+  height: 25vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-transform: translateX(5%);
+          transform: translateX(5%);
+}
+
+.level3 .sticky-menu .menu-flexbox p {
+  padding-right: 40%;
+}
+
+.level3 .sticky-menu .menu-flexbox .menu1 {
+  -webkit-transition: opacity 50ms linear 350ms, -webkit-transform 50ms linear 350ms;
+  transition: opacity 50ms linear 350ms, -webkit-transform 50ms linear 350ms;
+  transition: transform 50ms linear 350ms, opacity 50ms linear 350ms;
+  transition: transform 50ms linear 350ms, opacity 50ms linear 350ms, -webkit-transform 50ms linear 350ms;
+}
+
+.level3 .sticky-menu .menu-flexbox .menu1 svg {
+  width: 28px;
+}
+
+.level3 .sticky-menu .menu-flexbox .menu1 svg path {
+  fill: white;
+}
+
+.level3 .sticky-menu .menu-flexbox .line1 {
+  -webkit-transition: -webkit-transform 250ms linear 200ms;
+  transition: -webkit-transform 250ms linear 200ms;
+  transition: transform 250ms linear 200ms;
+  transition: transform 250ms linear 200ms, -webkit-transform 250ms linear 200ms;
+}
+
+.level3 .sticky-menu .menu-flexbox .menu2 {
+  -webkit-transition: opacity 50ms linear 600ms, -webkit-transform 50ms linear 600ms;
+  transition: opacity 50ms linear 600ms, -webkit-transform 50ms linear 600ms;
+  transition: transform 50ms linear 600ms, opacity 50ms linear 600ms;
+  transition: transform 50ms linear 600ms, opacity 50ms linear 600ms, -webkit-transform 50ms linear 600ms;
+}
+
+.level3 .sticky-menu .menu-flexbox .menu2 svg {
+  width: 34px;
+  stroke: white;
+}
+
+.level3 .sticky-menu .menu-flexbox .menu2 svg path {
+  stroke: white;
+}
+
+.level3 .sticky-menu .menu-flexbox .line2 {
+  -webkit-transition: -webkit-transform 250ms linear 450ms;
+  transition: -webkit-transform 250ms linear 450ms;
+  transition: transform 250ms linear 450ms;
+  transition: transform 250ms linear 450ms, -webkit-transform 250ms linear 450ms;
+}
+
+.level3 .sticky-menu .menu-flexbox .menu3 {
+  -webkit-transition: opacity 50ms linear 850ms, -webkit-transform 50ms linear 850ms;
+  transition: opacity 50ms linear 850ms, -webkit-transform 50ms linear 850ms;
+  transition: transform 50ms linear 850ms, opacity 50ms linear 850ms;
+  transition: transform 50ms linear 850ms, opacity 50ms linear 850ms, -webkit-transform 50ms linear 850ms;
+}
+
+.level3 .sticky-menu .menu-flexbox .menu3 svg {
+  width: 28px;
+}
+
+.level3 .sticky-menu .menu-flexbox .menu3 svg path {
+  stroke: white;
+}
+
+.level3 .sticky-menu .menu-flexbox .line3 {
+  -webkit-transition: -webkit-transform 250ms linear 700ms;
+  transition: -webkit-transform 250ms linear 700ms;
+  transition: transform 250ms linear 700ms;
+  transition: transform 250ms linear 700ms, -webkit-transform 250ms linear 700ms;
+}
+
+.level3 .sticky-menu .menu-flexbox .menu4 {
+  -webkit-transition: opacity 50ms linear 1100ms, -webkit-transform 50ms linear 1100ms;
+  transition: opacity 50ms linear 1100ms, -webkit-transform 50ms linear 1100ms;
+  transition: transform 50ms linear 1100ms, opacity 50ms linear 1100ms;
+  transition: transform 50ms linear 1100ms, opacity 50ms linear 1100ms, -webkit-transform 50ms linear 1100ms;
+}
+
+.level3 .sticky-menu .menu-flexbox .menu4 svg {
+  width: 25px;
+}
+
+.level3 .sticky-menu .menu-flexbox .menu4 svg path {
+  fill: white;
+}
+
+.level3 .menu-appear .vertical-line {
+  opacity: 1;
+  height: 100%;
+}
+
+.level3 .menu-appear .menu-flexbox .menu1 {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.level3 .menu-appear .menu-flexbox .line1 {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.level3 .menu-appear .menu-flexbox .menu2 {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.level3 .menu-appear .menu-flexbox .line2 {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.level3 .menu-appear .menu-flexbox .menu3 {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.level3 .menu-appear .menu-flexbox .line3 {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.level3 .menu-appear .menu-flexbox .menu4 {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 @-webkit-keyframes spin-compass {
