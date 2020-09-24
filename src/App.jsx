@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './App.css'
 import Level2 from './Components/Index/Level2'
+import Level3 from './Components/Index/Level3'
 import MainHeader from './Components/Index/MainHeader'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <div className='App'>
          <MainHeader />
          {level2Transition && <Level2 />}
+         {level2Transition && <Level3 />}
       </div>
    )
 }

@@ -6,7 +6,9 @@ import TogetherCircleSVG from './SVGs/TogetherCircleSVG'
 const Level2 = () => {
    return (
       <CSSTransition classNames='level2' timeout={3500} in={true} appear>
-         <div className='level2'>
+         <section className='level2'>
+            <div className='rotating-background'></div>
+
             <div className='svg-container'>
                <Years20SVG />
                <TogetherCircleSVG />
@@ -27,21 +29,27 @@ const Level2 = () => {
                      <p className='font-caption'>founder/operator</p>
                   </div>
                   <div className='bottom'>
-                     <img
-                        className='ipreo'
-                        src={require('../../img/stat logos/ipreo.png')}
-                        alt='ipreo'
-                     />
-                     <img
-                        className='tmcbonds'
-                        src={require('../../img/stat logos/tmcbonds.png')}
-                        alt='tmcbonds'
-                     />
-                     <img
-                        className='ilevel'
-                        src={require('../../img/stat logos/ilevel.png')}
-                        alt='ilevel'
-                     />
+                     <div>
+                        <img
+                           className='ipreo'
+                           src={require('../../img/stat logos/ipreo.png')}
+                           alt='ipreo'
+                        />
+                     </div>
+                     <div>
+                        <img
+                           className='tmcbonds'
+                           src={require('../../img/stat logos/tmcbonds.png')}
+                           alt='tmcbonds'
+                        />
+                     </div>
+                     <div>
+                        <img
+                           className='ilevel'
+                           src={require('../../img/stat logos/ilevel.png')}
+                           alt='ilevel'
+                        />
+                     </div>
                   </div>
                </div>
                <div className='block2 block'>
@@ -50,21 +58,27 @@ const Level2 = () => {
                      <p className='font-caption'>operator/investor</p>
                   </div>
                   <div className='bottom'>
-                     <img
-                        className='ipreo'
-                        src={require('../../img/stat logos/GSO.png')}
-                        alt='ipreo'
-                     />
-                     <img
-                        className='tmcbonds'
-                        src={require('../../img/stat logos/airbnb.png')}
-                        alt='tmcbonds'
-                     />
-                     <img
-                        className='ilevel'
-                        src={require('../../img/stat logos/blackstone.png')}
-                        alt='ilevel'
-                     />
+                     <div>
+                        <img
+                           className='gso'
+                           src={require('../../img/stat logos/GSO.png')}
+                           alt='gso'
+                        />
+                     </div>
+                     <div>
+                        <img
+                           className='airbnb'
+                           src={require('../../img/stat logos/airbnb.png')}
+                           alt='airbnb'
+                        />
+                     </div>
+                     <div>
+                        <img
+                           className='blackstone'
+                           src={require('../../img/stat logos/blackstone.png')}
+                           alt='blackstone'
+                        />
+                     </div>
                   </div>
                </div>
                <div className='block3 block'>
@@ -73,26 +87,56 @@ const Level2 = () => {
                      <p className='font-caption'>early investor</p>
                   </div>
                   <div className='bottom'>
-                     <img
-                        className='ipreo'
-                        src={require('../../img/stat logos/ipreo.png')}
-                        alt='ipreo'
-                     />
-                     <img
-                        className='tmcbonds'
-                        src={require('../../img/stat logos/tmcbonds.png')}
-                        alt='tmcbonds'
-                     />
-                     <img
-                        className='ilevel'
-                        src={require('../../img/stat logos/ilevel.png')}
-                        alt='ilevel'
-                     />
+                     <div>
+                        <img
+                           className='cyclance'
+                           src={require('../../img/stat logos/cylance.png')}
+                           alt='cyclance'
+                        />
+                     </div>
+                     <div>
+                        <img
+                           className='tradeweb'
+                           src={require('../../img/stat logos/tradeweb.png')}
+                           alt='tradeweb'
+                        />
+                     </div>
+                     <div>
+                        <img
+                           className='skillz'
+                           src={require('../../img/stat logos/skillz.png')}
+                           alt='skillz'
+                        />
+                     </div>
+                     <div>
+                        <img
+                           className='sonder'
+                           src={require('../../img/stat logos/sonder.png')}
+                           alt='sonder'
+                        />
+                     </div>
+                     <div>
+                        <img
+                           className='carbon'
+                           src={require('../../img/stat logos/carbon-black.png')}
+                           alt='carbon black'
+                        />
+                     </div>
+                     <div>
+                        <img
+                           className='archipelago'
+                           src={require('../../img/stat logos/archipelago.png')}
+                           alt='archipelago'
+                        />
+                     </div>
                   </div>
                </div>
-               <div className='block4 block'></div>
+               <div className='block4 block'>
+                  <h2>$128B</h2>
+                  <p className='font-caption'>total value</p>
+               </div>
             </div>
-         </div>
+         </section>
       </CSSTransition>
    )
 }
