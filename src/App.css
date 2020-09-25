@@ -55,7 +55,6 @@ p {
   font-size: 18px;
   font-weight: 300;
   line-height: 26px;
-  letter-spacing: 0px;
 }
 
 .font-subtitle {
@@ -1333,6 +1332,100 @@ p {
   opacity: 1;
   -webkit-transform: translateX(0);
           transform: translateX(0);
+}
+
+.level4 {
+  position: relative;
+  z-index: 5;
+  width: 100vw;
+  padding-top: 20vh;
+  padding-bottom: 800px;
+}
+
+.level4 .sticky-left {
+  display: inline-block;
+  opacity: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5vh;
+  width: 526px;
+  height: 166px;
+  margin-left: 5%;
+  -webkit-transition: opacity 500ms linear;
+  transition: opacity 500ms linear;
+}
+
+.level4 .sticky-left h2 {
+  margin: 0 0;
+}
+
+.level4 .scrolling-right {
+  opacity: 0;
+  position: relative;
+  margin-left: 55%;
+  margin-top: -156px;
+  width: 40%;
+  -webkit-transition: opacity 500ms linear;
+  transition: opacity 500ms linear;
+}
+
+.level4 .scrolling-right header {
+  height: 75px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border: 1px solid #0b2142;
+  background-color: #0b2142;
+  color: white;
+}
+
+.level4 .scrolling-right header p {
+  padding-left: 5%;
+  padding-top: 27px;
+}
+
+.level4 .scrolling-right .body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  border: 1px solid #0b2142;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  padding: 5%;
+  height: 245px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 32px;
+}
+
+.level4 .scrolling-right .body div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.level4 .scrolling-right .body div div {
+  width: 45px;
+}
+
+.level4 .scrolling-right .body div img {
+  width: 22px;
+}
+
+.level4 .scrolling-right .last-body {
+  margin-bottom: 0;
+}
+
+.level4-appear .sticky-left {
+  opacity: 1;
+}
+
+.level4-appear .scrolling-right {
+  opacity: 1;
 }
 
 @-webkit-keyframes spin-compass {

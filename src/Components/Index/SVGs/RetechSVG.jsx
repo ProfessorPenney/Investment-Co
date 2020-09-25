@@ -5,6 +5,7 @@ const RetechSVG = () => {
       <svg enableBackground='new 0 0 32 32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'>
          <g
             style={{
+               fill: 'none',
                stroke: '#f47a5d',
                strokeWidth: 2,
                strokeLinecap: 'round',
@@ -19,7 +20,7 @@ const RetechSVG = () => {
             <path d='m13.1 12.1-12.1 2.6' />
             <path d='m17.1 27.3v-6.1c0-1.2 1-2.1 2.1-2.1h3.6c1.2 0 2.1 1 2.1 2.1v6.1' />
          </g>
-         <circle cx='17.1' cy='12.3' r='1.5' />
+         <circle cx='17.1' fill='#f47a5d' cy='12.3' r='1.5' />
       </svg>
    )
 }

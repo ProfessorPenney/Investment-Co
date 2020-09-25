@@ -11,14 +11,24 @@ const Level3 = () => {
    })
 
    function handleScroll() {
-      // console.log('s2', document.querySelector('.section2').getBoundingClientRect().top)
       if (
+         document.querySelector('.level4').getBoundingClientRect().top <=
+         window.innerHeight * (2 / 3)
+      ) {
+         document.querySelector('.background-color').classList.remove('fade-out-white')
+         document.querySelector('.menu4').classList.remove('menu-item-shaded')
+         document.querySelector('.level4').classList.add('level4-appear')
+         document.querySelector('.sticky-menu').classList.remove('menu-appear')
+      } else if (
          document.querySelector('.section5').getBoundingClientRect().top <=
          window.innerHeight * (2 / 3)
       ) {
+         document.querySelector('.background-color').classList.add('fade-out-white')
          document.querySelector('.rotating-background').classList.add('background5')
          document.querySelector('.menu4').classList.add('menu-item-shaded')
          document.querySelector('.menu3').classList.remove('menu-item-shaded')
+         document.querySelector('.sticky-menu').classList.add('menu-appear')
+         document.querySelector('.level4').classList.remove('level4-appear')
       } else if (
          document.querySelector('.section4').getBoundingClientRect().top <=
          window.innerHeight * (2 / 3)
