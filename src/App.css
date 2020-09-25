@@ -638,7 +638,7 @@ p {
   left: 0;
   top: 0;
   width: 100%;
-  padding-top: 300px;
+  padding-top: 200px;
   padding-bottom: 200px;
   -webkit-transition: opacity 1s ease-out;
   transition: opacity 1s ease-out;
@@ -806,6 +806,7 @@ p {
 }
 
 .level2 .meet-team-button {
+  position: relative;
   display: block;
   background-color: #09b5ca;
   margin: 40px auto 0 auto;
@@ -825,6 +826,9 @@ p {
 }
 
 .level2 .investment-container .block {
+  opacity: 0;
+  -webkit-transition: opacity 1s linear;
+  transition: opacity 1s linear;
   position: relative;
   z-index: 5;
   display: inline-block;
@@ -1011,6 +1015,10 @@ p {
 
 .level2 .investment-container .block4 h2 {
   margin: 110px 0 0;
+}
+
+.level2 .investment-container-appear .block {
+  opacity: 1;
 }
 
 .level2-appear {

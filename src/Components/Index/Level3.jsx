@@ -66,10 +66,23 @@ const Level3 = () => {
          document.querySelector('.sticky-menu').classList.add('menu-appear')
          document.querySelector('.menu1').classList.remove('menu-item-shaded')
          document.querySelectorAll('.tech').forEach(node => node.classList.add('font-green'))
-      } else {
+         document
+            .querySelector('.investment-container')
+            .classList.remove('investment-container-appear')
+      } else if (
+         document.querySelector('.investment-container').getBoundingClientRect().top <=
+         window.innerHeight * (2 / 3)
+      ) {
          document.querySelector('.background-color').classList.remove('fade-out-white')
          document.querySelector('.sticky-menu').classList.remove('menu-appear')
+         document
+            .querySelector('.investment-container')
+            .classList.add('investment-container-appear')
          // document.querySelector('.rotating-background').classList.remove('background1')
+      } else {
+         document
+            .querySelector('.investment-container')
+            .classList.remove('investment-container-appear')
       }
    }
 

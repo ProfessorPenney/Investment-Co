@@ -529,7 +529,7 @@ p {
    left: 0;
    top: 0;
    width: 100%;
-   padding-top: 300px;
+   padding-top: 200px;
    padding-bottom: 200px;
    transition: opacity 1s ease-out;
    .rotating-background {
@@ -669,6 +669,7 @@ p {
       margin: auto;
    }
    .meet-team-button {
+      position: relative;
       display: block;
       background-color: #09b5ca;
       margin: 40px auto 0 auto;
@@ -681,6 +682,8 @@ p {
       flex-wrap: wrap;
       justify-content: space-evenly;
       .block {
+         opacity: 0;
+         transition: opacity 1s linear;
          position: relative;
          z-index: 5;
          display: inline-block;
@@ -825,6 +828,11 @@ p {
          h2 {
             margin: 110px 0 0;
          }
+      }
+   }
+   .investment-container-appear {
+      .block {
+         opacity: 1;
       }
    }
 } // level2
