@@ -74,7 +74,6 @@ const MainHeader = () => {
                73° 56' 6.8712" W<br />
             </p>
          </CSSTransition>
-         <div className='spacer-div'></div>
          {showMenu && <HeroMenu />}
          <div className='header-cover'></div>
       </header>

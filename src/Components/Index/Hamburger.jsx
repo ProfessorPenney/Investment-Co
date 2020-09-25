@@ -1,21 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const Hamburger = ({ showMenu, setshowMenu }) => {
-   const [clickedBurger, setclickedBurger] = useState(false)
-
    function burgerClick() {
       console.log('yup')
       if (showMenu) {
          setshowMenu(false)
-         setclickedBurger(false)
+         document.querySelector('.burger').classList.remove('clicked-burger')
       } else {
          setshowMenu(true)
-         setclickedBurger(true)
+         document.querySelector('.burger').classList.add('clicked-burger')
       }
    }
 
    return (
-      <div className={`burger ${clickedBurger && 'clicked-burger'}`} onClick={burgerClick}>
+      <div className='burger' onClick={burgerClick}>
          <div className='layers layer1'></div>
          <div className='layers layer2'></div>
          <div className='layers layer3'></div>

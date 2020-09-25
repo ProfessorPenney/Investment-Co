@@ -123,14 +123,15 @@ body {
    top: 0;
    transition: background-image 500ms linear, opacity 1s linear;
    .background-color {
+      opacity: 1;
       background-color: white;
-      transition: background-color 500ms linear;
+      transition: opacity 500ms linear;
       position: absolute;
       width: 100%;
       height: 100%;
    }
    .fade-out-white {
-      background-color: transparent;
+      opacity: 0;
    }
 }
 .rotating-background-disappear {
@@ -317,10 +318,10 @@ body {
 
    .hero-menu-wrapper {
       background-color: linear-gradient(197.36deg, #0a2040 33.42%, #00b7cc 93.86%);
-      position: absolute;
+      position: fixed;
       left: 0;
       top: 0;
-      z-index: 1;
+      z-index: 9;
       height: 100vh;
       width: 100vw;
 
@@ -500,12 +501,12 @@ body {
       }
    }
 
-   .spacer-div {
-      position: absolute;
-      top: 100vh;
-      height: 500px;
-      width: 100%;
-   }
+   // .spacer-div {
+   //    position: absolute;
+   //    top: 100vh;
+   //    height: 500px;
+   //    width: 100%;
+   // }
 
    .header-cover {
       z-index: -1;
@@ -561,12 +562,12 @@ body {
    }
 }
 
-.burger-fade {
-   opacity: 0;
-   z-index: 10;
-}
-.burger-color {
-   background-color: $dark-blue;
+.burger-blue {
+   border: 1px solid rgba(11, 33, 66, 0.31);
+   background-color: rgba(11, 33, 66, 0.08);
+   .layers {
+      background-color: $dark-blue;
+   }
 }
 
 .burger:hover {
@@ -575,8 +576,19 @@ body {
       background-color: $dark-blue;
    }
 }
+.burger-blue:hover {
+   background-color: $dark-blue;
+   .layers {
+      background-color: white;
+   }
+}
 
 .clicked-burger {
+   border: 1px solid rgba(255, 255, 255, 0.31);
+   background-color: rgba(255, 255, 255, 0.08);
+   .layers {
+      background-color: white;
+   }
    .layer2 {
       opacity: 0;
    }
@@ -589,7 +601,12 @@ body {
       width: 17px;
    }
 }
-
+.clicked-burger:hover {
+   background-color: white;
+   .layers {
+      background-color: $dark-blue;
+   }
+}
 .level2 {
    margin-top: -20vh;
    position: relative;
@@ -895,7 +912,6 @@ body {
          height: 0;
          width: 1px;
          background-color: rgba(255, 255, 255, 0.32);
-         transition: height 1000ms linear 200ms, opacity 500ms linear 200ms;
       }
       .menu-flexbox {
          position: absolute;
@@ -930,50 +946,30 @@ body {
          p {
             width: 262px;
          }
-         .menu1 {
-            transition: transform 50ms linear 350ms, opacity 50ms linear 350ms;
-            svg {
-               width: 28px;
-               path {
-                  fill: white;
-               }
+         .menu1 svg {
+            width: 28px;
+            path {
+               fill: white;
             }
          }
-         .line1 {
-            transition: transform 250ms linear 200ms;
-         }
-         .menu2 {
-            transition: transform 50ms linear 600ms, opacity 50ms linear 600ms;
-            svg {
-               width: 34px;
+
+         .menu2 svg {
+            width: 34px;
+            stroke: white;
+            path {
                stroke: white;
-               path {
-                  stroke: white;
-               }
             }
          }
-         .line2 {
-            transition: transform 250ms linear 450ms;
-         }
-         .menu3 {
-            transition: transform 50ms linear 850ms, opacity 50ms linear 850ms;
-            svg {
-               width: 28px;
-               path {
-                  stroke: white;
-               }
+         .menu3 svg {
+            width: 28px;
+            path {
+               stroke: white;
             }
          }
-         .line3 {
-            transition: transform 250ms linear 700ms;
-         }
-         .menu4 {
-            transition: transform 50ms linear 1100ms, opacity 50ms linear 1100ms;
-            svg {
-               width: 25px;
-               path {
-                  fill: white;
-               }
+         .menu4 svg {
+            width: 25px;
+            path {
+               fill: white;
             }
          }
          .menu-item-shaded {
@@ -1017,32 +1013,40 @@ body {
 
    .menu-appear {
       .vertical-line {
+         transition: height 1000ms linear 200ms, opacity 500ms linear 200ms;
          opacity: 1;
          height: 100%;
       }
       .menu-flexbox {
          .menu1 {
+            transition: transform 50ms linear 350ms, opacity 50ms linear 350ms;
             opacity: 1;
             transform: translateX(0);
          }
          .line1 {
+            transition: transform 250ms linear 200ms;
             transform: translateX(0);
          }
          .menu2 {
+            transition: transform 50ms linear 600ms, opacity 50ms linear 600ms;
             opacity: 1;
             transform: translateX(0);
          }
          .line2 {
+            transition: transform 250ms linear 450ms;
             transform: translateX(0);
          }
          .menu3 {
+            transition: transform 50ms linear 850ms, opacity 50ms linear 850ms;
             opacity: 1;
             transform: translateX(0);
          }
          .line3 {
+            transition: transform 250ms linear 700ms;
             transform: translateX(0);
          }
          .menu4 {
+            transition: transform 50ms linear 1100ms, opacity 50ms linear 1100ms;
             opacity: 1;
             transform: translateX(0);
          }

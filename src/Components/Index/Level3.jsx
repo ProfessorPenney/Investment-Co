@@ -20,6 +20,7 @@ const Level3 = () => {
          document.querySelector('.menu4').classList.remove('menu-item-shaded')
          document.querySelector('.level4').classList.add('level4-appear')
          document.querySelector('.sticky-menu').classList.remove('menu-appear')
+         document.querySelector('.burger').classList.add('burger-blue')
       } else if (
          document.querySelector('.section5').getBoundingClientRect().top <=
          window.innerHeight * (2 / 3)
@@ -30,6 +31,7 @@ const Level3 = () => {
          document.querySelector('.menu3').classList.remove('menu-item-shaded')
          document.querySelector('.sticky-menu').classList.add('menu-appear')
          document.querySelector('.level4').classList.remove('level4-appear')
+         document.querySelector('.burger').classList.remove('burger-blue')
       } else if (
          document.querySelector('.section4').getBoundingClientRect().top <=
          window.innerHeight * (2 / 3)
@@ -70,6 +72,7 @@ const Level3 = () => {
          document
             .querySelector('.investment-container')
             .classList.remove('investment-container-appear')
+         document.querySelector('.burger').classList.remove('burger-blue')
       } else if (
          document.querySelector('.investment-container').getBoundingClientRect().top <=
          window.innerHeight * (2 / 3)
@@ -81,10 +84,12 @@ const Level3 = () => {
             .classList.add('investment-container-appear')
          document.querySelector('.rotating-background').classList.remove('background1')
          document.querySelector('.svg-container').classList.remove('svg-container-appear')
+         document.querySelector('.burger').classList.add('burger-blue')
       } else if (
          document.querySelector('.level2').getBoundingClientRect().top <=
          window.innerHeight * (2 / 3)
       ) {
+         document.querySelector('.burger').classList.add('burger-blue')
          document.querySelector('.background-color').classList.remove('fade-out-white')
          document
             .querySelector('.investment-container')
@@ -92,6 +97,7 @@ const Level3 = () => {
          document.querySelector('.header-cover').classList.add('header-cover-cover')
          document.querySelector('.svg-container').classList.add('svg-container-appear')
       } else {
+         document.querySelector('.burger').classList.remove('burger-blue')
          document.querySelector('.svg-container').classList.remove('svg-container-appear')
          document.querySelector('.background-color').classList.add('fade-out-white')
          document.querySelector('.header-cover').classList.remove('header-cover-cover')

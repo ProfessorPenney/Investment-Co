@@ -1,11 +1,9 @@
 import React from 'react'
-// import { CSSTransition } from 'react-transition-group'
 import Years20SVG from './SVGs/Years20SVG'
 import TogetherCircleSVG from './SVGs/TogetherCircleSVG'
 
 const Level2 = () => {
    return (
-      // <CSSTransition classNames='level2' timeout={3500} in={true} appear>
       <section className='level2'>
          <div className='svg-container'>
             <Years20SVG />
@@ -131,7 +129,6 @@ const Level2 = () => {
             </div>
          </div>
       </section>
-      // </CSSTransition>
    )
 }
 

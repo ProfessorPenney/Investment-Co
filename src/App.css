@@ -123,16 +123,17 @@ body .font-caption-alt {
 }
 
 .rotating-background .background-color {
+  opacity: 1;
   background-color: white;
-  -webkit-transition: background-color 500ms linear;
-  transition: background-color 500ms linear;
+  -webkit-transition: opacity 500ms linear;
+  transition: opacity 500ms linear;
   position: absolute;
   width: 100%;
   height: 100%;
 }
 
 .rotating-background .fade-out-white {
-  background-color: transparent;
+  opacity: 0;
 }
 
 .rotating-background-disappear {
@@ -348,10 +349,10 @@ body .font-caption-alt {
 
 .main-header .hero-menu-wrapper {
   background-color: linear-gradient(197.36deg, #0a2040 33.42%, #00b7cc 93.86%);
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
-  z-index: 1;
+  z-index: 9;
   height: 100vh;
   width: 100vw;
 }
@@ -606,13 +607,6 @@ body .font-caption-alt {
   opacity: 1;
 }
 
-.main-header .spacer-div {
-  position: absolute;
-  top: 100vh;
-  height: 500px;
-  width: 100%;
-}
-
 .main-header .header-cover {
   z-index: -1;
   background-color: transparent;
@@ -679,12 +673,12 @@ body .font-caption-alt {
   transition: transform 100ms linear, width 100ms linear, -webkit-transform 100ms linear;
 }
 
-.burger-fade {
-  opacity: 0;
-  z-index: 10;
+.burger-blue {
+  border: 1px solid rgba(11, 33, 66, 0.31);
+  background-color: rgba(11, 33, 66, 0.08);
 }
 
-.burger-color {
+.burger-blue .layers {
   background-color: #0b2142;
 }
 
@@ -694,6 +688,23 @@ body .font-caption-alt {
 
 .burger:hover .layers {
   background-color: #0b2142;
+}
+
+.burger-blue:hover {
+  background-color: #0b2142;
+}
+
+.burger-blue:hover .layers {
+  background-color: white;
+}
+
+.clicked-burger {
+  border: 1px solid rgba(255, 255, 255, 0.31);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.clicked-burger .layers {
+  background-color: white;
 }
 
 .clicked-burger .layer2 {
@@ -710,6 +721,14 @@ body .font-caption-alt {
   -webkit-transform: rotate(-45deg) translateY(2px) translateX(-1px);
           transform: rotate(-45deg) translateY(2px) translateX(-1px);
   width: 17px;
+}
+
+.clicked-burger:hover {
+  background-color: white;
+}
+
+.clicked-burger:hover .layers {
+  background-color: #0b2142;
 }
 
 .level2 {
@@ -1095,8 +1114,6 @@ body .font-caption-alt {
   height: 0;
   width: 1px;
   background-color: rgba(255, 255, 255, 0.32);
-  -webkit-transition: height 1000ms linear 200ms, opacity 500ms linear 200ms;
-  transition: height 1000ms linear 200ms, opacity 500ms linear 200ms;
 }
 
 .level3 .sticky-menu .menu-flexbox {
@@ -1152,33 +1169,12 @@ body .font-caption-alt {
   width: 262px;
 }
 
-.level3 .sticky-menu .menu-flexbox .menu1 {
-  -webkit-transition: opacity 50ms linear 350ms, -webkit-transform 50ms linear 350ms;
-  transition: opacity 50ms linear 350ms, -webkit-transform 50ms linear 350ms;
-  transition: transform 50ms linear 350ms, opacity 50ms linear 350ms;
-  transition: transform 50ms linear 350ms, opacity 50ms linear 350ms, -webkit-transform 50ms linear 350ms;
-}
-
 .level3 .sticky-menu .menu-flexbox .menu1 svg {
   width: 28px;
 }
 
 .level3 .sticky-menu .menu-flexbox .menu1 svg path {
   fill: white;
-}
-
-.level3 .sticky-menu .menu-flexbox .line1 {
-  -webkit-transition: -webkit-transform 250ms linear 200ms;
-  transition: -webkit-transform 250ms linear 200ms;
-  transition: transform 250ms linear 200ms;
-  transition: transform 250ms linear 200ms, -webkit-transform 250ms linear 200ms;
-}
-
-.level3 .sticky-menu .menu-flexbox .menu2 {
-  -webkit-transition: opacity 50ms linear 600ms, -webkit-transform 50ms linear 600ms;
-  transition: opacity 50ms linear 600ms, -webkit-transform 50ms linear 600ms;
-  transition: transform 50ms linear 600ms, opacity 50ms linear 600ms;
-  transition: transform 50ms linear 600ms, opacity 50ms linear 600ms, -webkit-transform 50ms linear 600ms;
 }
 
 .level3 .sticky-menu .menu-flexbox .menu2 svg {
@@ -1190,40 +1186,12 @@ body .font-caption-alt {
   stroke: white;
 }
 
-.level3 .sticky-menu .menu-flexbox .line2 {
-  -webkit-transition: -webkit-transform 250ms linear 450ms;
-  transition: -webkit-transform 250ms linear 450ms;
-  transition: transform 250ms linear 450ms;
-  transition: transform 250ms linear 450ms, -webkit-transform 250ms linear 450ms;
-}
-
-.level3 .sticky-menu .menu-flexbox .menu3 {
-  -webkit-transition: opacity 50ms linear 850ms, -webkit-transform 50ms linear 850ms;
-  transition: opacity 50ms linear 850ms, -webkit-transform 50ms linear 850ms;
-  transition: transform 50ms linear 850ms, opacity 50ms linear 850ms;
-  transition: transform 50ms linear 850ms, opacity 50ms linear 850ms, -webkit-transform 50ms linear 850ms;
-}
-
 .level3 .sticky-menu .menu-flexbox .menu3 svg {
   width: 28px;
 }
 
 .level3 .sticky-menu .menu-flexbox .menu3 svg path {
   stroke: white;
-}
-
-.level3 .sticky-menu .menu-flexbox .line3 {
-  -webkit-transition: -webkit-transform 250ms linear 700ms;
-  transition: -webkit-transform 250ms linear 700ms;
-  transition: transform 250ms linear 700ms;
-  transition: transform 250ms linear 700ms, -webkit-transform 250ms linear 700ms;
-}
-
-.level3 .sticky-menu .menu-flexbox .menu4 {
-  -webkit-transition: opacity 50ms linear 1100ms, -webkit-transform 50ms linear 1100ms;
-  transition: opacity 50ms linear 1100ms, -webkit-transform 50ms linear 1100ms;
-  transition: transform 50ms linear 1100ms, opacity 50ms linear 1100ms;
-  transition: transform 50ms linear 1100ms, opacity 50ms linear 1100ms, -webkit-transform 50ms linear 1100ms;
 }
 
 .level3 .sticky-menu .menu-flexbox .menu4 svg {
@@ -1275,44 +1243,74 @@ body .font-caption-alt {
 }
 
 .level3 .menu-appear .vertical-line {
+  -webkit-transition: height 1000ms linear 200ms, opacity 500ms linear 200ms;
+  transition: height 1000ms linear 200ms, opacity 500ms linear 200ms;
   opacity: 1;
   height: 100%;
 }
 
 .level3 .menu-appear .menu-flexbox .menu1 {
+  -webkit-transition: opacity 50ms linear 350ms, -webkit-transform 50ms linear 350ms;
+  transition: opacity 50ms linear 350ms, -webkit-transform 50ms linear 350ms;
+  transition: transform 50ms linear 350ms, opacity 50ms linear 350ms;
+  transition: transform 50ms linear 350ms, opacity 50ms linear 350ms, -webkit-transform 50ms linear 350ms;
   opacity: 1;
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
 .level3 .menu-appear .menu-flexbox .line1 {
+  -webkit-transition: -webkit-transform 250ms linear 200ms;
+  transition: -webkit-transform 250ms linear 200ms;
+  transition: transform 250ms linear 200ms;
+  transition: transform 250ms linear 200ms, -webkit-transform 250ms linear 200ms;
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
 .level3 .menu-appear .menu-flexbox .menu2 {
+  -webkit-transition: opacity 50ms linear 600ms, -webkit-transform 50ms linear 600ms;
+  transition: opacity 50ms linear 600ms, -webkit-transform 50ms linear 600ms;
+  transition: transform 50ms linear 600ms, opacity 50ms linear 600ms;
+  transition: transform 50ms linear 600ms, opacity 50ms linear 600ms, -webkit-transform 50ms linear 600ms;
   opacity: 1;
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
 .level3 .menu-appear .menu-flexbox .line2 {
+  -webkit-transition: -webkit-transform 250ms linear 450ms;
+  transition: -webkit-transform 250ms linear 450ms;
+  transition: transform 250ms linear 450ms;
+  transition: transform 250ms linear 450ms, -webkit-transform 250ms linear 450ms;
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
 .level3 .menu-appear .menu-flexbox .menu3 {
+  -webkit-transition: opacity 50ms linear 850ms, -webkit-transform 50ms linear 850ms;
+  transition: opacity 50ms linear 850ms, -webkit-transform 50ms linear 850ms;
+  transition: transform 50ms linear 850ms, opacity 50ms linear 850ms;
+  transition: transform 50ms linear 850ms, opacity 50ms linear 850ms, -webkit-transform 50ms linear 850ms;
   opacity: 1;
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
 .level3 .menu-appear .menu-flexbox .line3 {
+  -webkit-transition: -webkit-transform 250ms linear 700ms;
+  transition: -webkit-transform 250ms linear 700ms;
+  transition: transform 250ms linear 700ms;
+  transition: transform 250ms linear 700ms, -webkit-transform 250ms linear 700ms;
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
 .level3 .menu-appear .menu-flexbox .menu4 {
+  -webkit-transition: opacity 50ms linear 1100ms, -webkit-transform 50ms linear 1100ms;
+  transition: opacity 50ms linear 1100ms, -webkit-transform 50ms linear 1100ms;
+  transition: transform 50ms linear 1100ms, opacity 50ms linear 1100ms;
+  transition: transform 50ms linear 1100ms, opacity 50ms linear 1100ms, -webkit-transform 50ms linear 1100ms;
   opacity: 1;
   -webkit-transform: translateX(0);
           transform: translateX(0);
