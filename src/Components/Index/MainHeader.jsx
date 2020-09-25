@@ -76,6 +76,7 @@ const MainHeader = () => {
          </CSSTransition>
          <div className='spacer-div'></div>
          {showMenu && <HeroMenu />}
+         <div className='header-cover'></div>
       </header>
    )
 }

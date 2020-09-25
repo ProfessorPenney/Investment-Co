@@ -9,97 +9,96 @@ body {
    font-family: Boston, Arial, Helvetica, sans-serif;
    margin: 0;
    padding: 0;
-   // overflow: hidden;
    overflow-x: hidden;
-}
 
-h1 {
-   font-size: 56px;
-   font-weight: 700;
-   line-height: 72px;
-   letter-spacing: -0.5px;
-}
+   h1 {
+      font-size: 56px;
+      font-weight: 700;
+      line-height: 72px;
+      letter-spacing: -0.5px;
+   }
 
-h2 {
-   font-size: 48px;
-   font-weight: 700;
-   line-height: 64px;
-   letter-spacing: -1px;
-}
+   h2 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 64px;
+      letter-spacing: -1px;
+   }
 
-h3 {
-   // h3 alt (bold and caps)
-   text-transform: uppercase;
-   font-size: 24px;
-   font-weight: 700;
-   line-height: 32px;
-   letter-spacing: 5px;
-}
+   h3 {
+      // h3 alt (bold and caps)
+      text-transform: uppercase;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+      letter-spacing: 5px;
+   }
 
-h4 {
-   //h3 not bold
-   margin: 0;
-   font-size: 24px;
-   font-weight: 400;
-   line-height: 32px;
-   letter-spacing: 0px;
-}
+   h4 {
+      //h3 not bold
+      margin: 0;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0px;
+   }
 
-button {
-   text-transform: uppercase;
-   font-size: 14px;
-   font-weight: 700;
-   line-height: 18px;
-   letter-spacing: 3.4000000953674316px;
-   width: 247px;
-   height: 64px;
-   border-radius: 64px;
-   border: none;
-}
+   button {
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 18px;
+      letter-spacing: 3.4000000953674316px;
+      width: 247px;
+      height: 64px;
+      border-radius: 64px;
+      border: none;
+   }
 
-p {
-   margin: 0;
-}
+   p {
+      margin: 0;
+   }
 
-.font-body {
-   font-size: 18px;
-   font-weight: 300;
-   line-height: 26px;
-}
+   .font-body {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 26px;
+   }
 
-.font-subtitle {
-   text-transform: uppercase;
-   font-size: 14px;
-   font-weight: 400;
-   line-height: 18px;
-   letter-spacing: 3.4px;
-}
+   .font-subtitle {
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 3.4px;
+   }
 
-.font-subtitle-bold {
-   text-transform: uppercase;
-   font-size: 14px;
-   font-weight: 700;
-   line-height: 18px;
-   letter-spacing: 1.6px;
-}
+   .font-subtitle-bold {
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 18px;
+      letter-spacing: 1.6px;
+   }
 
-.font-caption {
-   text-transform: uppercase;
-   font-size: 12px;
-   font-weight: 400;
-   line-height: 18px;
-   letter-spacing: 1px;
-}
+   .font-caption {
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 1px;
+   }
 
-.font-caption-alt {
-   font-size: 12px;
-   font-weight: 400;
-   line-height: 14px;
-   letter-spacing: 0px;
+   .font-caption-alt {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14px;
+      letter-spacing: 0px;
+   }
 }
 
 .empty-black-loading-div {
-   background-color: black;
+   background-color: rgb(233, 165, 165);
    width: 100%;
    height: 100vh;
 }
@@ -114,9 +113,54 @@ p {
    transition: transform 5s ease-out, opacity 1s linear;
 }
 
-.main-header {
-   position: absolute;
+.rotating-background {
+   z-index: 2;
+   height: 100vh;
+   width: 100vw;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: fixed;
    top: 0;
+   transition: background-image 500ms linear, opacity 1s linear;
+   .background-color {
+      background-color: white;
+      transition: background-color 500ms linear;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+   }
+   .fade-out-white {
+      background-color: transparent;
+   }
+}
+.rotating-background-disappear {
+   opacity: 0;
+}
+
+.background1 {
+   background-image: url('./img/homepage/optimized/thematic-intro-bg.jpg');
+   mix-blend-mode: hard-light;
+}
+.background2 {
+   background-image: url('./img/homepage/optimized/fintech-bg.jpg');
+   mix-blend-mode: hard-light;
+}
+.background3 {
+   background-image: url('./img/homepage/optimized/retech-bg.jpg');
+   mix-blend-mode: hard-light;
+}
+.background4 {
+   background-image: url('./img/homepage/optimized/extech-bg.jpg');
+   mix-blend-mode: hard-light;
+}
+.background5 {
+   background-image: url('./img/homepage/optimized/lifetech-bg.jpg');
+   mix-blend-mode: hard-light;
+}
+
+.main-header {
+   position: relative;
+   top: -10vh;
    left: 0;
    color: white;
    height: 100vh;
@@ -462,10 +506,25 @@ p {
       height: 500px;
       width: 100%;
    }
+
+   .header-cover {
+      z-index: -1;
+      background-color: transparent;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      transition: background-color 1s linear;
+   }
+   .header-cover-cover {
+      z-index: 1;
+      background-color: white;
+   }
 } // main-header
 
 .burger {
-   z-index: 2;
+   z-index: 10;
    position: fixed;
    right: 5vw;
    top: 7vh;
@@ -502,6 +561,14 @@ p {
    }
 }
 
+.burger-fade {
+   opacity: 0;
+   z-index: 10;
+}
+.burger-color {
+   background-color: $dark-blue;
+}
+
 .burger:hover {
    background-color: white;
    .layers {
@@ -509,7 +576,7 @@ p {
    }
 }
 
-.transform-burger {
+.clicked-burger {
    .layer2 {
       opacity: 0;
    }
@@ -524,82 +591,15 @@ p {
 }
 
 .level2 {
+   margin-top: -20vh;
    position: relative;
    z-index: 3;
-   left: 0;
-   top: 0;
    width: 100%;
-   padding-top: 200px;
    padding-bottom: 200px;
-   transition: opacity 1s ease-out;
-   .rotating-background {
-      height: 100vh;
-      width: 100vw;
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: fixed;
-      top: 0;
-      transition: background-image 500ms linear;
-      .background-color {
-         background-color: white;
-         transition: background-color 500ms linear;
-         position: absolute;
-         width: 100%;
-         height: 100%;
-      }
-      .fade-out-white {
-         background-color: transparent;
-      }
-   }
 
-   .background1 {
-      background-color: transparent;
-      background-image: url('./img/homepage/optimized/thematic-intro-bg.jpg');
-      background-size: cover;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      height: 100vh;
-      mix-blend-mode: hard-light;
-   }
-   .background2 {
-      background-image: url('./img/homepage/optimized/fintech-bg.jpg');
-      background-size: cover;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      height: 100vh;
-      mix-blend-mode: hard-light;
-   }
-   .background3 {
-      background-image: url('./img/homepage/optimized/retech-bg.jpg');
-      background-size: cover;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      height: 100vh;
-      mix-blend-mode: hard-light;
-   }
-   .background4 {
-      background-image: url('./img/homepage/optimized/extech-bg.jpg');
-      background-size: cover;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      height: 100vh;
-      mix-blend-mode: hard-light;
-   }
-   .background5 {
-      background-image: url('./img/homepage/optimized/lifetech-bg.jpg');
-      background-size: cover;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      height: 100vh;
-      mix-blend-mode: hard-light;
-   }
    .svg-container {
       transition: opacity 500ms linear 500ms;
+      opacity: 0;
       position: relative;
       height: 120vh;
       width: 100vw;
@@ -612,6 +612,7 @@ p {
          margin-left: -97px;
       }
       .together-circle-svg {
+         transform: rotate(-15deg) scale(1.3);
          position: absolute;
          width: 512px;
          top: 50%;
@@ -622,9 +623,10 @@ p {
       }
 
       .vert-line {
+         height: 0;
          position: absolute;
          left: 50%;
-         height: 107px;
+         // height: 107px;
          width: 1px;
          background-color: $dark-blue;
          transition: height 1s linear 1s;
@@ -639,7 +641,6 @@ p {
       }
 
       .wings {
-         background-color: white;
          border-top: $dark-blue solid 1px;
          border-bottom: $dark-blue solid 1px;
          position: absolute;
@@ -653,10 +654,12 @@ p {
          transition: transform 1s linear;
       }
       .estd {
+         transform: translateX(-100%);
          right: 50%;
          margin-right: 290px;
       }
       .year-est {
+         transform: translateX(100%);
          left: 50%;
          margin-left: 290px;
       }
@@ -835,30 +838,8 @@ p {
          opacity: 1;
       }
    }
-} // level2
 
-.level2-appear {
-   opacity: 0;
-   .svg-container {
-      opacity: 0;
-      .vert-line {
-         height: 0;
-      }
-      .together-circle-svg {
-         transform: rotate(-15deg) scale(1.3);
-      }
-      .estd {
-         transform: translateX(-100%);
-      }
-      .year-est {
-         transform: translateX(100%);
-      }
-   }
-}
-
-.level2-appear-active {
-   opacity: 1;
-   .svg-container {
+   .svg-container-appear {
       opacity: 1;
       .vert-line {
          height: 107px;
@@ -870,7 +851,7 @@ p {
          transform: translateX(0);
       }
    }
-}
+} // level2
 
 .level3 {
    width: 100%;

@@ -15,7 +15,7 @@ const Hamburger = ({ showMenu, setshowMenu }) => {
    }
 
    return (
-      <div className={`burger ${clickedBurger && 'transform-burger'}`} onClick={burgerClick}>
+      <div className={`burger ${clickedBurger && 'clicked-burger'}`} onClick={burgerClick}>
          <div className='layers layer1'></div>
          <div className='layers layer2'></div>
          <div className='layers layer3'></div>

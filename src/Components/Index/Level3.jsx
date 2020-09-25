@@ -11,6 +11,7 @@ const Level3 = () => {
    })
 
    function handleScroll() {
+      // BOTTOM OF PAGE
       if (
          document.querySelector('.level4').getBoundingClientRect().top <=
          window.innerHeight * (2 / 3)
@@ -78,13 +79,24 @@ const Level3 = () => {
          document
             .querySelector('.investment-container')
             .classList.add('investment-container-appear')
-         // document.querySelector('.rotating-background').classList.remove('background1')
-      } else {
+         document.querySelector('.rotating-background').classList.remove('background1')
+         document.querySelector('.svg-container').classList.remove('svg-container-appear')
+      } else if (
+         document.querySelector('.level2').getBoundingClientRect().top <=
+         window.innerHeight * (2 / 3)
+      ) {
+         document.querySelector('.background-color').classList.remove('fade-out-white')
          document
             .querySelector('.investment-container')
             .classList.remove('investment-container-appear')
+         document.querySelector('.header-cover').classList.add('header-cover-cover')
+         document.querySelector('.svg-container').classList.add('svg-container-appear')
+      } else {
+         document.querySelector('.svg-container').classList.remove('svg-container-appear')
+         document.querySelector('.background-color').classList.add('fade-out-white')
+         document.querySelector('.header-cover').classList.remove('header-cover-cover')
       }
-   }
+   } // TOP OF PAGE
 
    return (
       <section className='level3'>

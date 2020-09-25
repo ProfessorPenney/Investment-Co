@@ -5,21 +5,21 @@ body {
   overflow-x: hidden;
 }
 
-h1 {
+body h1 {
   font-size: 56px;
   font-weight: 700;
   line-height: 72px;
   letter-spacing: -0.5px;
 }
 
-h2 {
+body h2 {
   font-size: 48px;
   font-weight: 700;
   line-height: 64px;
   letter-spacing: -1px;
 }
 
-h3 {
+body h3 {
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 700;
@@ -27,7 +27,7 @@ h3 {
   letter-spacing: 5px;
 }
 
-h4 {
+body h4 {
   margin: 0;
   font-size: 24px;
   font-weight: 400;
@@ -35,7 +35,7 @@ h4 {
   letter-spacing: 0px;
 }
 
-button {
+body button {
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
@@ -47,17 +47,17 @@ button {
   border: none;
 }
 
-p {
+body p {
   margin: 0;
 }
 
-.font-body {
+body .font-body {
   font-size: 18px;
   font-weight: 300;
   line-height: 26px;
 }
 
-.font-subtitle {
+body .font-subtitle {
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 400;
@@ -65,7 +65,7 @@ p {
   letter-spacing: 3.4px;
 }
 
-.font-subtitle-bold {
+body .font-subtitle-bold {
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
@@ -73,7 +73,7 @@ p {
   letter-spacing: 1.6px;
 }
 
-.font-caption {
+body .font-caption {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 400;
@@ -81,7 +81,7 @@ p {
   letter-spacing: 1px;
 }
 
-.font-caption-alt {
+body .font-caption-alt {
   font-size: 12px;
   font-weight: 400;
   line-height: 14px;
@@ -89,7 +89,7 @@ p {
 }
 
 .empty-black-loading-div {
-  background-color: black;
+  background-color: #e9a5a5;
   width: 100%;
   height: 100vh;
 }
@@ -110,9 +110,63 @@ p {
   transition: transform 5s ease-out, opacity 1s linear, -webkit-transform 5s ease-out;
 }
 
-.main-header {
-  position: absolute;
+.rotating-background {
+  z-index: 2;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
   top: 0;
+  -webkit-transition: background-image 500ms linear, opacity 1s linear;
+  transition: background-image 500ms linear, opacity 1s linear;
+}
+
+.rotating-background .background-color {
+  background-color: white;
+  -webkit-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.rotating-background .fade-out-white {
+  background-color: transparent;
+}
+
+.rotating-background-disappear {
+  opacity: 0;
+}
+
+.background1 {
+  background-image: url("./img/homepage/optimized/thematic-intro-bg.jpg");
+  mix-blend-mode: hard-light;
+}
+
+.background2 {
+  background-image: url("./img/homepage/optimized/fintech-bg.jpg");
+  mix-blend-mode: hard-light;
+}
+
+.background3 {
+  background-image: url("./img/homepage/optimized/retech-bg.jpg");
+  mix-blend-mode: hard-light;
+}
+
+.background4 {
+  background-image: url("./img/homepage/optimized/extech-bg.jpg");
+  mix-blend-mode: hard-light;
+}
+
+.background5 {
+  background-image: url("./img/homepage/optimized/lifetech-bg.jpg");
+  mix-blend-mode: hard-light;
+}
+
+.main-header {
+  position: relative;
+  top: -10vh;
   left: 0;
   color: white;
   height: 100vh;
@@ -559,8 +613,25 @@ p {
   width: 100%;
 }
 
+.main-header .header-cover {
+  z-index: -1;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition: background-color 1s linear;
+  transition: background-color 1s linear;
+}
+
+.main-header .header-cover-cover {
+  z-index: 1;
+  background-color: white;
+}
+
 .burger {
-  z-index: 2;
+  z-index: 10;
   position: fixed;
   right: 5vw;
   top: 7vh;
@@ -608,6 +679,15 @@ p {
   transition: transform 100ms linear, width 100ms linear, -webkit-transform 100ms linear;
 }
 
+.burger-fade {
+  opacity: 0;
+  z-index: 10;
+}
+
+.burger-color {
+  background-color: #0b2142;
+}
+
 .burger:hover {
   background-color: white;
 }
@@ -616,112 +696,34 @@ p {
   background-color: #0b2142;
 }
 
-.transform-burger .layer2 {
+.clicked-burger .layer2 {
   opacity: 0;
 }
 
-.transform-burger .layer1 {
+.clicked-burger .layer1 {
   -webkit-transform: rotate(45deg) translateY(-2px) translateX(-1px);
           transform: rotate(45deg) translateY(-2px) translateX(-1px);
   width: 17px;
 }
 
-.transform-burger .layer3 {
+.clicked-burger .layer3 {
   -webkit-transform: rotate(-45deg) translateY(2px) translateX(-1px);
           transform: rotate(-45deg) translateY(2px) translateX(-1px);
   width: 17px;
 }
 
 .level2 {
+  margin-top: -20vh;
   position: relative;
   z-index: 3;
-  left: 0;
-  top: 0;
   width: 100%;
-  padding-top: 200px;
   padding-bottom: 200px;
-  -webkit-transition: opacity 1s ease-out;
-  transition: opacity 1s ease-out;
-}
-
-.level2 .rotating-background {
-  height: 100vh;
-  width: 100vw;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: fixed;
-  top: 0;
-  -webkit-transition: background-image 500ms linear;
-  transition: background-image 500ms linear;
-}
-
-.level2 .rotating-background .background-color {
-  background-color: white;
-  -webkit-transition: background-color 500ms linear;
-  transition: background-color 500ms linear;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.level2 .rotating-background .fade-out-white {
-  background-color: transparent;
-}
-
-.level2 .background1 {
-  background-color: transparent;
-  background-image: url("./img/homepage/optimized/thematic-intro-bg.jpg");
-  background-size: cover;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  mix-blend-mode: hard-light;
-}
-
-.level2 .background2 {
-  background-image: url("./img/homepage/optimized/fintech-bg.jpg");
-  background-size: cover;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  mix-blend-mode: hard-light;
-}
-
-.level2 .background3 {
-  background-image: url("./img/homepage/optimized/retech-bg.jpg");
-  background-size: cover;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  mix-blend-mode: hard-light;
-}
-
-.level2 .background4 {
-  background-image: url("./img/homepage/optimized/extech-bg.jpg");
-  background-size: cover;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  mix-blend-mode: hard-light;
-}
-
-.level2 .background5 {
-  background-image: url("./img/homepage/optimized/lifetech-bg.jpg");
-  background-size: cover;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  mix-blend-mode: hard-light;
 }
 
 .level2 .svg-container {
   -webkit-transition: opacity 500ms linear 500ms;
   transition: opacity 500ms linear 500ms;
+  opacity: 0;
   position: relative;
   height: 120vh;
   width: 100vw;
@@ -737,6 +739,8 @@ p {
 }
 
 .level2 .svg-container .together-circle-svg {
+  -webkit-transform: rotate(-15deg) scale(1.3);
+          transform: rotate(-15deg) scale(1.3);
   position: absolute;
   width: 512px;
   top: 50%;
@@ -750,9 +754,9 @@ p {
 }
 
 .level2 .svg-container .vert-line {
+  height: 0;
   position: absolute;
   left: 50%;
-  height: 107px;
   width: 1px;
   background-color: #0b2142;
   -webkit-transition: height 1s linear 1s;
@@ -770,7 +774,6 @@ p {
 }
 
 .level2 .svg-container .wings {
-  background-color: white;
   border-top: #0b2142 solid 1px;
   border-bottom: #0b2142 solid 1px;
   position: absolute;
@@ -788,11 +791,15 @@ p {
 }
 
 .level2 .svg-container .estd {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
   right: 50%;
   margin-right: 290px;
 }
 
 .level2 .svg-container .year-est {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
   left: 50%;
   margin-left: 290px;
 }
@@ -1021,51 +1028,20 @@ p {
   opacity: 1;
 }
 
-.level2-appear {
-  opacity: 0;
-}
-
-.level2-appear .svg-container {
-  opacity: 0;
-}
-
-.level2-appear .svg-container .vert-line {
-  height: 0;
-}
-
-.level2-appear .svg-container .together-circle-svg {
-  -webkit-transform: rotate(-15deg) scale(1.3);
-          transform: rotate(-15deg) scale(1.3);
-}
-
-.level2-appear .svg-container .estd {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-}
-
-.level2-appear .svg-container .year-est {
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-}
-
-.level2-appear-active {
+.level2 .svg-container-appear {
   opacity: 1;
 }
 
-.level2-appear-active .svg-container {
-  opacity: 1;
-}
-
-.level2-appear-active .svg-container .vert-line {
+.level2 .svg-container-appear .vert-line {
   height: 107px;
 }
 
-.level2-appear-active .svg-container .together-circle-svg {
+.level2 .svg-container-appear .together-circle-svg {
   -webkit-transform: rotate(0deg) scale(1);
           transform: rotate(0deg) scale(1);
 }
 
-.level2-appear-active .svg-container .wings {
+.level2 .svg-container-appear .wings {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
