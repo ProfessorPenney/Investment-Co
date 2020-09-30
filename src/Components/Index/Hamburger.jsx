@@ -2,14 +2,7 @@ import React from 'react'
 
 const Hamburger = ({ showMenu, setshowMenu }) => {
    function burgerClick() {
-      console.log('yup')
-      if (showMenu) {
-         setshowMenu(false)
-         document.querySelector('.burger').classList.remove('clicked-burger')
-      } else {
-         setshowMenu(true)
-         document.querySelector('.burger').classList.add('clicked-burger')
-      }
+      setshowMenu(!showMenu)
    }
 
    return (

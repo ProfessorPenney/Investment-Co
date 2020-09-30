@@ -1,109 +1,10 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import FintechSVG from './SVGs/FintechSVG'
 import RetechSVG from './SVGs/RetechSVG'
 import ExtechSVG from './SVGs/ExtechSVG'
 import LifetechSVG from './SVGs/LifetechSVG'
 
 const Level3 = () => {
-   useEffect(() => {
-      window.addEventListener('scroll', handleScroll)
-      return () => window.removeEventListener('scroll', handleScroll)
-   })
-
-   function handleScroll() {
-      // BOTTOM OF PAGE
-      if (
-         document.querySelector('.level4').getBoundingClientRect().top <=
-         window.innerHeight * (2 / 3)
-      ) {
-         document.querySelector('.background-color').classList.remove('fade-out-white')
-         document.querySelector('.menu4').classList.remove('menu-item-shaded')
-         document.querySelector('.level4').classList.add('level4-appear')
-         document.querySelector('.sticky-menu').classList.remove('menu-appear')
-         document.querySelector('.burger').classList.add('burger-blue')
-      } else if (
-         document.querySelector('.section5').getBoundingClientRect().top <=
-         window.innerHeight * (2 / 3)
-      ) {
-         document.querySelector('.background-color').classList.add('fade-out-white')
-         document.querySelector('.rotating-background').classList.add('background5')
-         document.querySelector('.menu4').classList.add('menu-item-shaded')
-         document.querySelector('.menu3').classList.remove('menu-item-shaded')
-         document.querySelector('.sticky-menu').classList.add('menu-appear')
-         document.querySelector('.level4').classList.remove('level4-appear')
-         document.querySelector('.burger').classList.remove('burger-blue')
-      } else if (
-         document.querySelector('.section4').getBoundingClientRect().top <=
-         window.innerHeight * (2 / 3)
-      ) {
-         document.querySelector('.rotating-background').classList.add('background4')
-         document.querySelector('.rotating-background').classList.remove('background5')
-         document.querySelector('.menu3').classList.add('menu-item-shaded')
-         document.querySelector('.menu4').classList.remove('menu-item-shaded')
-         document.querySelector('.menu2').classList.remove('menu-item-shaded')
-      } else if (
-         document.querySelector('.section3').getBoundingClientRect().top <=
-         window.innerHeight * (2 / 3)
-      ) {
-         document.querySelector('.rotating-background').classList.add('background3')
-         document.querySelector('.rotating-background').classList.remove('background4')
-         document.querySelector('.menu2').classList.add('menu-item-shaded')
-         document.querySelector('.menu3').classList.remove('menu-item-shaded')
-         document.querySelector('.menu1').classList.remove('menu-item-shaded')
-      } else if (
-         document.querySelector('.section2').getBoundingClientRect().top <=
-         window.innerHeight * (2 / 3)
-      ) {
-         document.querySelector('.rotating-background').classList.add('background2')
-         document.querySelector('.rotating-background').classList.remove('background3')
-         document.querySelector('.menu1').classList.add('menu-item-shaded')
-         document.querySelector('.menu2').classList.remove('menu-item-shaded')
-         document.querySelectorAll('.tech').forEach(node => node.classList.remove('font-green'))
-      } else if (
-         document.querySelector('.section1').getBoundingClientRect().top <=
-         window.innerHeight * (2 / 3)
-      ) {
-         document.querySelector('.rotating-background').classList.add('background1')
-         document.querySelector('.background-color').classList.add('fade-out-white')
-         document.querySelector('.rotating-background').classList.remove('background2')
-         document.querySelector('.sticky-menu').classList.add('menu-appear')
-         document.querySelector('.menu1').classList.remove('menu-item-shaded')
-         document.querySelectorAll('.tech').forEach(node => node.classList.add('font-green'))
-         document
-            .querySelector('.investment-container')
-            .classList.remove('investment-container-appear')
-         document.querySelector('.burger').classList.remove('burger-blue')
-      } else if (
-         document.querySelector('.investment-container').getBoundingClientRect().top <=
-         window.innerHeight * (2 / 3)
-      ) {
-         document.querySelector('.background-color').classList.remove('fade-out-white')
-         document.querySelector('.sticky-menu').classList.remove('menu-appear')
-         document
-            .querySelector('.investment-container')
-            .classList.add('investment-container-appear')
-         document.querySelector('.rotating-background').classList.remove('background1')
-         document.querySelector('.svg-container').classList.remove('svg-container-appear')
-         document.querySelector('.burger').classList.add('burger-blue')
-      } else if (
-         document.querySelector('.level2').getBoundingClientRect().top <=
-         window.innerHeight * (2 / 3)
-      ) {
-         document.querySelector('.burger').classList.add('burger-blue')
-         document.querySelector('.background-color').classList.remove('fade-out-white')
-         document
-            .querySelector('.investment-container')
-            .classList.remove('investment-container-appear')
-         document.querySelector('.header-cover').classList.add('header-cover-cover')
-         document.querySelector('.svg-container').classList.add('svg-container-appear')
-      } else {
-         document.querySelector('.burger').classList.remove('burger-blue')
-         document.querySelector('.svg-container').classList.remove('svg-container-appear')
-         document.querySelector('.background-color').classList.add('fade-out-white')
-         document.querySelector('.header-cover').classList.remove('header-cover-cover')
-      }
-   } // TOP OF PAGE
-
    return (
       <section className='level3'>
          <menu className='sticky-menu'>
@@ -138,15 +39,16 @@ const Level3 = () => {
                </div>
             </div>
          </menu>
-         <div className='section1 section'></div>
-         <div className='content content1'>
-            <h2>Growth equity is an operators game.</h2>
-            <p className='font-body'>
-               Our experience, expertise and history of outperformance are why founders pursue deep
-               partnerships with WestCap. We were entrepreneurs first, and we continue to
-               collaborate with world class leadership teams to create value and realize
-               opportunities across the very industries we helped shape.
-            </p>
+         <div className='section1 section'>
+            <div className='content content1'>
+               <h2>Growth equity is an operators game.</h2>
+               <p className='font-body'>
+                  Our experience, expertise and history of outperformance are why founders pursue
+                  deep partnerships with WestCap. We were entrepreneurs first, and we continue to
+                  collaborate with world class leadership teams to create value and realize
+                  opportunities across the very industries we helped shape.
+               </p>
+            </div>
          </div>
          <div className='section2'>
             <div className='content'>

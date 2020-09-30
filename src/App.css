@@ -88,90 +88,70 @@ body .font-caption-alt {
   letter-spacing: 0px;
 }
 
-.empty-black-loading-div {
-  background-color: #e9a5a5;
-  width: 100%;
-  height: 100vh;
-}
-
-.hero-background-appear {
-  -webkit-transform: scale(1.3) rotate(5deg);
-          transform: scale(1.3) rotate(5deg);
+.background-color {
   opacity: 0;
-}
-
-.hero-background-appear-active {
-  -webkit-transform: scale(1) rotate(0deg);
-          transform: scale(1) rotate(0deg);
-  opacity: 1;
-  -webkit-transition: opacity 1s linear, -webkit-transform 5s ease-out;
-  transition: opacity 1s linear, -webkit-transform 5s ease-out;
-  transition: transform 5s ease-out, opacity 1s linear;
-  transition: transform 5s ease-out, opacity 1s linear, -webkit-transform 5s ease-out;
-}
-
-.rotating-background {
-  z-index: 2;
-  height: 100vh;
-  width: 100vw;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: fixed;
-  top: 0;
-  -webkit-transition: background-image 500ms linear, opacity 1s linear;
-  transition: background-image 500ms linear, opacity 1s linear;
-}
-
-.rotating-background .background-color {
-  opacity: 1;
   background-color: white;
   -webkit-transition: opacity 500ms linear;
   transition: opacity 500ms linear;
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition: background-color 1s linear, opacity 1s linear;
+  transition: background-color 1s linear, opacity 1s linear;
 }
 
-.rotating-background .fade-out-white {
-  opacity: 0;
+.background-blue {
+  background-color: #0b2142;
 }
 
-.rotating-background-disappear {
+.background-color-appear {
+  opacity: 1;
+}
+
+.bg {
+  position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   opacity: 0;
+  -webkit-transition: opacity 500ms linear;
+  transition: opacity 500ms linear;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  mix-blend-mode: hard-light;
 }
 
 .background1 {
   background-image: url("./img/homepage/optimized/thematic-intro-bg.jpg");
-  mix-blend-mode: hard-light;
 }
 
 .background2 {
   background-image: url("./img/homepage/optimized/fintech-bg.jpg");
-  mix-blend-mode: hard-light;
 }
 
 .background3 {
   background-image: url("./img/homepage/optimized/retech-bg.jpg");
-  mix-blend-mode: hard-light;
 }
 
 .background4 {
   background-image: url("./img/homepage/optimized/extech-bg.jpg");
-  mix-blend-mode: hard-light;
 }
 
 .background5 {
   background-image: url("./img/homepage/optimized/lifetech-bg.jpg");
-  mix-blend-mode: hard-light;
+}
+
+.background-appear {
+  opacity: 1;
 }
 
 .main-header {
-  position: relative;
-  top: -10vh;
-  left: 0;
   color: white;
   height: 100vh;
   width: 100vw;
+  -webkit-transition: opacity 500ms linear;
+  transition: opacity 500ms linear;
 }
 
 .main-header .hero-background {
@@ -179,6 +159,13 @@ body .font-caption-alt {
   position: fixed;
   height: 100%;
   width: 100%;
+  -webkit-transform: scale(1.3) rotate(5deg);
+          transform: scale(1.3) rotate(5deg);
+  opacity: 0;
+  -webkit-transition: opacity 1s linear, -webkit-transform 5s ease-out;
+  transition: opacity 1s linear, -webkit-transform 5s ease-out;
+  transition: transform 5s ease-out, opacity 1s linear;
+  transition: transform 5s ease-out, opacity 1s linear, -webkit-transform 5s ease-out;
 }
 
 .main-header .hero-background img {
@@ -187,11 +174,18 @@ body .font-caption-alt {
 }
 
 .main-header .main-logo {
-  position: relative;
+  position: absolute;
   top: 35%;
   width: 100%;
   text-align: center;
   font-size: 100px;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  opacity: 0;
+  -webkit-transition: opacity 1s linear, -webkit-transform 2s linear;
+  transition: opacity 1s linear, -webkit-transform 2s linear;
+  transition: transform 2s linear, opacity 1s linear;
+  transition: transform 2s linear, opacity 1s linear, -webkit-transform 2s linear;
 }
 
 .main-header .contact-us {
@@ -199,6 +193,9 @@ body .font-caption-alt {
   position: absolute;
   left: 5.5%;
   top: 7%;
+  opacity: 0;
+  -webkit-transition: opacity 1s linear 2s;
+  transition: opacity 1s linear 2s;
 }
 
 .main-header .investor-login {
@@ -207,6 +204,9 @@ body .font-caption-alt {
   position: absolute;
   right: 10vw;
   top: 7vh;
+  opacity: 0;
+  -webkit-transition: opacity 1s linear 2s;
+  transition: opacity 1s linear 2s;
 }
 
 .main-header h4.hero-subtitle {
@@ -216,37 +216,14 @@ body .font-caption-alt {
   top: 70vh;
   left: 50vw;
   margin-left: -390px;
+  opacity: 0;
+  -webkit-transition: opacity 1s linear 2s;
+  transition: opacity 1s linear 2s;
 }
 
 .main-header h4.hero-subtitle em {
   font-style: normal;
   color: #09b5ca;
-}
-
-.main-header .hero-logo-appear {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  opacity: 0;
-}
-
-.main-header .hero-logo-appear-active {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  opacity: 1;
-  -webkit-transition: opacity 1s linear, -webkit-transform 2s linear;
-  transition: opacity 1s linear, -webkit-transform 2s linear;
-  transition: transform 2s linear, opacity 1s linear;
-  transition: transform 2s linear, opacity 1s linear, -webkit-transform 2s linear;
-}
-
-.main-header .hero-tidbits-appear {
-  opacity: 0;
-}
-
-.main-header .hero-tidbits-appear-active {
-  opacity: 1;
-  -webkit-transition: opacity 1s linear 2s;
-  transition: opacity 1s linear 2s;
 }
 
 .main-header .coordinates {
@@ -259,6 +236,9 @@ body .font-caption-alt {
   position: fixed;
   left: 5.5%;
   bottom: 5%;
+  opacity: 0;
+  -webkit-transition: opacity 1s linear 2s;
+  transition: opacity 1s linear 2s;
 }
 
 .main-header .compass-svg {
@@ -276,355 +256,84 @@ body .font-caption-alt {
   fill: #09b3ca67;
 }
 
-.main-header .line1 {
+.main-header .line {
   position: fixed;
-  left: 5%;
-  width: 1px;
-  bottom: 0;
-  height: 100%;
+  width: 0.5px;
   background-color: rgba(255, 255, 255, 0.1);
   -webkit-transition: height 1s linear 1s;
   transition: height 1s linear 1s;
+  height: 0;
+}
+
+.main-header .line1 {
+  left: 5vw;
+  bottom: 0;
 }
 
 .main-header .line2 {
-  position: fixed;
-  left: 27.5%;
+  left: 27.5vw;
   top: 0;
-  height: 100%;
-  width: 1px;
-  background-color: rgba(255, 255, 255, 0.1);
-  -webkit-transition: height 1s linear 1s;
-  transition: height 1s linear 1s;
 }
 
 .main-header .line3 {
-  position: fixed;
-  left: 50%;
+  left: 50vw;
   bottom: 0;
-  height: 100%;
-  width: 1px;
-  background-color: rgba(255, 255, 255, 0.1);
-  -webkit-transition: height 1s linear 1s;
-  transition: height 1s linear 1s;
 }
 
 .main-header .line4 {
-  position: fixed;
-  right: 27.5%;
+  right: 27.5vw;
   top: 0;
-  height: 100%;
-  width: 1px;
-  background-color: rgba(255, 255, 255, 0.1);
-  -webkit-transition: height 1s linear 1s;
-  transition: height 1s linear 1s;
 }
 
 .main-header .line5 {
-  position: fixed;
-  right: 5%;
+  right: 5vw;
   bottom: 0;
-  height: 100%;
-  width: 1px;
-  background-color: rgba(255, 255, 255, 0.1);
-  -webkit-transition: height 1s linear 1s;
-  transition: height 1s linear 1s;
 }
 
-.main-header div.line-up-appear {
-  height: 0;
+.app-appear .burger {
+  opacity: 1;
 }
 
-.main-header div.line-up-appear-active {
-  height: 100%;
+.app-appear .main-header .hero-background {
+  -webkit-transform: scale(1) rotate(0deg);
+          transform: scale(1) rotate(0deg);
+  opacity: 1;
 }
 
-.main-header div.line-down-appear {
-  height: 0;
+.app-appear .main-header .main-logo {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
 }
 
-.main-header div.line-down-appear-active {
-  height: 100%;
+.app-appear .main-header .contact-us {
+  opacity: 1;
 }
 
-.main-header .hero-menu-wrapper {
-  background-color: linear-gradient(197.36deg, #0a2040 33.42%, #00b7cc 93.86%);
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 9;
-  height: 100vh;
-  width: 100vw;
+.app-appear .main-header .investor-login {
+  opacity: 1;
 }
 
-.main-header .hero-menu-wrapper .hero-menu-background {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #0b2142;
-  -webkit-transition: height 300ms linear, opacity 400ms ease-in;
-  transition: height 300ms linear, opacity 400ms ease-in;
+.app-appear .main-header .hero-subtitle {
+  opacity: 1;
 }
 
-.main-header .hero-menu-wrapper .hero-menu-flexbox {
-  position: relative;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.app-appear .main-header .coordinates {
+  opacity: 1;
 }
 
-.main-header .hero-menu-wrapper .hero-menu-flexbox .left-hero-menu {
-  width: 50%;
-  height: 100%;
-  border-right: 1px solid rgba(255, 255, 255, 0.15);
-  -webkit-transition: height 300ms linear;
-  transition: height 300ms linear;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-flexbox .left-hero-menu h4 {
-  position: absolute;
-  left: 2.5%;
-  top: 5%;
-  font-size: 60px;
-  -webkit-transition: opacity 300ms ease-in 100ms;
-  transition: opacity 300ms ease-in 100ms;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-flexbox .left-hero-menu .address-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 350px;
-  position: absolute;
-  bottom: 5%;
-  left: 2.5%;
-  -webkit-transition: opacity 300ms ease-in 200ms;
-  transition: opacity 300ms ease-in 200ms;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-flexbox .left-hero-menu .address-flex address {
-  font-style: normal;
-  color: rgba(255, 255, 255, 0.4);
-  font-family: 'Roboto Mono', monospace;
-  font-size: 10px;
-  font-weight: 300;
-  line-height: 12px;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-flexbox .hero-menu-center-line-appear {
-  height: 0;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-flexbox .hero-menu-center-line-appear-active {
+.app-appear .main-header .line {
   height: 100%;
 }
 
-.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu {
-  width: 49%;
-  padding: 0;
-  margin: 0;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul {
-  margin: 0 auto 0 15%;
-  width: 90%;
-  padding-top: 17%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  list-style-type: none;
-  text-transform: uppercase;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul li {
-  padding: 3.5vh 0;
-  font-weight: bold;
-  font-size: 24px;
-  letter-spacing: 0.24em;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul li .wc-arrow-svg {
+.main-header-disappear {
   opacity: 0;
-  width: 15px;
-  position: relative;
-  top: -8px;
-  left: -10px;
-  -webkit-transition: all 200ms linear;
-  transition: all 200ms linear;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul li:hover {
-  color: #f7941d;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul li:hover .wc-arrow-svg {
-  opacity: 1;
-  top: -14px;
-  left: -2px;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .borders {
-  background-color: rgba(255, 255, 255, 0.15);
-  height: 1px;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .border1 {
-  -webkit-transition: -webkit-transform 300ms linear 200ms;
-  transition: -webkit-transform 300ms linear 200ms;
-  transition: transform 300ms linear 200ms;
-  transition: transform 300ms linear 200ms, -webkit-transform 300ms linear 200ms;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .border2 {
-  -webkit-transition: -webkit-transform 300ms linear 240ms;
-  transition: -webkit-transform 300ms linear 240ms;
-  transition: transform 300ms linear 240ms;
-  transition: transform 300ms linear 240ms, -webkit-transform 300ms linear 240ms;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .border3 {
-  -webkit-transition: -webkit-transform 300ms linear 280ms;
-  transition: -webkit-transform 300ms linear 280ms;
-  transition: transform 300ms linear 280ms;
-  transition: transform 300ms linear 280ms, -webkit-transform 300ms linear 280ms;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .border4 {
-  -webkit-transition: -webkit-transform 300ms linear 320ms;
-  transition: -webkit-transform 300ms linear 320ms;
-  transition: transform 300ms linear 320ms;
-  transition: transform 300ms linear 320ms, -webkit-transform 300ms linear 320ms;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .border5 {
-  -webkit-transition: -webkit-transform 300ms linear 360ms;
-  transition: -webkit-transform 300ms linear 360ms;
-  transition: transform 300ms linear 360ms;
-  transition: transform 300ms linear 360ms, -webkit-transform 300ms linear 360ms;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .hero-menu-border-appear {
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-}
-
-.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .hero-menu-border-appear-active {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-
-.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .item1 {
-  -webkit-transition: opacity 300ms linear 60ms, -webkit-transform 300ms linear 60ms;
-  transition: opacity 300ms linear 60ms, -webkit-transform 300ms linear 60ms;
-  transition: opacity 300ms linear 60ms, transform 300ms linear 60ms;
-  transition: opacity 300ms linear 60ms, transform 300ms linear 60ms, -webkit-transform 300ms linear 60ms;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .item2 {
-  -webkit-transition: opacity 300ms linear 100ms, -webkit-transform 300ms linear 100ms;
-  transition: opacity 300ms linear 100ms, -webkit-transform 300ms linear 100ms;
-  transition: opacity 300ms linear 100ms, transform 300ms linear 100ms;
-  transition: opacity 300ms linear 100ms, transform 300ms linear 100ms, -webkit-transform 300ms linear 100ms;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .item3 {
-  -webkit-transition: opacity 300ms linear 140ms, -webkit-transform 300ms linear 140ms;
-  transition: opacity 300ms linear 140ms, -webkit-transform 300ms linear 140ms;
-  transition: opacity 300ms linear 140ms, transform 300ms linear 140ms;
-  transition: opacity 300ms linear 140ms, transform 300ms linear 140ms, -webkit-transform 300ms linear 140ms;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .item4 {
-  -webkit-transition: opacity 300ms linear 180ms, -webkit-transform 300ms linear 180ms;
-  transition: opacity 300ms linear 180ms, -webkit-transform 300ms linear 180ms;
-  transition: opacity 300ms linear 180ms, transform 300ms linear 180ms;
-  transition: opacity 300ms linear 180ms, transform 300ms linear 180ms, -webkit-transform 300ms linear 180ms;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .item5 {
-  color: #09b5ca;
-  -webkit-transition: opacity 300ms linear 220ms, -webkit-transform 300ms linear 220ms;
-  transition: opacity 300ms linear 220ms, -webkit-transform 300ms linear 220ms;
-  transition: opacity 300ms linear 220ms, transform 300ms linear 220ms;
-  transition: opacity 300ms linear 220ms, transform 300ms linear 220ms, -webkit-transform 300ms linear 220ms;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .item6 {
-  -webkit-transition: opacity 300ms linear 260ms, -webkit-transform 300ms linear 260ms;
-  transition: opacity 300ms linear 260ms, -webkit-transform 300ms linear 260ms;
-  transition: opacity 300ms linear 260ms, transform 300ms linear 260ms;
-  transition: opacity 300ms linear 260ms, transform 300ms linear 260ms, -webkit-transform 300ms linear 260ms;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .hero-menu-list-appear {
-  opacity: 0;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
-}
-
-.main-header .hero-menu-wrapper .hero-menu-flexbox .right-hero-menu ul .hero-menu-list-appear-active {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
-.main-header .hero-menu-wrapper .hero-menu-background-appear {
-  height: 0;
-  opacity: 0.2;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-background-appear-active {
-  height: 100vh;
-  opacity: 1;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-logo-appear {
-  opacity: 0;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-logo-appear-active {
-  opacity: 1;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-address-appear {
-  opacity: 0;
-}
-
-.main-header .hero-menu-wrapper .hero-menu-address-appear-active {
-  opacity: 1;
-}
-
-.main-header .header-cover {
-  z-index: -1;
-  background-color: transparent;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  -webkit-transition: background-color 1s linear;
-  transition: background-color 1s linear;
-}
-
-.main-header .header-cover-cover {
-  z-index: 1;
-  background-color: white;
 }
 
 .burger {
+  opacity: 0;
+  -webkit-transition: opacity 1s linear 2s;
+  transition: opacity 1s linear 2s;
   z-index: 10;
   position: fixed;
   right: 5vw;
@@ -731,10 +440,306 @@ body .font-caption-alt {
   background-color: #0b2142;
 }
 
+.burger-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  opacity: 0;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+}
+
+.burger-menu .background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #0b2142;
+  height: 0;
+  opacity: 0.2;
+}
+
+.burger-menu .menu-flexbox {
+  position: relative;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.burger-menu .menu-flexbox .left-menu {
+  width: 50%;
+  height: 100%;
+  border-right: 0.5px solid rgba(255, 255, 255, 0.15);
+  -webkit-transition: height 300ms linear;
+  transition: height 300ms linear;
+  height: 0;
+}
+
+.burger-menu .menu-flexbox .left-menu h4 {
+  position: absolute;
+  left: 2.5%;
+  top: 5%;
+  font-size: 60px;
+  opacity: 0;
+}
+
+.burger-menu .menu-flexbox .left-menu .address-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 350px;
+  position: absolute;
+  bottom: 5%;
+  left: 2.5%;
+  opacity: 0;
+}
+
+.burger-menu .menu-flexbox .left-menu .address-flex address {
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 12px;
+}
+
+.burger-menu .menu-flexbox .right-menu {
+  width: 49%;
+  padding: 0;
+  margin: 0;
+}
+
+.burger-menu .menu-flexbox .right-menu ul {
+  margin: 0 auto 0 15%;
+  width: 90%;
+  padding-top: 17%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style-type: none;
+  text-transform: uppercase;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.burger-menu .menu-flexbox .right-menu ul li {
+  padding: 3.5vh 0;
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: 0.24em;
+}
+
+.burger-menu .menu-flexbox .right-menu ul li .wc-arrow-svg {
+  opacity: 0;
+  width: 15px;
+  position: relative;
+  top: -8px;
+  left: -10px;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+.burger-menu .menu-flexbox .right-menu ul li:hover {
+  color: #f7941d;
+}
+
+.burger-menu .menu-flexbox .right-menu ul li:hover .wc-arrow-svg {
+  opacity: 1;
+  top: -14px;
+  left: -2px;
+}
+
+.burger-menu .menu-flexbox .right-menu ul .borders {
+  background-color: rgba(255, 255, 255, 0.15);
+  height: 0.5px;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.burger-menu .menu-flexbox .right-menu ul .items {
+  opacity: 0;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+.burger-menu .menu-flexbox .right-menu ul .item5 {
+  color: #09b5ca;
+}
+
+.burger-menu-appear {
+  z-index: 9;
+  opacity: 1;
+}
+
+.burger-menu-appear .background {
+  -webkit-transition: height 300ms linear, opacity 400ms ease-in;
+  transition: height 300ms linear, opacity 400ms ease-in;
+  height: 100vh;
+  opacity: 1;
+}
+
+.burger-menu-appear .menu-flexbox .left-menu {
+  height: 100%;
+}
+
+.burger-menu-appear .menu-flexbox .left-menu h4 {
+  opacity: 1;
+  -webkit-transition: opacity 300ms ease-in 100ms;
+  transition: opacity 300ms ease-in 100ms;
+}
+
+.burger-menu-appear .menu-flexbox .left-menu .address-flex {
+  -webkit-transition: opacity 300ms ease-in 200ms;
+  transition: opacity 300ms ease-in 200ms;
+  opacity: 1;
+}
+
+.burger-menu-appear .menu-flexbox .right-menu ul .border1 {
+  -webkit-transition: -webkit-transform 300ms linear 200ms;
+  transition: -webkit-transform 300ms linear 200ms;
+  transition: transform 300ms linear 200ms;
+  transition: transform 300ms linear 200ms, -webkit-transform 300ms linear 200ms;
+}
+
+.burger-menu-appear .menu-flexbox .right-menu ul .border2 {
+  -webkit-transition: -webkit-transform 300ms linear 240ms;
+  transition: -webkit-transform 300ms linear 240ms;
+  transition: transform 300ms linear 240ms;
+  transition: transform 300ms linear 240ms, -webkit-transform 300ms linear 240ms;
+}
+
+.burger-menu-appear .menu-flexbox .right-menu ul .border3 {
+  -webkit-transition: -webkit-transform 300ms linear 280ms;
+  transition: -webkit-transform 300ms linear 280ms;
+  transition: transform 300ms linear 280ms;
+  transition: transform 300ms linear 280ms, -webkit-transform 300ms linear 280ms;
+}
+
+.burger-menu-appear .menu-flexbox .right-menu ul .border4 {
+  -webkit-transition: -webkit-transform 300ms linear 320ms;
+  transition: -webkit-transform 300ms linear 320ms;
+  transition: transform 300ms linear 320ms;
+  transition: transform 300ms linear 320ms, -webkit-transform 300ms linear 320ms;
+}
+
+.burger-menu-appear .menu-flexbox .right-menu ul .border5 {
+  -webkit-transition: -webkit-transform 300ms linear 360ms;
+  transition: -webkit-transform 300ms linear 360ms;
+  transition: transform 300ms linear 360ms;
+  transition: transform 300ms linear 360ms, -webkit-transform 300ms linear 360ms;
+}
+
+.burger-menu-appear .menu-flexbox .right-menu ul .borders {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.burger-menu-appear .menu-flexbox .right-menu ul .item1 {
+  -webkit-transition: opacity 300ms linear 60ms, -webkit-transform 300ms linear 60ms;
+  transition: opacity 300ms linear 60ms, -webkit-transform 300ms linear 60ms;
+  transition: opacity 300ms linear 60ms, transform 300ms linear 60ms;
+  transition: opacity 300ms linear 60ms, transform 300ms linear 60ms, -webkit-transform 300ms linear 60ms;
+}
+
+.burger-menu-appear .menu-flexbox .right-menu ul .item2 {
+  -webkit-transition: opacity 300ms linear 100ms, -webkit-transform 300ms linear 100ms;
+  transition: opacity 300ms linear 100ms, -webkit-transform 300ms linear 100ms;
+  transition: opacity 300ms linear 100ms, transform 300ms linear 100ms;
+  transition: opacity 300ms linear 100ms, transform 300ms linear 100ms, -webkit-transform 300ms linear 100ms;
+}
+
+.burger-menu-appear .menu-flexbox .right-menu ul .item3 {
+  -webkit-transition: opacity 300ms linear 140ms, -webkit-transform 300ms linear 140ms;
+  transition: opacity 300ms linear 140ms, -webkit-transform 300ms linear 140ms;
+  transition: opacity 300ms linear 140ms, transform 300ms linear 140ms;
+  transition: opacity 300ms linear 140ms, transform 300ms linear 140ms, -webkit-transform 300ms linear 140ms;
+}
+
+.burger-menu-appear .menu-flexbox .right-menu ul .item4 {
+  -webkit-transition: opacity 300ms linear 180ms, -webkit-transform 300ms linear 180ms;
+  transition: opacity 300ms linear 180ms, -webkit-transform 300ms linear 180ms;
+  transition: opacity 300ms linear 180ms, transform 300ms linear 180ms;
+  transition: opacity 300ms linear 180ms, transform 300ms linear 180ms, -webkit-transform 300ms linear 180ms;
+}
+
+.burger-menu-appear .menu-flexbox .right-menu ul .item5 {
+  -webkit-transition: opacity 300ms linear 220ms, -webkit-transform 300ms linear 220ms;
+  transition: opacity 300ms linear 220ms, -webkit-transform 300ms linear 220ms;
+  transition: opacity 300ms linear 220ms, transform 300ms linear 220ms;
+  transition: opacity 300ms linear 220ms, transform 300ms linear 220ms, -webkit-transform 300ms linear 220ms;
+}
+
+.burger-menu-appear .menu-flexbox .right-menu ul .item6 {
+  -webkit-transition: opacity 300ms linear 260ms, -webkit-transform 300ms linear 260ms;
+  transition: opacity 300ms linear 260ms, -webkit-transform 300ms linear 260ms;
+  transition: opacity 300ms linear 260ms, transform 300ms linear 260ms;
+  transition: opacity 300ms linear 260ms, transform 300ms linear 260ms, -webkit-transform 300ms linear 260ms;
+}
+
+.burger-menu-appear .menu-flexbox .right-menu ul .items {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.burger-menu-disappear {
+  -webkit-transition: opacity 300ms linear;
+  transition: opacity 300ms linear;
+  opacity: 0;
+  z-index: 9;
+}
+
+.burger-menu-disappear .background {
+  height: 100vh;
+  -webkit-transition: opacity 300ms linear;
+  transition: opacity 300ms linear;
+}
+
+.burger-menu-disappear .menu-flexbox .left-menu {
+  height: 100%;
+}
+
+.burger-menu-disappear .menu-flexbox .left-menu h4 {
+  -webkit-transition: opacity 300ms linear;
+  transition: opacity 300ms linear;
+}
+
+.burger-menu-disappear .menu-flexbox .left-menu .address-flex {
+  -webkit-transition: opacity 300ms linear;
+  transition: opacity 300ms linear;
+}
+
+.burger-menu-disappear .menu-flexbox .right-menu ul .borders {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 300ms linear;
+  transition: -webkit-transform 300ms linear;
+  transition: transform 300ms linear;
+  transition: transform 300ms linear, -webkit-transform 300ms linear;
+}
+
+.burger-menu-disappear .menu-flexbox .right-menu ul .items {
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  -webkit-transition: opacity 300ms linear, -webkit-transform 300ms linear;
+  transition: opacity 300ms linear, -webkit-transform 300ms linear;
+  transition: transform 300ms linear, opacity 300ms linear;
+  transition: transform 300ms linear, opacity 300ms linear, -webkit-transform 300ms linear;
+}
+
 .level2 {
   margin-top: -20vh;
-  position: relative;
-  z-index: 3;
   width: 100%;
   padding-bottom: 200px;
 }
@@ -823,19 +828,30 @@ body .font-caption-alt {
   margin-left: 290px;
 }
 
-.level2 .meet-team-caption {
+.level2 .caption-20years {
+  opacity: 0;
+  -webkit-transition: opacity 500ms linear;
+  transition: opacity 500ms linear;
   position: relative;
-  padding-top: 20px;
   text-align: center;
+  padding-top: 20px;
   width: 708px;
+  margin-left: -354px;
+  left: 50%;
+}
+
+.level2 .caption-20years .meet-team-caption {
   margin: auto;
 }
 
-.level2 .meet-team-button {
-  position: relative;
+.level2 .caption-20years .meet-team-button {
   display: block;
   background-color: #09b5ca;
   margin: 40px auto 0 auto;
+}
+
+.level2 .caption-20years-appear {
+  opacity: 1;
 }
 
 .level2 .investment-container {
@@ -1067,11 +1083,10 @@ body .font-caption-alt {
 
 .level3 {
   width: 100%;
-  position: relative;
-  z-index: 4;
 }
 
 .level3 .content {
+  position: relative;
   display: inline-block;
   color: white;
   height: 70vh;
@@ -1250,10 +1265,10 @@ body .font-caption-alt {
 }
 
 .level3 .menu-appear .menu-flexbox .menu1 {
-  -webkit-transition: opacity 50ms linear 350ms, -webkit-transform 50ms linear 350ms;
-  transition: opacity 50ms linear 350ms, -webkit-transform 50ms linear 350ms;
-  transition: transform 50ms linear 350ms, opacity 50ms linear 350ms;
-  transition: transform 50ms linear 350ms, opacity 50ms linear 350ms, -webkit-transform 50ms linear 350ms;
+  -webkit-transition: opacity 50ms linear 350ms, background-color 500ms linear, -webkit-transform 50ms linear 350ms;
+  transition: opacity 50ms linear 350ms, background-color 500ms linear, -webkit-transform 50ms linear 350ms;
+  transition: transform 50ms linear 350ms, opacity 50ms linear 350ms, background-color 500ms linear;
+  transition: transform 50ms linear 350ms, opacity 50ms linear 350ms, background-color 500ms linear, -webkit-transform 50ms linear 350ms;
   opacity: 1;
   -webkit-transform: translateX(0);
           transform: translateX(0);
@@ -1269,10 +1284,10 @@ body .font-caption-alt {
 }
 
 .level3 .menu-appear .menu-flexbox .menu2 {
-  -webkit-transition: opacity 50ms linear 600ms, -webkit-transform 50ms linear 600ms;
-  transition: opacity 50ms linear 600ms, -webkit-transform 50ms linear 600ms;
-  transition: transform 50ms linear 600ms, opacity 50ms linear 600ms;
-  transition: transform 50ms linear 600ms, opacity 50ms linear 600ms, -webkit-transform 50ms linear 600ms;
+  -webkit-transition: opacity 50ms linear 600ms, background-color 500ms linear, -webkit-transform 50ms linear 600ms;
+  transition: opacity 50ms linear 600ms, background-color 500ms linear, -webkit-transform 50ms linear 600ms;
+  transition: transform 50ms linear 600ms, opacity 50ms linear 600ms, background-color 500ms linear;
+  transition: transform 50ms linear 600ms, opacity 50ms linear 600ms, background-color 500ms linear, -webkit-transform 50ms linear 600ms;
   opacity: 1;
   -webkit-transform: translateX(0);
           transform: translateX(0);
@@ -1288,10 +1303,10 @@ body .font-caption-alt {
 }
 
 .level3 .menu-appear .menu-flexbox .menu3 {
-  -webkit-transition: opacity 50ms linear 850ms, -webkit-transform 50ms linear 850ms;
-  transition: opacity 50ms linear 850ms, -webkit-transform 50ms linear 850ms;
-  transition: transform 50ms linear 850ms, opacity 50ms linear 850ms;
-  transition: transform 50ms linear 850ms, opacity 50ms linear 850ms, -webkit-transform 50ms linear 850ms;
+  -webkit-transition: opacity 50ms linear 850ms, background-color 500ms linear, -webkit-transform 50ms linear 850ms;
+  transition: opacity 50ms linear 850ms, background-color 500ms linear, -webkit-transform 50ms linear 850ms;
+  transition: transform 50ms linear 850ms, opacity 50ms linear 850ms, background-color 500ms linear;
+  transition: transform 50ms linear 850ms, opacity 50ms linear 850ms, background-color 500ms linear, -webkit-transform 50ms linear 850ms;
   opacity: 1;
   -webkit-transform: translateX(0);
           transform: translateX(0);
@@ -1307,21 +1322,19 @@ body .font-caption-alt {
 }
 
 .level3 .menu-appear .menu-flexbox .menu4 {
-  -webkit-transition: opacity 50ms linear 1100ms, -webkit-transform 50ms linear 1100ms;
-  transition: opacity 50ms linear 1100ms, -webkit-transform 50ms linear 1100ms;
-  transition: transform 50ms linear 1100ms, opacity 50ms linear 1100ms;
-  transition: transform 50ms linear 1100ms, opacity 50ms linear 1100ms, -webkit-transform 50ms linear 1100ms;
+  -webkit-transition: opacity 50ms linear 1100ms, background-color 500ms linear, -webkit-transform 50ms linear 1100ms;
+  transition: opacity 50ms linear 1100ms, background-color 500ms linear, -webkit-transform 50ms linear 1100ms;
+  transition: transform 50ms linear 1100ms, opacity 50ms linear 1100ms, background-color 500ms linear;
+  transition: transform 50ms linear 1100ms, opacity 50ms linear 1100ms, background-color 500ms linear, -webkit-transform 50ms linear 1100ms;
   opacity: 1;
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
 .level4 {
-  position: relative;
-  z-index: 5;
   width: 100vw;
   padding-top: 20vh;
-  padding-bottom: 800px;
+  padding-bottom: 5vh;
 }
 
 .level4 .sticky-left {
@@ -1407,6 +1420,68 @@ body .font-caption-alt {
 }
 
 .level4-appear .scrolling-right {
+  opacity: 1;
+}
+
+.level5 {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  padding: 0 15%;
+  color: white;
+  margin: 0 0 20vh;
+  text-align: center;
+  opacity: 0;
+  -webkit-transform: opacity 500ms linear 500ms;
+          transform: opacity 500ms linear 500ms;
+}
+
+.level5 svg {
+  width: 94px;
+  fill: rgba(255, 255, 255, 0.24);
+  margin-bottom: 64px;
+}
+
+.level5 span {
+  font-weight: 700;
+  margin-top: 63px;
+}
+
+.level5-appear {
+  opacity: 1;
+}
+
+.level6 {
+  opacity: 0;
+  -webkit-transition: opacity 1s linear;
+  transition: opacity 1s linear;
+  color: #0b2142;
+  margin-top: -200vh;
+  width: 100%;
+  height: 200vh;
+  background-color: #f7941d;
+  padding: 200vh 5% 5vh;
+}
+
+.level6 h2 {
+  margin: 5vh 0 0;
+}
+
+.level6 p {
+  width: 31vw;
+  margin-bottom: 4vh;
+}
+
+.level6 button.see-portfolio {
+  background-color: #0b2142;
+  color: white;
+  height: 64px;
+  width: 225px;
+  border-radius: 64px;
+}
+
+.level6-appear {
   opacity: 1;
 }
 
