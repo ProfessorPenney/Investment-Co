@@ -58,6 +58,11 @@ body {
       cursor: pointer;
    }
 
+   a {
+      text-decoration: none;
+      color: inherit;
+   }
+
    p {
       margin: 0;
    }
@@ -98,6 +103,16 @@ body {
       line-height: 14px;
       letter-spacing: 0px;
    }
+}
+
+.header-links {
+   display: flex;
+   justify-content: space-between;
+   position: absolute;
+   left: 5.5%;
+   top: 7%;
+   width: 84.5%;
+   color: #09b5ca;
 }
 
 .background-color {
@@ -272,6 +287,7 @@ body {
 
 .app-appear {
    .burger {
+      transition: opacity 1s linear 2s;
       opacity: 1;
    }
    .main-header {
@@ -306,7 +322,6 @@ body {
 
 .burger {
    opacity: 0;
-   transition: opacity 1s linear 2s;
    z-index: 10;
    position: fixed;
    right: 5vw;
@@ -1191,6 +1206,10 @@ body {
       }
 
       .see-portfolio {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         text-decoration: none;
          background-color: $dark-blue;
          color: white;
          width: 225px;
@@ -1370,5 +1389,136 @@ body {
    }
    to {
       transform: rotate(-360deg);
+   }
+}
+
+.portfolio {
+   background-color: $dark-blue;
+   width: 100%;
+   padding-bottom: 50vh;
+   text-align: center;
+   color: white;
+   .small-logo {
+      width: 100%;
+      position: absolute;
+      top: 6.5%;
+      margin-top: 0;
+   }
+   .our-investments {
+      width: 100%;
+      padding-top: 30vh;
+      margin: 0;
+   }
+   .investment-p {
+      width: 33%;
+      margin: auto;
+   }
+   .investment-grid {
+      margin-top: 25vh;
+      padding: 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+         'addepar bolt blueground'
+         'addepar cerebral skillz'
+         'icapital hopper skillz'
+         'stubhub sonder zupee';
+      .grid-item {
+         margin: 24px;
+         color: $dark-blue;
+         text-align: left;
+         border-radius: 24px;
+         position: relative;
+         background-color: white;
+         width: 416px;
+         height: 416px;
+         transition: transform 100ms linear;
+         // transform: scale(100%);
+         h2 {
+            position: relative;
+            left: 9%;
+            padding-top: 9%;
+            margin: 0;
+            width: 82%;
+         }
+         p {
+            position: relative;
+            left: 9%;
+            width: 82%;
+         }
+      }
+      .grid-item:hover {
+         transform: scale(0.97);
+         svg {
+            stroke: white;
+            path {
+               fill: white;
+               stroke: white;
+            }
+         }
+      }
+      .addepar-grid {
+         grid-area: addepar;
+      }
+
+      .bolt-grid {
+         grid-area: bolt;
+      }
+      .blueground-grid {
+         grid-area: blueground;
+      }
+      .cerebral-grid {
+         grid-area: cerebral;
+      }
+      .skillz-grid {
+         grid-area: skillz;
+      }
+      .icapital-grid {
+         grid-area: icapital;
+      }
+      .hopper-grid {
+         grid-area: hopper;
+      }
+      .hopper-grid {
+         grid-area: hopper;
+      }
+      .stubhub-grid {
+         grid-area: stubhub;
+      }
+      .sonder-grid {
+         grid-area: sonder;
+      }
+      .zupee-grid {
+         grid-area: zupee;
+      }
+      .hover-green:hover {
+         background-color: $green;
+      }
+      .hover-salmon:hover {
+         background-color: $salmon;
+      }
+      .hover-blue:hover {
+         background-color: $light-blue;
+      }
+      .hover-orange:hover {
+         background-color: $orange-yellow;
+      }
+
+      .icon-flex {
+         display: flex;
+         position: absolute;
+         bottom: 9%;
+         left: 9%;
+         width: 82%;
+         height: 25px;
+         justify-content: space-between;
+         align-items: center;
+         img {
+            height: 23px;
+         }
+         svg {
+            height: 25px;
+         }
+      }
    }
 }

@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import WcArrowSVG from '../../SVGs/WcArrowSVG'
 
-const HeroMenu = ({ showMenu }) => {
+const HeroMenu = ({ showMenu, setshowMenu }) => {
    useEffect(() => {
       if (showMenu) {
          document.querySelector('.burger-menu').classList.remove('burger-menu-disappear')
@@ -68,7 +69,9 @@ const HeroMenu = ({ showMenu }) => {
                   </li>
                   <div className='border2 borders'></div>
                   <li className='item3 items'>
-                     Portfolio
+                     <Link to='./portfolio' onClick={() => setshowMenu(false)}>
+                        Portfolio
+                     </Link>
                      <WcArrowSVG />
                   </li>
                   <div className='border3 borders'></div>

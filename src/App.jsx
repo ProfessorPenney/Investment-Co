@@ -20,7 +20,7 @@ function App() {
       <Router>
          <div className='App'>
             <Hamburger showMenu={showMenu} setshowMenu={setshowMenu} />
-            <HeroMenu showMenu={showMenu} />
+            <HeroMenu showMenu={showMenu} setshowMenu={setshowMenu} />
             <Route exact path='/' component={Index} />
             <Route path='/portfolio' component={Portfolio} />
          </div>

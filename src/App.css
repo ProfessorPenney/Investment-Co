@@ -50,6 +50,11 @@ body button:hover {
   cursor: pointer;
 }
 
+body a {
+  text-decoration: none;
+  color: inherit;
+}
+
 body p {
   margin: 0;
 }
@@ -89,6 +94,20 @@ body .font-caption-alt {
   font-weight: 400;
   line-height: 14px;
   letter-spacing: 0px;
+}
+
+.header-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  left: 5.5%;
+  top: 7%;
+  width: 84.5%;
+  color: #09b5ca;
 }
 
 .background-color {
@@ -295,6 +314,8 @@ body .font-caption-alt {
 }
 
 .app-appear .burger {
+  -webkit-transition: opacity 1s linear 2s;
+  transition: opacity 1s linear 2s;
   opacity: 1;
 }
 
@@ -336,8 +357,6 @@ body .font-caption-alt {
 
 .burger {
   opacity: 0;
-  -webkit-transition: opacity 1s linear 2s;
-  transition: opacity 1s linear 2s;
   z-index: 10;
   position: fixed;
   right: 5vw;
@@ -1490,6 +1509,16 @@ body .font-caption-alt {
 }
 
 .level6 .slider .see-portfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
   background-color: #0b2142;
   color: white;
   width: 225px;
@@ -1726,5 +1755,193 @@ body .font-caption-alt {
     -webkit-transform: rotate(-360deg);
             transform: rotate(-360deg);
   }
+}
+
+.portfolio {
+  background-color: #0b2142;
+  width: 100%;
+  padding-bottom: 50vh;
+  text-align: center;
+  color: white;
+}
+
+.portfolio .small-logo {
+  width: 100%;
+  position: absolute;
+  top: 6.5%;
+  margin-top: 0;
+}
+
+.portfolio .our-investments {
+  width: 100%;
+  padding-top: 30vh;
+  margin: 0;
+}
+
+.portfolio .investment-p {
+  width: 33%;
+  margin: auto;
+}
+
+.portfolio .investment-grid {
+  margin-top: 25vh;
+  padding: 60px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: 'addepar bolt blueground' 'addepar cerebral skillz' 'icapital hopper skillz' 'stubhub sonder zupee';
+}
+
+.portfolio .investment-grid .grid-item {
+  margin: 24px;
+  color: #0b2142;
+  text-align: left;
+  border-radius: 24px;
+  position: relative;
+  background-color: white;
+  width: 416px;
+  height: 416px;
+  -webkit-transition: -webkit-transform 100ms linear;
+  transition: -webkit-transform 100ms linear;
+  transition: transform 100ms linear;
+  transition: transform 100ms linear, -webkit-transform 100ms linear;
+}
+
+.portfolio .investment-grid .grid-item h2 {
+  position: relative;
+  left: 9%;
+  padding-top: 9%;
+  margin: 0;
+  width: 82%;
+}
+
+.portfolio .investment-grid .grid-item p {
+  position: relative;
+  left: 9%;
+  width: 82%;
+}
+
+.portfolio .investment-grid .grid-item:hover {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+}
+
+.portfolio .investment-grid .grid-item:hover svg {
+  stroke: white;
+}
+
+.portfolio .investment-grid .grid-item:hover svg path {
+  fill: white;
+  stroke: white;
+}
+
+.portfolio .investment-grid .addepar-grid {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: addepar;
+}
+
+.portfolio .investment-grid .bolt-grid {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: bolt;
+}
+
+.portfolio .investment-grid .blueground-grid {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: blueground;
+}
+
+.portfolio .investment-grid .cerebral-grid {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: cerebral;
+}
+
+.portfolio .investment-grid .skillz-grid {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: skillz;
+}
+
+.portfolio .investment-grid .icapital-grid {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: icapital;
+}
+
+.portfolio .investment-grid .hopper-grid {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: hopper;
+}
+
+.portfolio .investment-grid .hopper-grid {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: hopper;
+}
+
+.portfolio .investment-grid .stubhub-grid {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: stubhub;
+}
+
+.portfolio .investment-grid .sonder-grid {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: sonder;
+}
+
+.portfolio .investment-grid .zupee-grid {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: zupee;
+}
+
+.portfolio .investment-grid .hover-green:hover {
+  background-color: #00a799;
+}
+
+.portfolio .investment-grid .hover-salmon:hover {
+  background-color: #f47a5d;
+}
+
+.portfolio .investment-grid .hover-blue:hover {
+  background-color: #0cb6cb;
+}
+
+.portfolio .investment-grid .hover-orange:hover {
+  background-color: #f7941d;
+}
+
+.portfolio .investment-grid .icon-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 9%;
+  left: 9%;
+  width: 82%;
+  height: 25px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.portfolio .investment-grid .icon-flex img {
+  height: 23px;
+}
+
+.portfolio .investment-grid .icon-flex svg {
+  height: 25px;
 }
 /*# sourceMappingURL=App.css.map */

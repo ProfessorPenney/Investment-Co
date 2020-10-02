@@ -9,6 +9,9 @@ import handleScroll from './scroll'
 
 const Index = () => {
    useEffect(() => {
+      window.onunload = () => {
+         window.scrollTo(0, 0)
+      }
       window.addEventListener('load', animateHero)
       window.addEventListener('scroll', handleScroll)
 
@@ -31,7 +34,6 @@ const Index = () => {
          <div className='background4 bg'></div>
          <div className='background5 bg'></div>
          <MainHeader />
-
          <Level2 />
          <Level3 />
          <Level4 />

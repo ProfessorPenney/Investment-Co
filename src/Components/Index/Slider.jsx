@@ -1,5 +1,6 @@
 import React from 'react'
 import ArrowSVG from '../../SVGs/ArrowSVG'
+import { Link } from 'react-router-dom'
 
 const Slider = ({ content, setslideLeft, setslideRight }) => {
    function slideRight() {
@@ -16,7 +17,9 @@ const Slider = ({ content, setslideLeft, setslideRight }) => {
             WestCap is fueling the success of the world’s most disruptive asset-light, tech enabled
             marketplace solutions.
          </p>
-         <button className='see-portfolio button-oval'>see portfolio</button>
+         <Link to='/portfolio' className='see-portfolio button-oval'>
+            see portfolio
+         </Link>
          <button className='square-button'>
             <div className='left'>
                <img src={content.buttonPic} alt='company' />
