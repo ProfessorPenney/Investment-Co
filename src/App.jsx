@@ -6,6 +6,7 @@ import HeroMenu from './Components/UI/HeroMenu'
 
 import Index from './Components/Index/Index'
 import Portfolio from './Components/Portfolio/Portfolio'
+import Contact from './Components/Contact/Contact'
 
 function App() {
    const [showMenu, setshowMenu] = useState(false)
@@ -23,6 +24,7 @@ function App() {
             <HeroMenu showMenu={showMenu} setshowMenu={setshowMenu} />
             <Route exact path='/' component={Index} />
             <Route path='/portfolio' component={Portfolio} />
+            <Route path='/contact' component={Contact} />
          </div>
       </Router>
    )

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import SmallLogo from '../UI/SmallLogo'
 import HeaderLinks from '../UI/HeaderLinks'
 import Footer from '../UI/Footer'
 import FintechSVG from '../../SVGs/FintechSVG'
@@ -14,8 +15,8 @@ const Portfolio = () => {
 
    return (
       <div className='portfolio'>
+         <SmallLogo />
          <HeaderLinks />
-         <h3 className='small-logo'>WestCrap</h3>
          <h1 className='our-investments'>Our investments</h1>
          <p className='investment-p font-body'>
             WestCap is fueling the success of the world’s most disruptive asset-light, tech enabled

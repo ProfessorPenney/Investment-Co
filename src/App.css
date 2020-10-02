@@ -110,12 +110,30 @@ body .font-caption-alt {
   color: #09b5ca;
 }
 
+.small-logo {
+  width: 100%;
+  position: absolute;
+  top: 7vh;
+  margin-top: 0;
+  text-align: center;
+}
+
 .footer {
   position: relative;
   height: 428px;
   width: 100%;
   background-color: #0b2142;
   text-align: center;
+}
+
+.footer hr {
+  position: absolute;
+  top: 0;
+  left: 5vw;
+  width: 90vw;
+  background-color: rgba(255, 255, 255, 0.24);
+  height: 1px;
+  border: none;
 }
 
 .footer img {
@@ -1507,14 +1525,19 @@ body .font-caption-alt {
   color: #0b2142;
   margin-top: -200vh;
   width: 100%;
-  height: 100vh;
   background-color: #0b2142;
   padding-top: 200vh;
 }
 
-.level6 .slider {
+.level6 .slider-placeholder {
   position: relative;
+  height: 100vh;
+}
+
+.level6 .slider-placeholder .slider {
+  position: absolute;
   left: 0;
+  top: 0;
   padding: 5vh 5%;
   height: 100vh;
   width: 100%;
@@ -1522,16 +1545,16 @@ body .font-caption-alt {
           box-sizing: border-box;
 }
 
-.level6 .slider h2 {
+.level6 .slider-placeholder .slider h2 {
   margin: 5vh 0 0;
 }
 
-.level6 .slider .investment-p {
+.level6 .slider-placeholder .slider .investment-p {
   width: 31vw;
   margin-bottom: 4vh;
 }
 
-.level6 .slider .see-portfolio {
+.level6 .slider-placeholder .slider .see-portfolio {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1547,11 +1570,11 @@ body .font-caption-alt {
   width: 225px;
 }
 
-.level6 .slider .see-portfolio:hover {
+.level6 .slider-placeholder .slider .see-portfolio:hover {
   background-color: #081a33;
 }
 
-.level6 .slider .square-button {
+.level6 .slider-placeholder .slider .square-button {
   position: absolute;
   bottom: 30vh;
   background-color: transparent;
@@ -1564,7 +1587,7 @@ body .font-caption-alt {
   border: none;
 }
 
-.level6 .slider .square-button .left {
+.level6 .slider-placeholder .slider .square-button .left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1586,20 +1609,20 @@ body .font-caption-alt {
   padding: 0 27px;
 }
 
-.level6 .slider .square-button .left img {
+.level6 .slider-placeholder .slider .square-button .left img {
   -o-object-fit: contain;
      object-fit: contain;
   height: 18px;
   margin-right: auto;
 }
 
-.level6 .slider .square-button .border {
+.level6 .slider-placeholder .slider .square-button .border {
   height: 100%;
   width: 1px;
   background-color: transparent;
 }
 
-.level6 .slider .square-button .right {
+.level6 .slider-placeholder .slider .square-button .right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1613,26 +1636,26 @@ body .font-caption-alt {
   border-bottom-right-radius: 16px;
 }
 
-.level6 .slider .square-button .right .arrowSVG {
+.level6 .slider-placeholder .slider .square-button .right .arrowSVG {
   width: 16px;
 }
 
-.level6 .slider .square-button:hover .left {
+.level6 .slider-placeholder .slider .square-button:hover .left {
   background-color: white;
 }
 
-.level6 .slider .square-button:hover .right {
+.level6 .slider-placeholder .slider .square-button:hover .right {
   background-color: white;
 }
 
-.level6 .slider .hero-img {
+.level6 .slider-placeholder .slider .hero-img {
   width: 50vw;
   position: absolute;
   right: -7vw;
   bottom: 21vh;
 }
 
-.level6 .slider hr {
+.level6 .slider-placeholder .slider hr {
   position: absolute;
   bottom: 19vh;
   width: 90vw;
@@ -1641,7 +1664,7 @@ body .font-caption-alt {
   border: none;
 }
 
-.level6 .slider .bottom-flexbox {
+.level6 .slider-placeholder .slider .bottom-flexbox {
   position: absolute;
   bottom: 10vh;
   left: 5vw;
@@ -1657,7 +1680,7 @@ body .font-caption-alt {
           align-items: center;
 }
 
-.level6 .slider .bottom-flexbox .circle-button {
+.level6 .slider-placeholder .slider .bottom-flexbox .circle-button {
   height: 48px;
   width: 48px;
   background-color: #0b2142;
@@ -1674,26 +1697,26 @@ body .font-caption-alt {
           align-items: center;
 }
 
-.level6 .slider .bottom-flexbox .circle-button .arrowSVG {
+.level6 .slider-placeholder .slider .bottom-flexbox .circle-button .arrowSVG {
   width: 16px;
 }
 
-.level6 .slider .bottom-flexbox .circle-button .arrowSVG path {
+.level6 .slider-placeholder .slider .bottom-flexbox .circle-button .arrowSVG path {
   stroke: white;
 }
 
-.level6 .slider .bottom-flexbox .left-button .arrowSVG {
+.level6 .slider-placeholder .slider .bottom-flexbox .left-button .arrowSVG {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.level6 .slider .bottom-flexbox .dots {
+.level6 .slider-placeholder .slider .bottom-flexbox .dots {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.level6 .slider .bottom-flexbox .dots div {
+.level6 .slider-placeholder .slider .bottom-flexbox .dots div {
   height: 8px;
   width: 8px;
   border-radius: 4px;
@@ -1701,11 +1724,11 @@ body .font-caption-alt {
   margin-left: 8px;
 }
 
-.level6 .slider .bottom-flexbox .dots .dot1 {
+.level6 .slider-placeholder .slider .bottom-flexbox .dots .dot1 {
   margin-left: 0;
 }
 
-.level6 .slider .bottom-flexbox .dots .white-dot {
+.level6 .slider-placeholder .slider .bottom-flexbox .dots .white-dot {
   background-color: white;
 }
 
@@ -1733,41 +1756,12 @@ body .font-caption-alt {
   opacity: 1;
 }
 
-@-webkit-keyframes spin-compass {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
-  }
-}
-
-@keyframes spin-compass {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
-  }
-}
-
 .portfolio {
   position: relative;
   background-color: #0b2142;
   width: 100%;
   text-align: center;
   color: white;
-}
-
-.portfolio .small-logo {
-  width: 100%;
-  position: absolute;
-  top: 7vh;
-  margin-top: 0;
 }
 
 .portfolio .our-investments {
@@ -2002,5 +1996,93 @@ body .font-caption-alt {
   width: 1296px;
   margin-top: 102px;
   background-color: rgba(255, 255, 255, 0.24);
+}
+
+.contact {
+  min-height: 100vh;
+  padding-top: 30vh;
+  background-color: #0b2142;
+  color: white;
+}
+
+.contact .contact-emails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 180px;
+  position: absolute;
+  left: 5.5vw;
+  top: 30vh;
+}
+
+.contact .contact-emails p {
+  color: #09b5ca;
+}
+
+.contact .address-box {
+  margin: 0 0 10vw 35vw;
+  width: 60vw;
+}
+
+.contact .address-box .address-flex {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.contact .address-box .address-flex h1 {
+  margin: 0;
+}
+
+.contact .address-box .address-flex p {
+  color: #09b5ca;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16.8px;
+  letter-spacing: -0.02em;
+}
+
+.contact .address-box address {
+  font-style: none;
+}
+
+@-webkit-keyframes spin-compass {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes spin-compass {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
 }
 /*# sourceMappingURL=App.css.map */
