@@ -1,6 +1,6 @@
 import React from 'react'
-import Years20SVG from './SVGs/Years20SVG'
-import TogetherCircleSVG from './SVGs/TogetherCircleSVG'
+import Years20SVG from '../../SVGs/Years20SVG'
+import TogetherCircleSVG from '../../SVGs/TogetherCircleSVG'
 
 const Level2 = () => {
    return (
@@ -18,7 +18,7 @@ const Level2 = () => {
                WestCap is a growth equity firm led by a team that has founded, capitalized and
                operated tech-enabled, asset light marketplaces for over 20 years.
             </p>
-            <button className='meet-team-button'>Meet Our Team</button>
+            <button className='meet-team-button button-oval'>Meet Our Team</button>
          </div>
          <div className='investment-container'>
             <div className='block1 block'>

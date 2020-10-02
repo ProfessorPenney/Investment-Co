@@ -1,5 +1,5 @@
 import React from 'react'
-import ArrowSVG from './SVGs/ArrowSVG'
+import ArrowSVG from '../../SVGs/ArrowSVG'
 
 const Slider = ({ content, setslideLeft, setslideRight }) => {
    function slideRight() {

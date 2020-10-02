@@ -849,6 +849,7 @@ body .font-caption-alt {
 }
 
 .level2 .caption-20years .meet-team-button {
+  width: 239px;
   display: block;
   background-color: #09b5ca;
   margin: 40px auto 0 auto;

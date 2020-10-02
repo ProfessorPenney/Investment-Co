@@ -1,8 +1,8 @@
 import React from 'react'
-import FintechSVG from './SVGs/FintechSVG'
-import RetechSVG from './SVGs/RetechSVG'
-import ExtechSVG from './SVGs/ExtechSVG'
-import LifetechSVG from './SVGs/LifetechSVG'
+import FintechSVG from '../../SVGs/FintechSVG'
+import RetechSVG from '../../SVGs/RetechSVG'
+import ExtechSVG from '../../SVGs/ExtechSVG'
+import LifetechSVG from '../../SVGs/LifetechSVG'
 
 const Level3 = () => {
    return (

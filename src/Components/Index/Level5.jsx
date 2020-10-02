@@ -1,5 +1,5 @@
 import React from 'react'
-import QuotesSVG from './SVGs/QuotesSVG'
+import QuotesSVG from '../../SVGs/QuotesSVG'
 
 const Level5 = () => {
    return (

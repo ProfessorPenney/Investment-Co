@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import WcArrowSVG from './SVGs/WcArrowSVG'
+import WcArrowSVG from '../../SVGs/WcArrowSVG'
 
 const HeroMenu = ({ showMenu }) => {
    useEffect(() => {

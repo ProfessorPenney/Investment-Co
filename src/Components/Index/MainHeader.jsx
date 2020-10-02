@@ -1,5 +1,5 @@
 import React from 'react'
-import CompassSVG from './SVGs/CompassSVG'
+import CompassSVG from '../../SVGs/CompassSVG'
 
 const MainHeader = () => {
    return (
