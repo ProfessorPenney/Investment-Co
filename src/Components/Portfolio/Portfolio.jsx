@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
-import HeaderLinks from '../Universal/HeaderLinks'
+import HeaderLinks from '../UI/HeaderLinks'
+import Footer from '../UI/Footer'
 import FintechSVG from '../../SVGs/FintechSVG'
 import RetechSVG from '../../SVGs/RetechSVG'
 import ExtechSVG from '../../SVGs/ExtechSVG'
@@ -21,15 +22,26 @@ const Portfolio = () => {
             marketplace solutions.
          </p>
          <section className='investment-grid'>
-            <div className='addepar-grid grid-item hover-green'>
-               <h2>Addepar</h2>
-               <p className='font-body'>Helping investors make better, more informed decisions</p>
-               <div className='icon-flex'>
+            <div className='addepar-grid grid-item'>
+               <div className='top'>
                   <img
-                     src={require('../../img/portfolio company pages/company logos/addepar.png')}
-                     alt='Addepar'
+                     className='portfolio-hero'
+                     src={require('../../img/portfolio company pages/optimized hero images/addepar-2.jpg')}
+                     alt=''
                   />
-                  <FintechSVG />
+               </div>
+               <div className='bottom'>
+                  <h2>Addepar</h2>
+                  <p className='font-body'>
+                     Helping investors make better, more informed decisions
+                  </p>
+                  <div className='icon-flex'>
+                     <img
+                        src={require('../../img/portfolio company pages/company logos/addepar.png')}
+                        alt='Addepar'
+                     />
+                     <FintechSVG />
+                  </div>
                </div>
             </div>
             <div className='bolt-grid grid-item hover-green'>
@@ -66,14 +78,23 @@ const Portfolio = () => {
                </div>
             </div>
             <div className='skillz-grid grid-item hover-orange'>
-               <h2>Skillz</h2>
-               <p className='font-body'>Platform for competitive mobile games</p>
-               <div className='icon-flex'>
+               <div className='top'>
                   <img
-                     src={require('../../img/portfolio company pages/company logos/skillz.png')}
-                     alt='Skillz'
+                     className='portfolio-hero'
+                     src={require('../../img/portfolio company pages/optimized hero images/skillz.jpg')}
+                     alt=''
                   />
-                  <ExtechSVG />
+               </div>
+               <div className='bottom'>
+                  <h2>Skillz</h2>
+                  <p className='font-body'>Platform for competitive mobile games</p>
+                  <div className='icon-flex'>
+                     <img
+                        src={require('../../img/portfolio company pages/company logos/skillz.png')}
+                        alt='Skillz'
+                     />
+                     <ExtechSVG />
+                  </div>
                </div>
             </div>
             <div className='icapital-grid grid-item hover-green'>
@@ -132,6 +153,8 @@ const Portfolio = () => {
                </div>
             </div>
          </section>
+         <hr />
+         <Footer />
       </div>
    )
 }

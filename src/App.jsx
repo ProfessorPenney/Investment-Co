@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.css'
-import Hamburger from './Components/Universal/Hamburger'
-import HeroMenu from './Components/Universal/HeroMenu'
+import Hamburger from './Components/UI/Hamburger'
+import HeroMenu from './Components/UI/HeroMenu'
 
 import Index from './Components/Index/Index'
 import Portfolio from './Components/Portfolio/Portfolio'

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Slider from './Slider'
-import Footer from './Footer'
+import Footer from '../UI/Footer'
 import slideContent from './slideData'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
