@@ -54,6 +54,10 @@ body {
       border: none;
    }
 
+   button:hover {
+      cursor: pointer;
+   }
+
    p {
       margin: 0;
    }
@@ -1169,7 +1173,9 @@ body {
    padding-top: 200vh;
 
    .slider {
-      overflow: hidden;
+      position: absolute;
+      top: 200vh;
+      left: 0;
       padding: 5vh 5%;
       height: 100vh;
       width: 100%;
@@ -1315,25 +1321,41 @@ body {
    } // slider
 
    .slide-enter {
-      transform: translateX(100%);
-      transition: transform 300ms linear;
+      opacity: 0;
+      transition: opacity 300ms linear;
    }
    .slide-enter-active {
-      transform: translateX(0);
-      transition: transform 300ms linear;
+      opacity: 1;
    }
    .slide-exit {
-      transform: translateX(0);
-      transition: transform 300ms linear;
+      opacity: 1;
+      transition: opacity 300ms linear;
    }
    .slide-exit-active {
-      transform: translateX(-100%);
+      opacity: 0;
    }
 
    .index-footer {
+      position: relative;
+      top: 100vh;
       height: 428px;
       width: 100%;
       background-color: $dark-blue;
+      text-align: center;
+      img {
+         position: absolute;
+         top: 35%;
+         left: 50%;
+         margin-left: -48px;
+         width: 96px;
+      }
+      p {
+         color: white;
+         position: absolute;
+         top: 80%;
+         left: 0;
+         width: 100%;
+      }
    }
 }
 

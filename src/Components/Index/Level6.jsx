@@ -26,7 +26,7 @@ const Level6 = () => {
       <section className='level6'>
          <div className='level6-begin'></div>
          <TransitionGroup>
-            <CSSTransition timeout={1000} key={slide.index} classNames='slide'>
+            <CSSTransition timeout={350} key={slide.index} classNames='slide'>
                <Slider content={slide} setslideLeft={setslideLeft} setslideRight={setslideRight} />
             </CSSTransition>
          </TransitionGroup>

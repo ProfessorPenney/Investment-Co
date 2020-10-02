@@ -46,6 +46,10 @@ body .button-oval {
   border: none;
 }
 
+body button:hover {
+  cursor: pointer;
+}
+
 body p {
   margin: 0;
 }
@@ -1465,7 +1469,9 @@ body .font-caption-alt {
 }
 
 .level6 .slider {
-  overflow: hidden;
+  position: absolute;
+  top: 200vh;
+  left: 0;
   padding: 5vh 5%;
   height: 100vh;
   width: 100%;
@@ -1651,41 +1657,48 @@ body .font-caption-alt {
 }
 
 .level6 .slide-enter {
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-transition: -webkit-transform 300ms linear;
-  transition: -webkit-transform 300ms linear;
-  transition: transform 300ms linear;
-  transition: transform 300ms linear, -webkit-transform 300ms linear;
+  opacity: 0;
+  -webkit-transition: opacity 300ms linear;
+  transition: opacity 300ms linear;
 }
 
 .level6 .slide-enter-active {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  -webkit-transition: -webkit-transform 300ms linear;
-  transition: -webkit-transform 300ms linear;
-  transition: transform 300ms linear;
-  transition: transform 300ms linear, -webkit-transform 300ms linear;
+  opacity: 1;
 }
 
 .level6 .slide-exit {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  -webkit-transition: -webkit-transform 300ms linear;
-  transition: -webkit-transform 300ms linear;
-  transition: transform 300ms linear;
-  transition: transform 300ms linear, -webkit-transform 300ms linear;
+  opacity: 1;
+  -webkit-transition: opacity 300ms linear;
+  transition: opacity 300ms linear;
 }
 
 .level6 .slide-exit-active {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  opacity: 0;
 }
 
 .level6 .index-footer {
+  position: relative;
+  top: 100vh;
   height: 428px;
   width: 100%;
   background-color: #0b2142;
+  text-align: center;
+}
+
+.level6 .index-footer img {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  margin-left: -48px;
+  width: 96px;
+}
+
+.level6 .index-footer p {
+  color: white;
+  position: absolute;
+  top: 80%;
+  left: 0;
+  width: 100%;
 }
 
 .level6-appear {

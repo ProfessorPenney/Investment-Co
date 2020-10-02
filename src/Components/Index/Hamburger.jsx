@@ -3,6 +3,7 @@ import React from 'react'
 const Hamburger = ({ showMenu, setshowMenu }) => {
    function burgerClick() {
       setshowMenu(!showMenu)
+      document.querySelector('.burger').classList.toggle('clicked-burger')
    }
 
    return (
