@@ -1,15 +1,36 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import Slider from './Slider'
+import Footer from './Footer'
+import slideContent from './slideData'
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 const Level6 = () => {
+   const [slide, setslide] = useState(slideContent[0])
+   const [slideRight, setslideRight] = useState(false)
+   const [slideLeft, setslideLeft] = useState(false)
+
+   useEffect(() => {
+      if (slideRight === true) {
+         setslideRight(false)
+         setslide(slideContent[slide.index + 1])
+      }
+   }, [slideRight])
+   useEffect(() => {
+      if (slideLeft === true) {
+         setslideLeft(false)
+         setslide(slideContent[slide.index - 1])
+      }
+   }, [slideLeft])
+
    return (
       <section className='level6'>
          <div className='level6-begin'></div>
-         <h2>Our Investments</h2>
-         <p className='font-body'>
-            WestCap is fueling the success of the world’s most disruptive asset-light, tech enabled
-            marketplace solutions.
-         </p>
-         <button className='see-portfolio'>see portfolio</button>
+         <TransitionGroup>
+            <CSSTransition timeout={1000} key={slide.index} classNames='slide'>
+               <Slider content={slide} setslideLeft={setslideLeft} setslideRight={setslideRight} />
+            </CSSTransition>
+         </TransitionGroup>
+         <Footer />
       </section>
    )
 }

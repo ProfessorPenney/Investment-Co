@@ -35,13 +35,12 @@ body h4 {
   letter-spacing: 0px;
 }
 
-body button {
+body .button-oval {
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
   line-height: 18px;
-  letter-spacing: 3.4000000953674316px;
-  width: 247px;
+  letter-spacing: 3.4px;
   height: 64px;
   border-radius: 64px;
   border: none;
@@ -111,6 +110,7 @@ body .font-caption-alt {
 
 .bg {
   position: fixed;
+  z-index: -1;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0;
@@ -1091,7 +1091,7 @@ body .font-caption-alt {
   color: white;
   height: 70vh;
   width: 57%;
-  margin-top: 30vh;
+  margin-top: 10vh;
   margin-left: 13vw;
 }
 
@@ -1333,7 +1333,6 @@ body .font-caption-alt {
 
 .level4 {
   width: 100vw;
-  padding-top: 20vh;
   padding-bottom: 5vh;
 }
 
@@ -1453,32 +1452,240 @@ body .font-caption-alt {
 }
 
 .level6 {
+  position: relative;
   opacity: 0;
   -webkit-transition: opacity 1s linear;
   transition: opacity 1s linear;
   color: #0b2142;
   margin-top: -200vh;
   width: 100%;
-  height: 200vh;
-  background-color: #f7941d;
-  padding: 200vh 5% 5vh;
+  height: 100vh;
+  background-color: #0b2142;
+  padding-top: 200vh;
 }
 
-.level6 h2 {
+.level6 .slider {
+  overflow: hidden;
+  padding: 5vh 5%;
+  height: 100vh;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.level6 .slider h2 {
   margin: 5vh 0 0;
 }
 
-.level6 p {
+.level6 .slider .investment-p {
   width: 31vw;
   margin-bottom: 4vh;
 }
 
-.level6 button.see-portfolio {
+.level6 .slider .see-portfolio {
   background-color: #0b2142;
   color: white;
-  height: 64px;
   width: 225px;
-  border-radius: 64px;
+}
+
+.level6 .slider .see-portfolio:hover {
+  background-color: #081a33;
+}
+
+.level6 .slider .square-button {
+  position: absolute;
+  bottom: 30vh;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 419px;
+  height: 80px;
+  border-radius: 16px;
+  border: none;
+}
+
+.level6 .slider .square-button .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 80px;
+  width: 337px;
+  background-color: rgba(255, 255, 255, 0.24);
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  text-align: left;
+  padding: 0 27px;
+}
+
+.level6 .slider .square-button .left img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 18px;
+  margin-right: auto;
+}
+
+.level6 .slider .square-button .border {
+  height: 100%;
+  width: 1px;
+  background-color: transparent;
+}
+
+.level6 .slider .square-button .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.24);
+  width: 80px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.level6 .slider .square-button .right .arrowSVG {
+  width: 16px;
+}
+
+.level6 .slider .square-button:hover .left {
+  background-color: white;
+}
+
+.level6 .slider .square-button:hover .right {
+  background-color: white;
+}
+
+.level6 .slider .hero-img {
+  width: 50vw;
+  position: absolute;
+  right: -7vw;
+  bottom: 21vh;
+}
+
+.level6 .slider hr {
+  position: absolute;
+  bottom: 19vh;
+  width: 90vw;
+  height: 1px;
+  background-color: rgba(11, 33, 66, 0.24);
+  border: none;
+}
+
+.level6 .slider .bottom-flexbox {
+  position: absolute;
+  bottom: 10vh;
+  left: 5vw;
+  width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.level6 .slider .bottom-flexbox .circle-button {
+  height: 48px;
+  width: 48px;
+  background-color: #0b2142;
+  border: none;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.level6 .slider .bottom-flexbox .circle-button .arrowSVG {
+  width: 16px;
+}
+
+.level6 .slider .bottom-flexbox .circle-button .arrowSVG path {
+  stroke: white;
+}
+
+.level6 .slider .bottom-flexbox .left-button .arrowSVG {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.level6 .slider .bottom-flexbox .dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.level6 .slider .bottom-flexbox .dots div {
+  height: 8px;
+  width: 8px;
+  border-radius: 4px;
+  background-color: #0b2142;
+  margin-left: 8px;
+}
+
+.level6 .slider .bottom-flexbox .dots .dot1 {
+  margin-left: 0;
+}
+
+.level6 .slider .bottom-flexbox .dots .white-dot {
+  background-color: white;
+}
+
+.level6 .slide-enter {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 300ms linear;
+  transition: -webkit-transform 300ms linear;
+  transition: transform 300ms linear;
+  transition: transform 300ms linear, -webkit-transform 300ms linear;
+}
+
+.level6 .slide-enter-active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 300ms linear;
+  transition: -webkit-transform 300ms linear;
+  transition: transform 300ms linear;
+  transition: transform 300ms linear, -webkit-transform 300ms linear;
+}
+
+.level6 .slide-exit {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 300ms linear;
+  transition: -webkit-transform 300ms linear;
+  transition: transform 300ms linear;
+  transition: transform 300ms linear, -webkit-transform 300ms linear;
+}
+
+.level6 .slide-exit-active {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.level6 .index-footer {
+  height: 428px;
+  width: 100%;
+  background-color: #0b2142;
 }
 
 .level6-appear {
