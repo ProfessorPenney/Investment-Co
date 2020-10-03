@@ -10,7 +10,6 @@ import LifetechSVG from '../../SVGs/LifetechSVG'
 const Portfolio = () => {
    useEffect(() => {
       document.querySelector('.burger').style.opacity = 1
-      return () => {}
    }, [])
 
    return (
@@ -154,7 +153,6 @@ const Portfolio = () => {
                </div>
             </div>
          </section>
-         <hr />
          <Footer />
       </div>
    )

@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import SmallLogo from '../UI/SmallLogo'
 import HeaderLinks from '../UI/HeaderLinks'
 import Footer from '../UI/Footer'
 
 const Contact = () => {
+   useEffect(() => {
+      document.querySelector('.burger').style.opacity = 1
+   }, [])
+
    return (
       <section className='contact'>
          <SmallLogo />

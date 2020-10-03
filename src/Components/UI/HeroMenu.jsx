@@ -59,7 +59,9 @@ const HeroMenu = ({ showMenu, setshowMenu }) => {
             <menu className='right-menu'>
                <ul>
                   <li className='item1 items'>
-                     Home
+                     <Link to='./' onClick={() => setshowMenu(false)}>
+                        Home
+                     </Link>
                      <WcArrowSVG />
                   </li>
                   <div className='border1 borders'></div>
@@ -86,7 +88,9 @@ const HeroMenu = ({ showMenu, setshowMenu }) => {
                   </li>
                   <div className='border5 borders'></div>
                   <li className='item6 items'>
-                     Contact
+                     <Link to='./contact' onClick={() => setshowMenu(false)}>
+                        Contact
+                     </Link>
                      <WcArrowSVG />
                   </li>
                </ul>

@@ -253,27 +253,6 @@ body .font-caption-alt {
   transition: transform 2s linear, opacity 1s linear, -webkit-transform 2s linear;
 }
 
-.main-header .contact-us {
-  color: #09b5ca;
-  position: absolute;
-  left: 5.5%;
-  top: 7%;
-  opacity: 0;
-  -webkit-transition: opacity 1s linear 2s;
-  transition: opacity 1s linear 2s;
-}
-
-.main-header .investor-login {
-  z-index: 1;
-  color: #09b5ca;
-  position: absolute;
-  right: 10vw;
-  top: 7vh;
-  opacity: 0;
-  -webkit-transition: opacity 1s linear 2s;
-  transition: opacity 1s linear 2s;
-}
-
 .main-header h4.hero-subtitle {
   width: 780px;
   text-align: center;
@@ -1783,6 +1762,7 @@ body .font-caption-alt {
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-areas: 'addepar bolt blueground' 'addepar cerebral skillz' 'icapital hopper skillz' 'stubhub sonder zupee';
+  padding-bottom: 102px;
 }
 
 .portfolio .investment-grid .grid-item {
@@ -1990,16 +1970,7 @@ body .font-caption-alt {
   height: 25px;
 }
 
-.portfolio hr {
-  border: none;
-  height: 1px;
-  width: 1296px;
-  margin-top: 102px;
-  background-color: rgba(255, 255, 255, 0.24);
-}
-
 .contact {
-  min-height: 100vh;
   padding-top: 30vh;
   background-color: #0b2142;
   color: white;
@@ -2027,7 +1998,7 @@ body .font-caption-alt {
 }
 
 .contact .address-box {
-  margin: 0 0 10vw 35vw;
+  margin: 0 0 8vw 35vw;
   width: 60vw;
 }
 
@@ -2061,7 +2032,8 @@ body .font-caption-alt {
 }
 
 .contact .address-box address {
-  font-style: none;
+  margin-top: 26px;
+  font-style: normal;
 }
 
 @-webkit-keyframes spin-compass {

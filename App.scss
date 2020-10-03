@@ -233,24 +233,24 @@ body {
       transition: transform 2s linear, opacity 1s linear;
    }
 
-   .contact-us {
-      color: #09b5ca;
-      position: absolute;
-      left: 5.5%;
-      top: 7%;
-      opacity: 0;
-      transition: opacity 1s linear 2s;
-   }
+   // .contact-us {
+   //    color: #09b5ca;
+   //    position: absolute;
+   //    left: 5.5%;
+   //    top: 7%;
+   //    opacity: 0;
+   //    transition: opacity 1s linear 2s;
+   // }
 
-   .investor-login {
-      z-index: 1;
-      color: $header-green;
-      position: absolute;
-      right: 10vw;
-      top: 7vh;
-      opacity: 0;
-      transition: opacity 1s linear 2s;
-   }
+   // .investor-login {
+   //    z-index: 1;
+   //    color: $header-green;
+   //    position: absolute;
+   //    right: 10vw;
+   //    top: 7vh;
+   //    opacity: 0;
+   //    transition: opacity 1s linear 2s;
+   // }
 
    h4.hero-subtitle {
       width: 780px;
@@ -1223,7 +1223,6 @@ body {
    color: $dark-blue;
    margin-top: -200vh;
    width: 100%;
-   // height: 100vh;
    background-color: $dark-blue;
    padding-top: 200vh;
    .slider-placeholder {
@@ -1427,6 +1426,7 @@ body {
          'addepar cerebral skillz'
          'icapital hopper skillz'
          'stubhub sonder zupee';
+      padding-bottom: 102px;
       .grid-item {
          margin: 12px;
          color: $dark-blue;
@@ -1578,18 +1578,9 @@ body {
          }
       }
    }
-
-   hr {
-      border: none;
-      height: 1px;
-      width: 1296px;
-      margin-top: 102px;
-      background-color: rgba(255, 255, 255, 0.24);
-   }
 }
 
 .contact {
-   min-height: 100vh;
    padding-top: 30vh;
    background-color: $dark-blue;
    color: white;
@@ -1608,7 +1599,7 @@ body {
    }
 
    .address-box {
-      margin: 0 0 10vw 35vw;
+      margin: 0 0 8vw 35vw;
       width: 60vw;
       .address-flex {
          width: 100%;
@@ -1630,7 +1621,8 @@ body {
          }
       }
       address {
-         font-style: none;
+         margin-top: 26px;
+         font-style: normal;
       }
    }
 }
