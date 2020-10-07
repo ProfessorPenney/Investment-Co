@@ -1,8 +1,14 @@
 import React from 'react'
+import { useLayoutEffect } from 'react'
 import CompassSVG from '../../SVGs/CompassSVG'
 import HeaderLinks from '../UI/HeaderLinks'
 
 const MainHeader = () => {
+   useLayoutEffect(() => {
+      document.querySelector('.background-color').classList.remove('background-color-appear')
+      document.querySelector('.main-header').classList.remove('main-header-disappear')
+   }, [])
+
    return (
       <header className='main-header'>
          <div className='hero-background'>
@@ -17,9 +23,7 @@ const MainHeader = () => {
          <div className='line4 line'></div>
          <div className='line5 line'></div>
          <h1 className='main-logo'>WestCrap</h1>
-         {/* <p className='font-caption contact-us'>contact us</p> */}
          <HeaderLinks />
-         <p className='font-caption investor-login'>investor login</p>
          <h4 className='hero-subtitle'>
             We build companies that become <em>great</em> investments.
          </h4>

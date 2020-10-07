@@ -233,24 +233,10 @@ body {
       transition: transform 2s linear, opacity 1s linear;
    }
 
-   // .contact-us {
-   //    color: #09b5ca;
-   //    position: absolute;
-   //    left: 5.5%;
-   //    top: 7%;
-   //    opacity: 0;
-   //    transition: opacity 1s linear 2s;
-   // }
-
-   // .investor-login {
-   //    z-index: 1;
-   //    color: $header-green;
-   //    position: absolute;
-   //    right: 10vw;
-   //    top: 7vh;
-   //    opacity: 0;
-   //    transition: opacity 1s linear 2s;
-   // }
+   .header-links {
+      opacity: 0;
+      transition: opacity 1s linear 2s;
+   }
 
    h4.hero-subtitle {
       width: 780px;
@@ -288,6 +274,8 @@ body {
       margin-right: -35vh;
       top: 50vh;
       margin-top: -35vh;
+      opacity: 0;
+      transition: opacity 1s linear 1s;
       animation: spin-compass infinite 180s linear;
 
       path {
@@ -334,14 +322,14 @@ body {
          transform: scale(1) rotate(0deg);
          opacity: 1;
       }
+      .compass-svg {
+         opacity: 1;
+      }
       .main-logo {
          transform: scale(1);
          opacity: 1;
       }
-      .contact-us {
-         opacity: 1;
-      }
-      .investor-login {
+      .header-links {
          opacity: 1;
       }
       .hero-subtitle {
@@ -664,7 +652,7 @@ body {
    padding-bottom: 200px;
 
    .svg-container {
-      transition: opacity 500ms linear 500ms;
+      transition: opacity 500ms linear;
       opacity: 0;
       position: relative;
       height: 120vh;
@@ -914,6 +902,7 @@ body {
    }
 
    .svg-container-appear {
+      transition: opacity 500ms linear 500ms;
       opacity: 1;
       .vert-line {
          height: 107px;
@@ -960,6 +949,8 @@ body {
       height: 100vh;
       padding: 0;
       margin: 0;
+      z-index: -1;
+      transition: z-index 2s linear;
       .vertical-line {
          opacity: 0;
          position: absolute;
@@ -1068,6 +1059,7 @@ body {
    }
 
    .menu-appear {
+      z-index: 1;
       .vertical-line {
          transition: height 1000ms linear 200ms, opacity 500ms linear 200ms;
          opacity: 1;
@@ -1576,6 +1568,18 @@ body {
          svg {
             height: 25px;
          }
+      }
+   }
+}
+
+.portfolio-co {
+   background-color: $salmon;
+   color: $dark-blue;
+
+   .company {
+      .hero {
+         display: flex;
+         flex-wrap: none;
       }
    }
 }
