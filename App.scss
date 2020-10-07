@@ -387,6 +387,7 @@ body {
 }
 
 .burger-blue {
+   opacity: 1;
    border: 1px solid rgba(11, 33, 66, 0.31);
    background-color: rgba(11, 33, 66, 0.08);
    .layers {
@@ -1576,10 +1577,58 @@ body {
    background-color: $salmon;
    color: $dark-blue;
 
+   .header-links {
+      color: $dark-blue;
+   }
+
    .company {
+      padding-top: 20vh;
       .hero {
+         margin-left: 5.5vw;
+         width: 89.5%;
          display: flex;
-         flex-wrap: none;
+         flex-wrap: nowrap;
+         justify-content: space-between;
+         align-items: center;
+
+         .title {
+            img {
+               height: 16px;
+            }
+            h1 {
+               max-width: 500px;
+            }
+         }
+         .hero-img {
+            height: 600px;
+            margin-right: -15vw;
+         }
+      }
+      .body {
+         max-width: 966px;
+         margin: auto;
+         padding-bottom: 80px;
+         p {
+            max-width: 792px;
+            text-align: center;
+            display: block;
+            margin: 150px auto;
+         }
+         div {
+            display: flex;
+            flex-flow: row nowrap;
+            border-bottom: rgba(11, 33, 66, 0.24) solid 1px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 0;
+
+            h2 {
+               margin: 0;
+            }
+         }
+         div:last-of-type {
+            border-bottom: none;
+         }
       }
    }
 }

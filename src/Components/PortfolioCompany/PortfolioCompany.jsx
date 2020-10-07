@@ -1,25 +1,35 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import SmallLogo from '../UI/SmallLogo'
+import HeaderLinks from '../UI/HeaderLinks'
+import Footer from '../UI/Footer'
 
 const PortfolioCompany = ({ company }) => {
+   useEffect(() => {
+      document.querySelector('.burger').classList.add('burger-blue')
+   }, [])
+
    return (
       <div className='portfolio-co'>
+         <SmallLogo />
+         <HeaderLinks />
          <section className='company'>
             <header className='hero'>
                <div className='title'>
                   <header>
                      <img
-                        src='../../img/portfolio company pages/company logos/sonder.png'
+                        src={require('../../img/portfolio company pages/company logos/sonder.png')}
                         alt='SONDER'
                      />
                   </header>
                   <h1>Building the future of hospitality</h1>
                </div>
                <img
+                  className='hero-img'
                   src={require('../../img/portfolio company pages/optimized hero images/sonder-2.jpg')}
                   alt=''
                />
             </header>
-            <div className='body-flex'>
+            <div className='body'>
                <p className='font-body'>
                   Based in San Francisco, CA, Sonder is the #1 global platform for short-term leases
                   and has established itself as the 2.0 hospitality brand. The company blends the
@@ -46,6 +56,7 @@ const PortfolioCompany = ({ company }) => {
             </div>
          </section>
          <section className='other-investments'></section>
+         <Footer />
       </div>
    )
 }
