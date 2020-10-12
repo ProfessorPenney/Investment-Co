@@ -21,10 +21,14 @@ const PortfolioCompany = ({ match }) => {
          setcompany(newCompany)
          setotherInvestments(companyData.filter(company => company.name !== match.params.company))
       }
-   }, [])
+   }, [match.params.company])
 
    function companyRedirect() {
       window.open(`https://${company.website}`, '_blank')
+   }
+
+   function switchCompany(otherCompany) {
+      history.push(`/portfolio/${otherCompany.name}`)
    }
 
    return (
@@ -82,7 +86,7 @@ const PortfolioCompany = ({ match }) => {
                   <div
                      key={otherCompany.name}
                      className={`grid-item hover-${otherCompany.color}`}
-                     onClick={() => history.push(`/portfolio/${otherCompany.name}`)}>
+                     onClick={() => switchCompany(otherCompany)}>
                      <h2>{otherCompany.capitalName}</h2>
                      <p className='font-body'>{otherCompany.headline2}</p>
                      <div className='icon-flex'>
@@ -90,7 +94,7 @@ const PortfolioCompany = ({ match }) => {
                         {otherCompany.icon === 'fintech' && <FintechSVG />}
                         {otherCompany.icon === 'retech' && <RetechSVG />}
                         {otherCompany.icon === 'lifetech' && <LifetechSVG />}
-                        {otherCompany.icon === 'lifetech' && <ExtechSVG />}
+                        {otherCompany.icon === 'extech' && <ExtechSVG />}
                      </div>
                   </div>
                ))}

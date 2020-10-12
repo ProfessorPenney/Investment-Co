@@ -1431,7 +1431,7 @@ body {
       background-color: white;
       height: 416px;
       width: 416px;
-      transition: transform 100ms linear;
+      transition: transform 100ms linear, background-color 100ms linear;
       overflow: hidden;
 
       h2 {
@@ -1446,11 +1446,6 @@ body {
          position: relative;
          left: 9%;
          width: 82%;
-      }
-
-      .grid-item:hover {
-         transform: scale(0.97);
-         cursor: pointer;
       }
 
       .addepar-grid {
@@ -1542,6 +1537,10 @@ body {
    }
 }
 
+.grid-item:hover {
+   transform: scale(0.97);
+   cursor: pointer;
+}
 .hover-green:hover {
    background-color: $green;
    svg {

@@ -78,7 +78,7 @@ export default [
       color: 'green',
       capitalName: 'iCapital',
       headline2: 'Powering the world’s alternative investment marketplace',
-      icon: 'extech'
+      icon: 'fintech'
    },
    {
       name: 'cerebral',
@@ -114,7 +114,7 @@ export default [
       website: 'hopper.com',
       background: '#F7941D',
       color: 'orange',
-      capitalName: 'Addepar',
+      capitalName: 'Hopper',
       headline2: 'Revolutionizing how millions of people book their travel',
       icon: 'extech'
    },

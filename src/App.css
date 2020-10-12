@@ -1793,10 +1793,10 @@ body .font-caption-alt {
   background-color: white;
   height: 416px;
   width: 416px;
-  -webkit-transition: -webkit-transform 100ms linear;
-  transition: -webkit-transform 100ms linear;
-  transition: transform 100ms linear;
-  transition: transform 100ms linear, -webkit-transform 100ms linear;
+  -webkit-transition: background-color 100ms linear, -webkit-transform 100ms linear;
+  transition: background-color 100ms linear, -webkit-transform 100ms linear;
+  transition: transform 100ms linear, background-color 100ms linear;
+  transition: transform 100ms linear, background-color 100ms linear, -webkit-transform 100ms linear;
   overflow: hidden;
 }
 
@@ -1812,12 +1812,6 @@ body .font-caption-alt {
   position: relative;
   left: 9%;
   width: 82%;
-}
-
-.portfolio .grid-item .grid-item:hover {
-  -webkit-transform: scale(0.97);
-          transform: scale(0.97);
-  cursor: pointer;
 }
 
 .portfolio .grid-item .addepar-grid {
@@ -1952,6 +1946,12 @@ body .font-caption-alt {
 
 .portfolio .grid-item .icon-flex svg {
   height: 25px;
+}
+
+.grid-item:hover {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+  cursor: pointer;
 }
 
 .hover-green:hover {
