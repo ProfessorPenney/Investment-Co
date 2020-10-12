@@ -12,14 +12,14 @@ body {
    overflow-x: hidden;
 
    h1 {
-      font-size: 56px;
+      font-size: 52px;
       font-weight: 700;
       line-height: 72px;
       letter-spacing: -0.5px;
    }
 
    h2 {
-      font-size: 48px;
+      font-size: 42px;
       font-weight: 700;
       line-height: 64px;
       letter-spacing: -1px;
@@ -1420,35 +1420,37 @@ body {
          'icapital hopper skillz'
          'stubhub sonder zupee';
       padding-bottom: 102px;
-      .grid-item {
-         margin: 12px;
-         color: $dark-blue;
-         text-align: left;
-         border-radius: 24px;
+   }
+
+   .grid-item {
+      margin: 12px;
+      color: $dark-blue;
+      text-align: left;
+      border-radius: 24px;
+      position: relative;
+      background-color: white;
+      height: 416px;
+      width: 416px;
+      transition: transform 100ms linear;
+      overflow: hidden;
+
+      h2 {
          position: relative;
-         background-color: white;
-         width: 416px;
-         height: 416px;
-         transition: transform 100ms linear;
-         overflow: hidden;
+         left: 9%;
+         padding-top: 9%;
+         margin: 0;
+         width: 82%;
+      }
 
-         h2 {
-            position: relative;
-            left: 9%;
-            padding-top: 9%;
-            margin: 0;
-            width: 82%;
-         }
-
-         p {
-            position: relative;
-            left: 9%;
-            width: 82%;
-         }
+      p {
+         position: relative;
+         left: 9%;
+         width: 82%;
       }
 
       .grid-item:hover {
          transform: scale(0.97);
+         cursor: pointer;
       }
 
       .addepar-grid {
@@ -1520,39 +1522,6 @@ body {
       .zupee-grid {
          grid-area: zupee;
       }
-      .hover-green:hover {
-         background-color: $green;
-         svg {
-            path {
-               fill: white;
-            }
-         }
-      }
-      .hover-salmon:hover {
-         background-color: $salmon;
-         svg {
-            stroke: white;
-            path {
-               stroke: white;
-            }
-         }
-      }
-      .hover-blue:hover {
-         background-color: $light-blue;
-         svg {
-            path {
-               fill: white;
-            }
-         }
-      }
-      .hover-orange:hover {
-         background-color: $orange-yellow;
-         svg {
-            path {
-               stroke: white;
-            }
-         }
-      }
 
       .icon-flex {
          display: flex;
@@ -1573,8 +1542,41 @@ body {
    }
 }
 
-.portfolio-co {
+.hover-green:hover {
+   background-color: $green;
+   svg {
+      path {
+         fill: white;
+      }
+   }
+}
+.hover-salmon:hover {
    background-color: $salmon;
+   svg {
+      stroke: white;
+      path {
+         stroke: white;
+      }
+   }
+}
+.hover-blue:hover {
+   background-color: $light-blue;
+   svg {
+      path {
+         fill: white;
+      }
+   }
+}
+.hover-orange:hover {
+   background-color: $orange-yellow;
+   svg {
+      path {
+         stroke: white;
+      }
+   }
+}
+
+.portfolio-co {
    color: $dark-blue;
 
    .header-links {
@@ -1585,7 +1587,7 @@ body {
       padding-top: 20vh;
       .hero {
          margin-left: 5.5vw;
-         width: 89.5%;
+         width: 102vw;
          display: flex;
          flex-wrap: nowrap;
          justify-content: space-between;
@@ -1597,30 +1599,39 @@ body {
             }
             h1 {
                max-width: 500px;
+               padding-right: 30px;
             }
          }
          .hero-img {
-            height: 600px;
-            margin-right: -15vw;
+            height: 606px;
          }
       }
       .body {
          max-width: 966px;
          margin: auto;
          padding-bottom: 80px;
+
          p {
             max-width: 792px;
             text-align: center;
             display: block;
-            margin: 150px auto;
+            margin: 130px auto;
          }
-         div {
+         .list-line {
             display: flex;
             flex-flow: row nowrap;
             border-bottom: rgba(11, 33, 66, 0.24) solid 1px;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
             padding: 50px 0;
+
+            h3 {
+               font-size: 20px;
+            }
+
+            .founder-list {
+               text-align: right;
+            }
 
             h2 {
                margin: 0;
@@ -1629,6 +1640,27 @@ body {
          div:last-of-type {
             border-bottom: none;
          }
+
+         button {
+            min-width: 239px;
+            padding: 0 40px;
+            background: rgba(11, 33, 66, 0.08);
+            border: 1px solid rgba(11, 33, 66, 0.31);
+            color: $dark-blue;
+         }
+      }
+   }
+   .other-investments {
+      margin-top: 0;
+      h1 {
+         padding-top: 15vh;
+      }
+      .investment-flex {
+         margin: 15vh auto 0;
+         display: flex;
+         width: 1320px;
+         flex-wrap: wrap;
+         padding-bottom: 10vh;
       }
    }
 }

@@ -1,61 +1,101 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import SmallLogo from '../UI/SmallLogo'
 import HeaderLinks from '../UI/HeaderLinks'
 import Footer from '../UI/Footer'
+import companyData from './companyData'
+import FintechSVG from '../../SVGs/FintechSVG'
+import RetechSVG from '../../SVGs/RetechSVG'
+import ExtechSVG from '../../SVGs/ExtechSVG'
+import LifetechSVG from '../../SVGs/LifetechSVG'
 
-const PortfolioCompany = ({ company }) => {
+const PortfolioCompany = ({ match }) => {
+   const [company, setcompany] = useState(companyData[0])
+   const [otherInvestments, setotherInvestments] = useState(companyData)
+   const history = useHistory()
+
    useEffect(() => {
       document.querySelector('.burger').classList.add('burger-blue')
+      const newCompany = companyData.find(company => company.name === match.params.company)
+      if (newCompany !== undefined) {
+         setcompany(newCompany)
+         setotherInvestments(companyData.filter(company => company.name !== match.params.company))
+      }
    }, [])
+
+   function companyRedirect() {
+      window.open(`https://${company.website}`, '_blank')
+   }
 
    return (
       <div className='portfolio-co'>
          <SmallLogo />
          <HeaderLinks />
-         <section className='company'>
+         <section className='company' style={{ backgroundColor: company.background }}>
             <header className='hero'>
                <div className='title'>
                   <header>
                      <img
-                        src={require('../../img/portfolio company pages/company logos/sonder.png')}
-                        alt='SONDER'
+                        src={company.logo}
+                        alt={company.Capitalname}
+                        style={{ height: company.logoHeight }}
                      />
                   </header>
-                  <h1>Building the future of hospitality</h1>
+                  <h1>{company.headline}</h1>
                </div>
-               <img
-                  className='hero-img'
-                  src={require('../../img/portfolio company pages/optimized hero images/sonder-2.jpg')}
-                  alt=''
-               />
+               <img className='hero-img' src={company.heroImg} alt='' />
             </header>
             <div className='body'>
-               <p className='font-body'>
-                  Based in San Francisco, CA, Sonder is the #1 global platform for short-term leases
-                  and has established itself as the 2.0 hospitality brand. The company blends the
-                  home-sharing economy with the service, safety and predictability of a hotel-like
-                  experience.
-               </p>
-               <div className='founder'>
-                  <h3>FOUNDER</h3>
-
-                  <h2>Francis Davidson</h2>
+               <p className='font-body'>{company.description}</p>
+               <div className='founder list-line'>
+                  <h3>{company.founderTitle}</h3>
+                  <div className='founder-list'>
+                     {company.founders.map(founder => (
+                        <h2>{founder}</h2>
+                     ))}
+                  </div>
                </div>
-               <div className='founded'>
+               <div className='founded list-line'>
                   <h3>FOUNDED</h3>
-                  <h2>2014</h2>
+                  <h2>{company.founded}</h2>
                </div>
-               <div className='category'>
+               <div className='category list-line'>
                   <h3>CATEGORY</h3>
-                  <h2>Real estate tech</h2>
+                  <h2>{company.category}</h2>
                </div>
-               <div className='website'>
+               <div className='website list-line'>
                   <h3>WEBSITE</h3>
-                  <button className='button-oval'></button>
+                  <button className='button-oval' onClick={companyRedirect}>
+                     visit {company.website}
+                  </button>
                </div>
             </div>
          </section>
-         <section className='other-investments'></section>
+         <section className='other-investments portfolio'>
+            <h1 className='our-investments'>Our investments</h1>
+            <p className='investment-p font-body'>
+               WestCap is fueling the success of the world’s most disruptive asset-light, tech
+               enabled marketplace solutions.
+            </p>
+            <div className='investment-flex'>
+               {otherInvestments.map(otherCompany => (
+                  <div
+                     key={otherCompany.name}
+                     className={`grid-item hover-${otherCompany.color}`}
+                     onClick={() => history.push(`/portfolio/${otherCompany.name}`)}>
+                     <h2>{otherCompany.capitalName}</h2>
+                     <p className='font-body'>{otherCompany.headline2}</p>
+                     <div className='icon-flex'>
+                        <img src={otherCompany.logo} alt={otherCompany.capitalName} />
+                        {otherCompany.icon === 'fintech' && <FintechSVG />}
+                        {otherCompany.icon === 'retech' && <RetechSVG />}
+                        {otherCompany.icon === 'lifetech' && <LifetechSVG />}
+                        {otherCompany.icon === 'lifetech' && <ExtechSVG />}
+                     </div>
+                  </div>
+               ))}
+            </div>
+         </section>
          <Footer />
       </div>
    )

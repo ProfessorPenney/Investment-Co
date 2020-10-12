@@ -6,14 +6,14 @@ body {
 }
 
 body h1 {
-  font-size: 56px;
+  font-size: 52px;
   font-weight: 700;
   line-height: 72px;
   letter-spacing: -0.5px;
 }
 
 body h2 {
-  font-size: 48px;
+  font-size: 42px;
   font-weight: 700;
   line-height: 64px;
   letter-spacing: -1px;
@@ -1784,15 +1784,15 @@ body .font-caption-alt {
   padding-bottom: 102px;
 }
 
-.portfolio .investment-grid .grid-item {
+.portfolio .grid-item {
   margin: 12px;
   color: #0b2142;
   text-align: left;
   border-radius: 24px;
   position: relative;
   background-color: white;
-  width: 416px;
   height: 416px;
+  width: 416px;
   -webkit-transition: -webkit-transform 100ms linear;
   transition: -webkit-transform 100ms linear;
   transition: transform 100ms linear;
@@ -1800,7 +1800,7 @@ body .font-caption-alt {
   overflow: hidden;
 }
 
-.portfolio .investment-grid .grid-item h2 {
+.portfolio .grid-item h2 {
   position: relative;
   left: 9%;
   padding-top: 9%;
@@ -1808,18 +1808,19 @@ body .font-caption-alt {
   width: 82%;
 }
 
-.portfolio .investment-grid .grid-item p {
+.portfolio .grid-item p {
   position: relative;
   left: 9%;
   width: 82%;
 }
 
-.portfolio .investment-grid .grid-item:hover {
+.portfolio .grid-item .grid-item:hover {
   -webkit-transform: scale(0.97);
           transform: scale(0.97);
+  cursor: pointer;
 }
 
-.portfolio .investment-grid .addepar-grid {
+.portfolio .grid-item .addepar-grid {
   background-color: #00a799;
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
@@ -1828,43 +1829,43 @@ body .font-caption-alt {
   height: 865px;
 }
 
-.portfolio .investment-grid .addepar-grid .portfolio-hero {
+.portfolio .grid-item .addepar-grid .portfolio-hero {
   position: relative;
   top: 46px;
   left: 15px;
   width: 650px;
 }
 
-.portfolio .investment-grid .addepar-grid .bottom {
+.portfolio .grid-item .addepar-grid .bottom {
   height: 416px;
   position: absolute;
   bottom: 0;
   left: 0;
 }
 
-.portfolio .investment-grid .addepar-grid .bottom svg path {
+.portfolio .grid-item .addepar-grid .bottom svg path {
   fill: white;
 }
 
-.portfolio .investment-grid .bolt-grid {
+.portfolio .grid-item .bolt-grid {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: bolt;
 }
 
-.portfolio .investment-grid .blueground-grid {
+.portfolio .grid-item .blueground-grid {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: blueground;
 }
 
-.portfolio .investment-grid .cerebral-grid {
+.portfolio .grid-item .cerebral-grid {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: cerebral;
 }
 
-.portfolio .investment-grid .skillz-grid {
+.portfolio .grid-item .skillz-grid {
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
   -ms-grid-column: 3;
@@ -1873,14 +1874,14 @@ body .font-caption-alt {
   height: 865px;
 }
 
-.portfolio .investment-grid .skillz-grid .portfolio-hero {
+.portfolio .grid-item .skillz-grid .portfolio-hero {
   position: relative;
   top: -55px;
   left: -150px;
   width: 800px;
 }
 
-.portfolio .investment-grid .skillz-grid .bottom {
+.portfolio .grid-item .skillz-grid .bottom {
   height: 416px;
   width: 100%;
   position: absolute;
@@ -1888,83 +1889,47 @@ body .font-caption-alt {
   left: 0;
 }
 
-.portfolio .investment-grid .skillz-grid .bottom svg path {
+.portfolio .grid-item .skillz-grid .bottom svg path {
   stroke: white;
 }
 
-.portfolio .investment-grid .icapital-grid {
+.portfolio .grid-item .icapital-grid {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: icapital;
 }
 
-.portfolio .investment-grid .hopper-grid {
+.portfolio .grid-item .hopper-grid {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: hopper;
 }
 
-.portfolio .investment-grid .hopper-grid {
+.portfolio .grid-item .hopper-grid {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: hopper;
 }
 
-.portfolio .investment-grid .stubhub-grid {
+.portfolio .grid-item .stubhub-grid {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: stubhub;
 }
 
-.portfolio .investment-grid .sonder-grid {
+.portfolio .grid-item .sonder-grid {
   -ms-grid-row: 4;
   -ms-grid-column: 2;
   grid-area: sonder;
 }
 
-.portfolio .investment-grid .zupee-grid {
+.portfolio .grid-item .zupee-grid {
   -ms-grid-row: 4;
   -ms-grid-column: 3;
   grid-area: zupee;
 }
 
-.portfolio .investment-grid .hover-green:hover {
-  background-color: #00a799;
-}
-
-.portfolio .investment-grid .hover-green:hover svg path {
-  fill: white;
-}
-
-.portfolio .investment-grid .hover-salmon:hover {
-  background-color: #f47a5d;
-}
-
-.portfolio .investment-grid .hover-salmon:hover svg {
-  stroke: white;
-}
-
-.portfolio .investment-grid .hover-salmon:hover svg path {
-  stroke: white;
-}
-
-.portfolio .investment-grid .hover-blue:hover {
-  background-color: #0cb6cb;
-}
-
-.portfolio .investment-grid .hover-blue:hover svg path {
-  fill: white;
-}
-
-.portfolio .investment-grid .hover-orange:hover {
-  background-color: #f7941d;
-}
-
-.portfolio .investment-grid .hover-orange:hover svg path {
-  stroke: white;
-}
-
-.portfolio .investment-grid .icon-flex {
+.portfolio .grid-item .icon-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1981,16 +1946,51 @@ body .font-caption-alt {
           align-items: center;
 }
 
-.portfolio .investment-grid .icon-flex img {
+.portfolio .grid-item .icon-flex img {
   height: 23px;
 }
 
-.portfolio .investment-grid .icon-flex svg {
+.portfolio .grid-item .icon-flex svg {
   height: 25px;
 }
 
-.portfolio-co {
+.hover-green:hover {
+  background-color: #00a799;
+}
+
+.hover-green:hover svg path {
+  fill: white;
+}
+
+.hover-salmon:hover {
   background-color: #f47a5d;
+}
+
+.hover-salmon:hover svg {
+  stroke: white;
+}
+
+.hover-salmon:hover svg path {
+  stroke: white;
+}
+
+.hover-blue:hover {
+  background-color: #0cb6cb;
+}
+
+.hover-blue:hover svg path {
+  fill: white;
+}
+
+.hover-orange:hover {
+  background-color: #f7941d;
+}
+
+.hover-orange:hover svg path {
+  stroke: white;
+}
+
+.portfolio-co {
   color: #0b2142;
 }
 
@@ -2004,7 +2004,7 @@ body .font-caption-alt {
 
 .portfolio-co .company .hero {
   margin-left: 5.5vw;
-  width: 89.5%;
+  width: 102vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2024,11 +2024,11 @@ body .font-caption-alt {
 
 .portfolio-co .company .hero .title h1 {
   max-width: 500px;
+  padding-right: 30px;
 }
 
 .portfolio-co .company .hero .hero-img {
-  height: 600px;
-  margin-right: -15vw;
+  height: 606px;
 }
 
 .portfolio-co .company .body {
@@ -2041,10 +2041,10 @@ body .font-caption-alt {
   max-width: 792px;
   text-align: center;
   display: block;
-  margin: 150px auto;
+  margin: 130px auto;
 }
 
-.portfolio-co .company .body div {
+.portfolio-co .company .body .list-line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2056,18 +2056,53 @@ body .font-caption-alt {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding: 50px 0;
 }
 
-.portfolio-co .company .body div h2 {
+.portfolio-co .company .body .list-line h3 {
+  font-size: 20px;
+}
+
+.portfolio-co .company .body .list-line .founder-list {
+  text-align: right;
+}
+
+.portfolio-co .company .body .list-line h2 {
   margin: 0;
 }
 
 .portfolio-co .company .body div:last-of-type {
   border-bottom: none;
+}
+
+.portfolio-co .company .body button {
+  min-width: 239px;
+  padding: 0 40px;
+  background: rgba(11, 33, 66, 0.08);
+  border: 1px solid rgba(11, 33, 66, 0.31);
+  color: #0b2142;
+}
+
+.portfolio-co .other-investments {
+  margin-top: 0;
+}
+
+.portfolio-co .other-investments h1 {
+  padding-top: 15vh;
+}
+
+.portfolio-co .other-investments .investment-flex {
+  margin: 15vh auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1320px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-bottom: 10vh;
 }
 
 .contact {

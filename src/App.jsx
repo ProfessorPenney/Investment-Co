@@ -7,10 +7,10 @@ import Index from './Components/Index/Index'
 import Portfolio from './Components/Portfolio/Portfolio'
 import PortfolioCompany from './Components/PortfolioCompany/PortfolioCompany'
 import Contact from './Components/Contact/Contact'
+import ScrollToTop from './Components/UI/ScrollToTop'
 
 function App() {
    const [showMenu, setshowMenu] = useState(false)
-   const [portfolioCompany, setportfolioCompany] = useState('')
 
    useEffect(() => {
       window.onunload = () => {
@@ -20,16 +20,13 @@ function App() {
 
    return (
       <Router>
+         <ScrollToTop />
          <div className='App'>
             <Hamburger showMenu={showMenu} setshowMenu={setshowMenu} />
             <HeroMenu showMenu={showMenu} setshowMenu={setshowMenu} />
             <Route exact path='/' component={Index} />
             <Route exact path='/portfolio' component={Portfolio} />
-            <Route
-               exact
-               path='/portfolio/co'
-               render={portfolioCompany => <PortfolioCompany company={portfolioCompany} />}
-            />
+            <Route path='/portfolio/:company' component={PortfolioCompany} />
             <Route path='/contact' component={Contact} />
          </div>
       </Router>

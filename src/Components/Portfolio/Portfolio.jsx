@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 import SmallLogo from '../UI/SmallLogo'
 import HeaderLinks from '../UI/HeaderLinks'
 import Footer from '../UI/Footer'
@@ -8,7 +9,10 @@ import ExtechSVG from '../../SVGs/ExtechSVG'
 import LifetechSVG from '../../SVGs/LifetechSVG'
 
 const Portfolio = () => {
+   const history = useHistory()
+
    useEffect(() => {
+      document.querySelector('.burger').classList.remove('burger-blue')
       document.querySelector('.burger').style.opacity = 1
    }, [])
 
@@ -22,7 +26,9 @@ const Portfolio = () => {
             marketplace solutions.
          </p>
          <section className='investment-grid'>
-            <div className='addepar-grid grid-item'>
+            <div
+               className='addepar-grid grid-item'
+               onClick={() => history.push('/portfolio/addepar')}>
                <div className='top'>
                   <img
                      className='portfolio-hero'
@@ -44,7 +50,9 @@ const Portfolio = () => {
                   </div>
                </div>
             </div>
-            <div className='bolt-grid grid-item hover-green'>
+            <div
+               className='bolt-grid grid-item hover-green'
+               onClick={() => history.push('/portfolio/bolt')}>
                <h2>Bolt</h2>
                <p className='font-body'>The world's first checkout experience platform</p>
                <div className='icon-flex'>
@@ -55,7 +63,9 @@ const Portfolio = () => {
                   <FintechSVG />
                </div>
             </div>
-            <div className='blueground-grid grid-item hover-salmon'>
+            <div
+               className='blueground-grid grid-item hover-salmon'
+               onClick={() => history.push('/portfolio/blueground')}>
                <h2>Blueground</h2>
                <p className='font-body'>Fully furnished apartments for monthly stays</p>
                <div className='icon-flex'>
@@ -66,7 +76,9 @@ const Portfolio = () => {
                   <RetechSVG />
                </div>
             </div>
-            <div className='cerebral-grid grid-item hover-blue'>
+            <div
+               className='cerebral-grid grid-item hover-blue'
+               onClick={() => history.push('/portfolio/cerebral')}>
                <h2>Cerebral</h2>
                <p className='font-body'>Online service for mental health</p>
                <div className='icon-flex'>
@@ -77,7 +89,9 @@ const Portfolio = () => {
                   <LifetechSVG />
                </div>
             </div>
-            <div className='skillz-grid grid-item hover-orange'>
+            <div
+               className='skillz-grid grid-item hover-orange'
+               onClick={() => history.push('/portfolio/skillz')}>
                <div className='top'>
                   <img
                      className='portfolio-hero'
@@ -97,7 +111,9 @@ const Portfolio = () => {
                   </div>
                </div>
             </div>
-            <div className='icapital-grid grid-item hover-green'>
+            <div
+               className='icapital-grid grid-item hover-green'
+               onClick={() => history.push('/portfolio/icapital')}>
                <h2>iCapital</h2>
                <p className='font-body'>Powering the world’s alternative investment marketplace</p>
                <div className='icon-flex'>
@@ -108,7 +124,9 @@ const Portfolio = () => {
                   <FintechSVG />
                </div>
             </div>
-            <div className='hopper-grid grid-item hover-orange'>
+            <div
+               className='hopper-grid grid-item hover-orange'
+               onClick={() => history.push('/portfolio/hopper')}>
                <h2>Hopper</h2>
                <p className='font-body'>Revolutionizing how millions of people book their travel</p>
                <div className='icon-flex'>
@@ -119,7 +137,9 @@ const Portfolio = () => {
                   <ExtechSVG />
                </div>
             </div>
-            <div className='stubhub-grid grid-item hover-orange'>
+            <div
+               className='stubhub-grid grid-item hover-orange'
+               onClick={() => history.push('/portfolio/stubhub')}>
                <h2>StubHub/ Viagogo</h2>
                <p className='font-body'>Helping investors make better, more informed decisions</p>
                <div className='icon-flex'>
@@ -130,7 +150,9 @@ const Portfolio = () => {
                   <ExtechSVG />
                </div>
             </div>
-            <div className='sonder-grid grid-item hover-salmon'>
+            <div
+               className='sonder-grid grid-item hover-salmon'
+               onClick={() => history.push('/portfolio/sonder')}>
                <h2>Sonder</h2>
                <p className='font-body'>Building the future of hospitality</p>
                <div className='icon-flex'>
@@ -141,7 +163,9 @@ const Portfolio = () => {
                   <RetechSVG />
                </div>
             </div>
-            <div className='zupee-grid grid-item hover-orange'>
+            <div
+               className='zupee-grid grid-item hover-orange'
+               onClick={() => history.push('/portfolio/zupee')}>
                <h2>Zupee</h2>
                <p className='font-body'>Real money gaming platform in India</p>
                <div className='icon-flex'>
