@@ -5,6 +5,7 @@ import Footer from '../UI/Footer'
 
 const Contact = () => {
    useEffect(() => {
+      document.querySelector('.burger').classList.remove('burger-blue')
       document.querySelector('.burger').style.opacity = 1
    }, [])
 
