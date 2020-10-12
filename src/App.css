@@ -398,6 +398,10 @@ body .font-caption-alt {
   border: 1px solid rgba(255, 255, 255, 0.31);
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.08);
+  -webkit-transition: -webkit-transform 100ms linear;
+  transition: -webkit-transform 100ms linear;
+  transition: transform 100ms linear;
+  transition: transform 100ms linear, -webkit-transform 100ms linear;
 }
 
 .burger .layers {
@@ -1814,115 +1818,6 @@ body .font-caption-alt {
   width: 82%;
 }
 
-.portfolio .grid-item .addepar-grid {
-  background-color: #00a799;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 1;
-  grid-area: addepar;
-  height: 865px;
-}
-
-.portfolio .grid-item .addepar-grid .portfolio-hero {
-  position: relative;
-  top: 46px;
-  left: 15px;
-  width: 650px;
-}
-
-.portfolio .grid-item .addepar-grid .bottom {
-  height: 416px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.portfolio .grid-item .addepar-grid .bottom svg path {
-  fill: white;
-}
-
-.portfolio .grid-item .bolt-grid {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: bolt;
-}
-
-.portfolio .grid-item .blueground-grid {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: blueground;
-}
-
-.portfolio .grid-item .cerebral-grid {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: cerebral;
-}
-
-.portfolio .grid-item .skillz-grid {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 3;
-  grid-area: skillz;
-  background-color: #f7941d;
-  height: 865px;
-}
-
-.portfolio .grid-item .skillz-grid .portfolio-hero {
-  position: relative;
-  top: -55px;
-  left: -150px;
-  width: 800px;
-}
-
-.portfolio .grid-item .skillz-grid .bottom {
-  height: 416px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.portfolio .grid-item .skillz-grid .bottom svg path {
-  stroke: white;
-}
-
-.portfolio .grid-item .icapital-grid {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: icapital;
-}
-
-.portfolio .grid-item .hopper-grid {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
-  grid-area: hopper;
-}
-
-.portfolio .grid-item .hopper-grid {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
-  grid-area: hopper;
-}
-
-.portfolio .grid-item .stubhub-grid {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  grid-area: stubhub;
-}
-
-.portfolio .grid-item .sonder-grid {
-  -ms-grid-row: 4;
-  -ms-grid-column: 2;
-  grid-area: sonder;
-}
-
-.portfolio .grid-item .zupee-grid {
-  -ms-grid-row: 4;
-  -ms-grid-column: 3;
-  grid-area: zupee;
-}
-
 .portfolio .grid-item .icon-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1946,6 +1841,115 @@ body .font-caption-alt {
 
 .portfolio .grid-item .icon-flex svg {
   height: 25px;
+}
+
+.portfolio .addepar-grid {
+  background-color: #00a799;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: addepar;
+  height: 865px;
+}
+
+.portfolio .addepar-grid .portfolio-hero {
+  position: relative;
+  top: 46px;
+  left: 15px;
+  width: 650px;
+}
+
+.portfolio .addepar-grid .bottom {
+  height: 416px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.portfolio .addepar-grid .bottom svg path {
+  fill: white;
+}
+
+.portfolio .bolt-grid {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: bolt;
+}
+
+.portfolio .blueground-grid {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: blueground;
+}
+
+.portfolio .cerebral-grid {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: cerebral;
+}
+
+.portfolio .skillz-grid {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: skillz;
+  background-color: #f7941d;
+  height: 865px;
+}
+
+.portfolio .skillz-grid .portfolio-hero {
+  position: relative;
+  top: -55px;
+  left: -150px;
+  width: 800px;
+}
+
+.portfolio .skillz-grid .bottom {
+  height: 416px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.portfolio .skillz-grid .bottom svg path {
+  stroke: white;
+}
+
+.portfolio .icapital-grid {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: icapital;
+}
+
+.portfolio .hopper-grid {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: hopper;
+}
+
+.portfolio .hopper-grid {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: hopper;
+}
+
+.portfolio .stubhub-grid {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: stubhub;
+}
+
+.portfolio .sonder-grid {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: sonder;
+}
+
+.portfolio .zupee-grid {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: zupee;
 }
 
 .grid-item:hover {
@@ -1992,6 +1996,8 @@ body .font-caption-alt {
 
 .portfolio-co {
   color: #0b2142;
+  -webkit-transition: opacity 500ms linear;
+  transition: opacity 500ms linear;
 }
 
 .portfolio-co .header-links {
@@ -2029,6 +2035,16 @@ body .font-caption-alt {
 
 .portfolio-co .company .hero .hero-img {
   height: 606px;
+}
+
+.portfolio-co .company .hero .image-visible {
+  opacity: 1;
+  -webkit-transition: opacity 100ms linear;
+  transition: opacity 100ms linear;
+}
+
+.portfolio-co .company .hero .image-hidden {
+  opacity: 0;
 }
 
 .portfolio-co .company .body {

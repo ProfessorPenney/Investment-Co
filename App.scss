@@ -360,6 +360,7 @@ body {
    border: 1px solid rgba(255, 255, 255, 0.31);
    border-radius: 50%;
    background-color: rgba(255, 255, 255, 0.08);
+   transition: transform 100ms linear;
 
    .layers {
       position: absolute;
@@ -1448,76 +1449,6 @@ body {
          width: 82%;
       }
 
-      .addepar-grid {
-         background-color: $green;
-         grid-area: addepar;
-         height: 865px;
-         .portfolio-hero {
-            position: relative;
-            top: 46px;
-            left: 15px;
-            width: 650px;
-         }
-         .bottom {
-            height: 416px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            svg path {
-               fill: white;
-            }
-         }
-      }
-
-      .bolt-grid {
-         grid-area: bolt;
-      }
-      .blueground-grid {
-         grid-area: blueground;
-      }
-      .cerebral-grid {
-         grid-area: cerebral;
-      }
-      .skillz-grid {
-         grid-area: skillz;
-         background-color: $orange-yellow;
-         height: 865px;
-         .portfolio-hero {
-            position: relative;
-            top: -55px;
-            left: -150px;
-            width: 800px;
-         }
-         .bottom {
-            height: 416px;
-            width: 100%;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            svg path {
-               stroke: white;
-            }
-         }
-      }
-      .icapital-grid {
-         grid-area: icapital;
-      }
-      .hopper-grid {
-         grid-area: hopper;
-      }
-      .hopper-grid {
-         grid-area: hopper;
-      }
-      .stubhub-grid {
-         grid-area: stubhub;
-      }
-      .sonder-grid {
-         grid-area: sonder;
-      }
-      .zupee-grid {
-         grid-area: zupee;
-      }
-
       .icon-flex {
          display: flex;
          position: absolute;
@@ -1534,6 +1465,75 @@ body {
             height: 25px;
          }
       }
+   }
+   .addepar-grid {
+      background-color: $green;
+      grid-area: addepar;
+      height: 865px;
+      .portfolio-hero {
+         position: relative;
+         top: 46px;
+         left: 15px;
+         width: 650px;
+      }
+      .bottom {
+         height: 416px;
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         svg path {
+            fill: white;
+         }
+      }
+   }
+
+   .bolt-grid {
+      grid-area: bolt;
+   }
+   .blueground-grid {
+      grid-area: blueground;
+   }
+   .cerebral-grid {
+      grid-area: cerebral;
+   }
+   .skillz-grid {
+      grid-area: skillz;
+      background-color: $orange-yellow;
+      height: 865px;
+      .portfolio-hero {
+         position: relative;
+         top: -55px;
+         left: -150px;
+         width: 800px;
+      }
+      .bottom {
+         height: 416px;
+         width: 100%;
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         svg path {
+            stroke: white;
+         }
+      }
+   }
+   .icapital-grid {
+      grid-area: icapital;
+   }
+   .hopper-grid {
+      grid-area: hopper;
+   }
+   .hopper-grid {
+      grid-area: hopper;
+   }
+   .stubhub-grid {
+      grid-area: stubhub;
+   }
+   .sonder-grid {
+      grid-area: sonder;
+   }
+   .zupee-grid {
+      grid-area: zupee;
    }
 }
 
@@ -1577,6 +1577,7 @@ body {
 
 .portfolio-co {
    color: $dark-blue;
+   transition: opacity 500ms linear;
 
    .header-links {
       color: $dark-blue;
@@ -1603,6 +1604,13 @@ body {
          }
          .hero-img {
             height: 606px;
+         }
+         .image-visible {
+            opacity: 1;
+            transition: opacity 100ms linear;
+         }
+         .image-hidden {
+            opacity: 0;
          }
       }
       .body {

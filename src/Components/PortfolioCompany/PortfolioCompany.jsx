@@ -12,6 +12,7 @@ import LifetechSVG from '../../SVGs/LifetechSVG'
 const PortfolioCompany = ({ match }) => {
    const [company, setcompany] = useState(companyData[0])
    const [otherInvestments, setotherInvestments] = useState(companyData)
+   const [imageLoaded, setimageLoaded] = useState(false)
    const history = useHistory()
 
    useEffect(() => {
@@ -28,6 +29,7 @@ const PortfolioCompany = ({ match }) => {
    }
 
    function switchCompany(otherCompany) {
+      setimageLoaded(false)
       history.push(`/portfolio/${otherCompany.name}`)
    }
 
@@ -47,7 +49,12 @@ const PortfolioCompany = ({ match }) => {
                   </header>
                   <h1>{company.headline}</h1>
                </div>
-               <img className='hero-img' src={company.heroImg} alt='' />
+               <img
+                  className={`hero-img image-${imageLoaded ? 'visible' : 'hidden'}`}
+                  src={company.heroImg}
+                  alt=''
+                  onLoad={() => setimageLoaded(true)}
+               />
             </header>
             <div className='body'>
                <p className='font-body'>{company.description}</p>
