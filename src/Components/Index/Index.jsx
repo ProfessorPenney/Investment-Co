@@ -28,13 +28,11 @@ const Index = () => {
          <div className='background4 bg'></div>
          <div className='background5 bg'></div>
          <MainHeader />
-         {/* <Suspense fallback={<h1> Still Loading...</h1>}> */}
          <Level2 />
          <Level3 />
          <Level4 />
          <Level5 />
          <Level6 />
-         {/* </Suspense> */}
       </React.Fragment>
    )
 }
