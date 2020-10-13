@@ -64,6 +64,17 @@ const PortfolioCompany = ({ match }) => {
                         alt={company.Capitalname}
                         style={{ height: company.logoHeight }}
                      />
+                     {company.logo2 && (
+                        <img
+                           src={company.logo2}
+                           alt=''
+                           style={{
+                              height: company.logo2Height,
+                              marginLeft: '10px',
+                              marginBottom: '6px'
+                           }}
+                        />
+                     )}
                   </header>
                   <h1>{company.headline}</h1>
                </div>
@@ -117,7 +128,19 @@ const PortfolioCompany = ({ match }) => {
                      <h2>{otherCompany.capitalName}</h2>
                      <p className='font-body'>{otherCompany.headline2}</p>
                      <div className='icon-flex'>
-                        <img src={otherCompany.logo} alt={otherCompany.capitalName} />
+                        <div>
+                           <img src={otherCompany.logo} alt={otherCompany.capitalName} />
+                           {otherCompany.logo2 && (
+                              <img
+                                 src={otherCompany.logo2}
+                                 alt=''
+                                 style={{
+                                    height: otherCompany.logo2Height,
+                                    marginLeft: '10px'
+                                 }}
+                              />
+                           )}
+                        </div>
                         {otherCompany.icon === 'fintech' && <FintechSVG />}
                         {otherCompany.icon === 'retech' && <RetechSVG />}
                         {otherCompany.icon === 'lifetech' && <LifetechSVG />}

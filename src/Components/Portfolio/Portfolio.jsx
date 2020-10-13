@@ -143,10 +143,16 @@ const Portfolio = () => {
                <h2>StubHub/ Viagogo</h2>
                <p className='font-body'>Helping investors make better, more informed decisions</p>
                <div className='icon-flex'>
-                  <img
-                     src={require('../../img/portfolio company pages/company logos/addepar.png')}
-                     alt='StubHub'
-                  />
+                  <div>
+                     <img
+                        src={require('../../img/portfolio company pages/company logos/stubhub.png')}
+                        alt='StubHub'
+                     />
+                     <img
+                        src={require('../../img/portfolio company pages/company logos/viagogo.png')}
+                        alt='Viagogo'
+                     />
+                  </div>
                   <ExtechSVG />
                </div>
             </div>

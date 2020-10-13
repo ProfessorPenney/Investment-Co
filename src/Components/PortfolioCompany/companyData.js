@@ -140,7 +140,9 @@ export default [
    {
       name: 'stubhub',
       logo: require('../../img/portfolio company pages/company logos/stubhub.png'),
+      logo2: require('../../img/portfolio company pages/company logos/viagogo.png'),
       logoHeight: '40px',
+      logo2Height: '26px',
       headline: 'The world’s largest ticket marketplace',
       heroImg: require('../../img/portfolio company pages/optimized hero images/stubhub.jpg'),
       description:

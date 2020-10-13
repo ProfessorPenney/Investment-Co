@@ -1884,6 +1884,7 @@ body .font-caption-alt {
 
 .portfolio .grid-item .icon-flex img {
   height: 23px;
+  margin-right: 14px;
 }
 
 .portfolio .grid-item .icon-flex svg {
