@@ -16,13 +16,31 @@ const PortfolioCompany = ({ match }) => {
    const history = useHistory()
 
    useEffect(() => {
-      document.querySelector('.burger').classList.add('burger-blue')
+      window.addEventListener('scroll', handleScroll)
+      return () => {
+         window.removeEventListener('scroll', handleScroll)
+      }
+   }, [])
+
+   useEffect(() => {
+      document.querySelector('.burger').classList.add('burger-appear', 'burger-blue')
       const newCompany = companyData.find(company => company.name === match.params.company)
       if (newCompany !== undefined) {
          setcompany(newCompany)
          setotherInvestments(companyData.filter(company => company.name !== match.params.company))
       }
    }, [match.params.company])
+
+   function handleScroll() {
+      if (
+         document.querySelector('.other-investments').getBoundingClientRect().top <=
+         window.innerHeight * 0.1
+      ) {
+         document.querySelector('.burger').classList.remove('burger-blue')
+      } else {
+         document.querySelector('.burger').classList.add('burger-blue')
+      }
+   }
 
    function companyRedirect() {
       window.open(`https://${company.website}`, '_blank')

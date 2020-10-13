@@ -10,7 +10,6 @@ import Level6 from './Level6'
 const Index = () => {
    useEffect(() => {
       window.addEventListener('scroll', handleScroll)
-
       return () => {
          window.removeEventListener('scroll', handleScroll)
       }

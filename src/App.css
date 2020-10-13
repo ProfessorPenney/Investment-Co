@@ -517,6 +517,10 @@ body .font-caption-alt {
   background-color: #0b2142;
 }
 
+.burger-appear {
+  opacity: 1;
+}
+
 .burger-menu {
   position: fixed;
   left: 0;
