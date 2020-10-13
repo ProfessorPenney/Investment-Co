@@ -50,7 +50,9 @@ const PortfolioCompany = ({ match }) => {
                   <h1>{company.headline}</h1>
                </div>
                <img
-                  className={`hero-img image-${imageLoaded ? 'visible' : 'hidden'}`}
+                  className={`hero-img ${company.name}-img image-${
+                     imageLoaded ? 'visible' : 'hidden'
+                  }`}
                   src={company.heroImg}
                   alt=''
                   onLoad={() => setimageLoaded(true)}

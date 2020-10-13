@@ -122,6 +122,7 @@ body {
    top: 7vh;
    margin-top: 0;
    text-align: center;
+   z-index: 1;
    span {
       color: $header-green;
    }
@@ -1614,6 +1615,7 @@ body {
          flex-wrap: nowrap;
          justify-content: space-between;
          align-items: center;
+         height: 600px;
 
          .title {
             img {
@@ -1633,6 +1635,17 @@ body {
          }
          .image-hidden {
             opacity: 0;
+         }
+         .skillz-img {
+            height: 900px;
+            margin-right: -300px;
+            margin-top: -140px;
+         }
+         .zupee-img {
+            transform: rotate(45deg);
+            margin-right: 400px;
+            height: 750px;
+            margin-top: -150px;
          }
       }
       .body {

@@ -120,6 +120,7 @@ body .font-caption-alt {
   top: 7vh;
   margin-top: 0;
   text-align: center;
+  z-index: 1;
 }
 
 .small-logo span {
@@ -2072,6 +2073,7 @@ body .font-caption-alt {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 600px;
 }
 
 .portfolio-co .company .hero .title img {
@@ -2095,6 +2097,20 @@ body .font-caption-alt {
 
 .portfolio-co .company .hero .image-hidden {
   opacity: 0;
+}
+
+.portfolio-co .company .hero .skillz-img {
+  height: 900px;
+  margin-right: -300px;
+  margin-top: -140px;
+}
+
+.portfolio-co .company .hero .zupee-img {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-right: 400px;
+  height: 750px;
+  margin-top: -150px;
 }
 
 .portfolio-co .company .body {
