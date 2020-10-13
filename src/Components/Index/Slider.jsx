@@ -33,10 +33,7 @@ const Slider = ({ content, setslideLeft, setslideRight }) => {
          <img src={content.heroImage} alt='' className='hero-img' />
          <hr />
          <div className='bottom-flexbox'>
-            <button
-               className='left-button circle-button'
-               onClick={slideLeft}
-               disabled={content.index === 0}>
+            <button className='left-button circle-button' onClick={slideLeft}>
                <ArrowSVG />
             </button>
             <div className='dots'>
@@ -46,10 +43,7 @@ const Slider = ({ content, setslideLeft, setslideRight }) => {
                <div className={`dot4 ${content.index === 3 ? 'white-dot' : 'none'}`}></div>
                <div className={`dot5 ${content.index === 4 ? 'white-dot' : 'none'}`}></div>
             </div>
-            <button
-               className='right-button circle-button'
-               onClick={slideRight}
-               disabled={content.index === 4}>
+            <button className='right-button circle-button' onClick={slideRight}>
                <ArrowSVG />
             </button>
          </div>

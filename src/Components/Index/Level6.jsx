@@ -12,13 +12,22 @@ const Level6 = () => {
    useEffect(() => {
       if (slideRight === true) {
          setslideRight(false)
-         setslide(slideContent[slide.index + 1])
+         if (slide.index === slideContent.length - 1) {
+            setslide(slideContent[0])
+         } else {
+            setslide(slideContent[slide.index + 1])
+         }
       }
    }, [slideRight])
+
    useEffect(() => {
       if (slideLeft === true) {
          setslideLeft(false)
-         setslide(slideContent[slide.index - 1])
+         if (slide.index === 0) {
+            setslide(slideContent[slideContent.length - 1])
+         } else {
+            setslide(slideContent[slide.index - 1])
+         }
       }
    }, [slideLeft])
 

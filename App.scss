@@ -52,6 +52,7 @@ body {
       height: 64px;
       border-radius: 64px;
       border: none;
+      transition: transform 100ms linear;
    }
 
    button:hover {
@@ -121,6 +122,9 @@ body {
    top: 7vh;
    margin-top: 0;
    text-align: center;
+   span {
+      color: $header-green;
+   }
 }
 
 .footer {
@@ -231,6 +235,9 @@ body {
       transform: scale(1.2);
       opacity: 0;
       transition: transform 2s linear, opacity 1s linear;
+      span {
+         color: $header-green;
+      }
    }
 
    .header-links {
@@ -314,7 +321,7 @@ body {
 
 .app-appear {
    .burger {
-      transition: opacity 1s linear 2s;
+      transition: opacity 1s linear 2s, transform 100ms linear;
       opacity: 1;
    }
    .main-header {
@@ -361,6 +368,7 @@ body {
    border-radius: 50%;
    background-color: rgba(255, 255, 255, 0.08);
    transition: transform 100ms linear;
+   transform: scale(0.99);
 
    .layers {
       position: absolute;
@@ -398,6 +406,7 @@ body {
 
 .burger:hover {
    background-color: white;
+   transform: scale(0.92);
    .layers {
       background-color: $dark-blue;
    }
@@ -472,7 +481,6 @@ body {
             left: 2.5%;
             top: 5%;
             font-size: 60px;
-            // transition: opacity 300ms ease-in 100ms;
             opacity: 0;
          }
 
@@ -1247,8 +1255,10 @@ body {
             background-color: $dark-blue;
             color: white;
             width: 225px;
+            transition: transform 100ms linear;
          }
          .see-portfolio:hover {
+            transform: scale(0.95);
             background-color: #081a33;
          }
 
@@ -1261,6 +1271,7 @@ body {
             height: 80px;
             border-radius: 16px;
             border: none;
+            transition: transform 100ms linear;
             .left {
                display: flex;
                justify-content: center;
@@ -1298,6 +1309,7 @@ body {
             }
          }
          .square-button:hover {
+            transform: scale(0.97);
             .left {
                background-color: white;
             }
@@ -1341,12 +1353,16 @@ body {
                display: flex;
                justify-content: center;
                align-items: center;
+               transition: transform 100ms linear;
                .arrowSVG {
                   width: 16px;
                   path {
                      stroke: white;
                   }
                }
+            }
+            button:hover {
+               transform: scale(0.92);
             }
 
             .left-button {
@@ -1582,6 +1598,12 @@ body {
    .header-links {
       color: $dark-blue;
    }
+   .small-logo {
+      color: $dark-blue;
+      span {
+         color: white;
+      }
+   }
 
    .company {
       padding-top: 20vh;
@@ -1654,6 +1676,12 @@ body {
             background: rgba(11, 33, 66, 0.08);
             border: 1px solid rgba(11, 33, 66, 0.31);
             color: $dark-blue;
+            transition: all 100ms linear;
+         }
+         button:hover {
+            background-color: $dark-blue;
+            color: white;
+            transform: scale(0.95);
          }
       }
    }

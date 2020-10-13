@@ -20,7 +20,7 @@ const Contact = () => {
                   <p>40° 43' 58.44'' N, 73° 59' 29.436'' W</p>
                </div>
                <address>
-                  <h4>809 Broadway, New York, NY 10003</h4>
+                  <h4>908 Broadway, New York, NY 10003</h4>
                </address>
             </div>
             <div className='address-box'>
@@ -29,7 +29,7 @@ const Contact = () => {
                   <p>37° 47' 50.0" N, 122° 24' 18.2" W</p>
                </div>
                <address>
-                  <h4>590 Pacific Avenue, San Francisco, CA 94133</h4>
+                  <h4>950 Pacific Avenue, San Francisco, CA 94133</h4>
                </address>
             </div>
             <div className='contact-emails font-body'>

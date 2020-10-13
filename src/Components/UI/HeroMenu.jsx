@@ -21,7 +21,7 @@ const HeroMenu = ({ showMenu, setshowMenu }) => {
          <div className='background'></div>
          <div className='menu-flexbox'>
             <div className='left-menu'>
-               <h4>WestCrap</h4>
+               <h4>Investment Co</h4>
                <div className='address-flex'>
                   <div className='address-coords'>
                      <p className='font-subtitle-bold'>
@@ -30,7 +30,7 @@ const HeroMenu = ({ showMenu, setshowMenu }) => {
                         <br />
                      </p>
                      <address>
-                        590 PACIFIC AVE
+                        950 PACIFIC AVE
                         <br />
                         SAN FRANCISCO, CA 94113 <br />
                         <br />
@@ -45,7 +45,7 @@ const HeroMenu = ({ showMenu, setshowMenu }) => {
                         <br />
                      </p>
                      <address>
-                        809 BROADWAY
+                        908 BROADWAY
                         <br />
                         NEW YORK, NY 10003
                         <br />

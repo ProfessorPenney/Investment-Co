@@ -5,10 +5,8 @@ const Footer = () => {
    return (
       <footer className='footer'>
          <hr />
-         <img src={WLogo} alt='W' />
-         <p className='font-caption'>
-            © 2020 Westcap Investment Partners, LLC. All Rights Reserved
-         </p>
+         {/* <img src={WLogo} alt='' /> */}
+         <p className='font-caption'>© 2020 Investment Co. Lorem ipsum, dolor sit amet</p>
       </footer>
    )
 }

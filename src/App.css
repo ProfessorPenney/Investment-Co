@@ -44,6 +44,10 @@ body .button-oval {
   height: 64px;
   border-radius: 64px;
   border: none;
+  -webkit-transition: -webkit-transform 100ms linear;
+  transition: -webkit-transform 100ms linear;
+  transition: transform 100ms linear;
+  transition: transform 100ms linear, -webkit-transform 100ms linear;
 }
 
 body button:hover {
@@ -116,6 +120,10 @@ body .font-caption-alt {
   top: 7vh;
   margin-top: 0;
   text-align: center;
+}
+
+.small-logo span {
+  color: #09b5ca;
 }
 
 .footer {
@@ -253,6 +261,10 @@ body .font-caption-alt {
   transition: transform 2s linear, opacity 1s linear, -webkit-transform 2s linear;
 }
 
+.main-header .main-logo span {
+  color: #09b5ca;
+}
+
 .main-header .header-links {
   opacity: 0;
   -webkit-transition: opacity 1s linear 2s;
@@ -344,8 +356,10 @@ body .font-caption-alt {
 }
 
 .app-appear .burger {
-  -webkit-transition: opacity 1s linear 2s;
-  transition: opacity 1s linear 2s;
+  -webkit-transition: opacity 1s linear 2s, -webkit-transform 100ms linear;
+  transition: opacity 1s linear 2s, -webkit-transform 100ms linear;
+  transition: opacity 1s linear 2s, transform 100ms linear;
+  transition: opacity 1s linear 2s, transform 100ms linear, -webkit-transform 100ms linear;
   opacity: 1;
 }
 
@@ -402,6 +416,8 @@ body .font-caption-alt {
   transition: -webkit-transform 100ms linear;
   transition: transform 100ms linear;
   transition: transform 100ms linear, -webkit-transform 100ms linear;
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
 }
 
 .burger .layers {
@@ -451,6 +467,8 @@ body .font-caption-alt {
 
 .burger:hover {
   background-color: white;
+  -webkit-transform: scale(0.92);
+          transform: scale(0.92);
 }
 
 .burger:hover .layers {
@@ -1570,9 +1588,15 @@ body .font-caption-alt {
   background-color: #0b2142;
   color: white;
   width: 225px;
+  -webkit-transition: -webkit-transform 100ms linear;
+  transition: -webkit-transform 100ms linear;
+  transition: transform 100ms linear;
+  transition: transform 100ms linear, -webkit-transform 100ms linear;
 }
 
 .level6 .slider-placeholder .slider .see-portfolio:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
   background-color: #081a33;
 }
 
@@ -1587,6 +1611,10 @@ body .font-caption-alt {
   height: 80px;
   border-radius: 16px;
   border: none;
+  -webkit-transition: -webkit-transform 100ms linear;
+  transition: -webkit-transform 100ms linear;
+  transition: transform 100ms linear;
+  transition: transform 100ms linear, -webkit-transform 100ms linear;
 }
 
 .level6 .slider-placeholder .slider .square-button .left {
@@ -1640,6 +1668,11 @@ body .font-caption-alt {
 
 .level6 .slider-placeholder .slider .square-button .right .arrowSVG {
   width: 16px;
+}
+
+.level6 .slider-placeholder .slider .square-button:hover {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
 }
 
 .level6 .slider-placeholder .slider .square-button:hover .left {
@@ -1697,6 +1730,10 @@ body .font-caption-alt {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: -webkit-transform 100ms linear;
+  transition: -webkit-transform 100ms linear;
+  transition: transform 100ms linear;
+  transition: transform 100ms linear, -webkit-transform 100ms linear;
 }
 
 .level6 .slider-placeholder .slider .bottom-flexbox .circle-button .arrowSVG {
@@ -1705,6 +1742,11 @@ body .font-caption-alt {
 
 .level6 .slider-placeholder .slider .bottom-flexbox .circle-button .arrowSVG path {
   stroke: white;
+}
+
+.level6 .slider-placeholder .slider .bottom-flexbox button:hover {
+  -webkit-transform: scale(0.92);
+          transform: scale(0.92);
 }
 
 .level6 .slider-placeholder .slider .bottom-flexbox .left-button .arrowSVG {
@@ -2004,6 +2046,14 @@ body .font-caption-alt {
   color: #0b2142;
 }
 
+.portfolio-co .small-logo {
+  color: #0b2142;
+}
+
+.portfolio-co .small-logo span {
+  color: white;
+}
+
 .portfolio-co .company {
   padding-top: 20vh;
 }
@@ -2100,6 +2150,15 @@ body .font-caption-alt {
   background: rgba(11, 33, 66, 0.08);
   border: 1px solid rgba(11, 33, 66, 0.31);
   color: #0b2142;
+  -webkit-transition: all 100ms linear;
+  transition: all 100ms linear;
+}
+
+.portfolio-co .company .body button:hover {
+  background-color: #0b2142;
+  color: white;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 .portfolio-co .other-investments {

@@ -1,20 +1,19 @@
 import React from 'react'
-import { useLayoutEffect } from 'react'
 import CompassSVG from '../../SVGs/CompassSVG'
 import HeaderLinks from '../UI/HeaderLinks'
 
 const MainHeader = () => {
-   useLayoutEffect(() => {
-      document.querySelector('.background-color').classList.remove('background-color-appear')
-      document.querySelector('.main-header').classList.remove('main-header-disappear')
-   }, [])
+   function animateHero() {
+      document.querySelector('.App').classList.add('app-appear')
+   }
 
    return (
       <header className='main-header'>
          <div className='hero-background'>
             <img
                src={require('../../img/homepage/optimized/homepage-hero-bg.jpg')}
-               alt='background'
+               alt=''
+               onLoad={animateHero}
             />
          </div>
          <div className='line1 line'></div>
@@ -22,7 +21,9 @@ const MainHeader = () => {
          <div className='line3 line'></div>
          <div className='line4 line'></div>
          <div className='line5 line'></div>
-         <h1 className='main-logo'>WestCrap</h1>
+         <h1 className='main-logo'>
+            Investment <span>Co</span>
+         </h1>
          <HeaderLinks />
          <h4 className='hero-subtitle'>
             We build companies that become <em>great</em> investments.
