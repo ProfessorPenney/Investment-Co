@@ -1,15 +1,29 @@
 import React from 'react'
+// import React, { useEffect, useRef } from 'react'
+// import { useLocation } from 'react-router-dom'
 import CompassSVG from '../../SVGs/CompassSVG'
 import HeaderLinks from '../UI/HeaderLinks'
 
 const MainHeader = () => {
+   // const myRef = useRef(null)
+   // const { pathname } = useLocation()
+
+   // useEffect(() => {
+   //    if (pathname === '/') {
+   //       window.scrollTo(0, myRef.current.offsetTop)
+   //       console.log(myRef)
+   //    }
+   //    console.log(pathname)
+   // }, [pathname])
+
    function animateHero() {
       document.querySelector('.App').classList.add('app-appear')
    }
 
    return (
       <header className='main-header'>
-         <div className='hero-background'>
+         {/* <div ref={myRef} style={{ height: '100px', backgroundColor: 'red' }}></div> */}
+         <div className='hero-background' onLoad={animateHero}>
             <img
                src={require('../../img/homepage/optimized/homepage-hero-bg.jpg')}
                alt=''

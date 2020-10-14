@@ -20,17 +20,19 @@ const Slider = ({ content, setslideLeft, setslideRight }) => {
          <Link to='/portfolio' className='see-portfolio button-oval'>
             see portfolio
          </Link>
-         <button className='square-button'>
-            <div className='left'>
-               <img src={content.buttonPic} alt='company' />
-               <p className='font-caption-alt'>{content.buttonText}</p>
-            </div>
-            <div className='border'></div>
-            <div className='right'>
-               <ArrowSVG />
-            </div>
-         </button>
          <img src={content.heroImage} alt='' className='hero-img' />
+         <Link to={`/portfolio/${content.name}`}>
+            <button className='square-button'>
+               <div className='left'>
+                  <img src={content.buttonPic} alt='company' />
+                  <p className='font-caption-alt'>{content.buttonText}</p>
+               </div>
+               <div className='border'></div>
+               <div className='right'>
+                  <ArrowSVG />
+               </div>
+            </button>
+         </Link>
          <hr />
          <div className='bottom-flexbox'>
             <button className='left-button circle-button' onClick={slideLeft}>

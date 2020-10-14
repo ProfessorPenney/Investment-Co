@@ -9,7 +9,8 @@ const Level5 = () => {
             Passives take bets and hope for the best. Operators make investments and build the best.
          </h2>
          <p className='font-body'>
-            <span>LAURENCE TOSI</span> // MANAGING PARTNER
+            <span className='bold'>LAURENCE TOSI</span>
+            <span className='mobile-delete'> // </span>MANAGING PARTNER
          </p>
       </blockquote>
    )

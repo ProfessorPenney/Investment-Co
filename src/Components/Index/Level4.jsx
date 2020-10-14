@@ -31,31 +31,31 @@ const Level4 = () => {
                   <p className='font-subtitle-bold'>investment criteria</p>
                </header>
                <div className='body'>
-                  <div>
+                  <div className='row'>
                      <div>
                         <img src={Criteria1SVG} alt=''></img>
                      </div>
                      <p>Opportunistic leadership teams</p>
                   </div>
-                  <div>
+                  <div className='row'>
                      <div>
                         <img src={Criteria2SVG} alt=''></img>
                      </div>
                      <p>Innovative products powered by best-in-class technology</p>
                   </div>
-                  <div>
+                  <div className='row'>
                      <div>
                         <img src={Criteria3SVG} alt=''></img>
                      </div>
                      <p>Passionate, growing customer base</p>
                   </div>
-                  <div>
+                  <div className='row'>
                      <div>
                         <img src={Criteria4SVG} alt=''></img>
                      </div>
                      <p>Positive unit economics</p>
                   </div>
-                  <div>
+                  <div className='row'>
                      <div>
                         <img src={Criteria5SVG} alt=''></img>
                      </div>
@@ -68,31 +68,31 @@ const Level4 = () => {
                   <p className='font-subtitle-bold'>investment approach</p>
                </header>
                <div className='body'>
-                  <div>
+                  <div className='row'>
                      <div>
                         <img src={Approach1SVG} alt=''></img>
                      </div>
                      <p>Secure proprietary deal(s)</p>
                   </div>
-                  <div>
+                  <div className='row'>
                      <div>
                         <img src={Approach2SVG} alt=''></img>
                      </div>
                      <p>Define operating plan before investing and scaling</p>
                   </div>
-                  <div>
+                  <div className='row'>
                      <div>
                         <img src={Approach3SVG} alt=''></img>
                      </div>
                      <p>Confirm entry valuations reflective of WestCap operating expertise</p>
                   </div>
-                  <div>
+                  <div className='row'>
                      <div>
                         <img src={Approach4SVG} alt=''></img>
                      </div>
                      <p>Structure downside protections</p>
                   </div>
-                  <div>
+                  <div className='row'>
                      <div>
                         <img src={Approach5SVG} alt=''></img>
                      </div>
@@ -105,29 +105,43 @@ const Level4 = () => {
                   <p className='font-subtitle-bold'>investment criteria</p>
                </header>
                <div className='body last-body'>
-                  <div>
+                  <div className='row'>
                      <div>
                         <img src={Risk1SVG} alt=''></img>
                      </div>
-                     <p>Small team, few investments, limited sector focus, deliberate fund cap</p>
+                     <p>
+                        <b>Focus</b>
+                        <br />
+                        Small team, few investments, limited sector focus, deliberate fund cap
+                     </p>
                   </div>
-                  <div>
+                  <div className='row'>
                      <div>
                         <img src={Risk2SVG} alt=''></img>
                      </div>
-                     <p>Deals sourced at a discount to fair market value</p>
+                     <p>
+                        <b>Entry Point Validation</b>
+                        <br />
+                        Deals sourced at a discount to fair market value
+                     </p>
                   </div>
-                  <div>
+                  <div className='row'>
                      <div>
                         <img src={Risk3SVG} alt=''></img>
                      </div>
-                     <p>Advantageous liquidation preferences that protect principal</p>
+                     <p>
+                        <b>Structure</b>
+                        <br />
+                        Advantageous liquidation preferences that protect principal
+                     </p>
                   </div>
-                  <div>
+                  <div className='row'>
                      <div>
                         <img src={Risk4SVG} alt=''></img>
                      </div>
                      <p>
+                        <b>Governance</b>
+                        <br />
                         Control-like provisions such as blocking rights, board seats and pro rata /
                         pre-emptive rights
                      </p>

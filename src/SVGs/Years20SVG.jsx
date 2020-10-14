@@ -4,8 +4,6 @@ const Years20SVG = () => {
    return (
       <svg
          className='years-svg'
-         width='194'
-         height='172'
          viewBox='0 0 194 172'
          fill='none'
          xmlns='http://www.w3.org/2000/svg'>

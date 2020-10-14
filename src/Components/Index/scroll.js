@@ -99,7 +99,7 @@ const scroll = () => {
       document.querySelector('.caption-20years').classList.remove('caption-20years-appear')
    } else if (
       document.querySelector('.caption-20years').getBoundingClientRect().top <=
-      window.innerHeight * (2 / 3)
+      window.innerHeight * (9 / 10)
    ) {
       document.querySelector('.caption-20years').classList.add('caption-20years-appear')
       document
@@ -108,7 +108,7 @@ const scroll = () => {
       document.querySelector('.svg-container').classList.add('svg-container-appear')
    } else if (
       document.querySelector('.level2').getBoundingClientRect().top <=
-      window.innerHeight * (2 / 3)
+      window.innerHeight * (1 / 3)
    ) {
       document.querySelector('.burger').classList.add('burger-blue')
       document.querySelector('.background-color').classList.add('background-color-appear')
