@@ -29,6 +29,12 @@ const Index = () => {
          <Level4 />
          <Level5 />
          <Level6 />
+         <div className='preload' style={{ display: 'none' }}>
+            <img src={require('../../img/homepage/optimized/fintech-bg.jpg')} alt='' />
+            <img src={require('../../img/homepage/optimized/retech-bg.jpg')} alt='' />
+            <img src={require('../../img/homepage/optimized/extech-bg.jpg')} alt='' />
+            <img src={require('../../img/homepage/optimized/lifetech-bg.jpg')} alt='' />
+         </div>
       </React.Fragment>
    )
 }
