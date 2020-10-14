@@ -224,7 +224,6 @@ body .font-caption-alt {
   width: 100vw;
   -webkit-transition: opacity 500ms linear;
   transition: opacity 500ms linear;
-  overflow: hidden;
 }
 
 .main-header .hero-background {
@@ -820,7 +819,7 @@ body .font-caption-alt {
 
 .level2 {
   margin-top: -60vh;
-  width: 100%;
+  width: 100vw;
   padding-bottom: 200px;
 }
 
@@ -916,13 +915,13 @@ body .font-caption-alt {
   transition: opacity 500ms linear;
   position: relative;
   text-align: center;
-  padding-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 20px 5vw;
 }
 
 .level2 .caption-20years .meet-team-caption {
@@ -1614,6 +1613,7 @@ body .font-caption-alt {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .level6 .slider-placeholder .slider h2 {
