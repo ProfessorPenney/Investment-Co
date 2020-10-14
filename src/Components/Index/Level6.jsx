@@ -38,6 +38,9 @@ const Level6 = () => {
    function swipeRight() {
       setslideRight(true)
    }
+   function goToSlide(index) {
+      setslide(slideContent[index])
+   }
 
    return (
       <section className='level6'>
@@ -45,11 +48,12 @@ const Level6 = () => {
          <div className='slider-placeholder'>
             <TransitionGroup>
                <CSSTransition timeout={350} key={slide.index} classNames='slide'>
-                  <Swipe onSwipeLeft={swipeLeft} onSwipeRight={swipeRight} tolerance='50'>
+                  <Swipe onSwipeLeft={swipeLeft} onSwipeRight={swipeRight} tolerance={50}>
                      <Slider
                         content={slide}
                         setslideLeft={setslideLeft}
                         setslideRight={setslideRight}
+                        goToSlide={goToSlide}
                      />
                   </Swipe>
                </CSSTransition>

@@ -2,7 +2,7 @@ import React from 'react'
 import ArrowSVG from '../../SVGs/ArrowSVG'
 import { Link } from 'react-router-dom'
 
-const Slider = ({ content, setslideLeft, setslideRight }) => {
+const Slider = ({ content, setslideLeft, setslideRight, goToSlide }) => {
    function slideRight() {
       setslideRight(true)
    }
@@ -39,11 +39,21 @@ const Slider = ({ content, setslideLeft, setslideRight }) => {
                <ArrowSVG />
             </button>
             <div className='dots'>
-               <div className={`dot1 ${content.index === 0 ? 'white-dot' : 'none'}`}></div>
-               <div className={`dot2 ${content.index === 1 ? 'white-dot' : 'none'}`}></div>
-               <div className={`dot3 ${content.index === 2 ? 'white-dot' : 'none'}`}></div>
-               <div className={`dot4 ${content.index === 3 ? 'white-dot' : 'none'}`}></div>
-               <div className={`dot5 ${content.index === 4 ? 'white-dot' : 'none'}`}></div>
+               <div
+                  className={`dot1 ${content.index === 0 ? 'white-dot' : 'none'}`}
+                  onClick={() => goToSlide(0)}></div>
+               <div
+                  className={`dot2 ${content.index === 1 ? 'white-dot' : 'none'}`}
+                  onClick={() => goToSlide(1)}></div>
+               <div
+                  className={`dot3 ${content.index === 2 ? 'white-dot' : 'none'}`}
+                  onClick={() => goToSlide(2)}></div>
+               <div
+                  className={`dot4 ${content.index === 3 ? 'white-dot' : 'none'}`}
+                  onClick={() => goToSlide(3)}></div>
+               <div
+                  className={`dot5 ${content.index === 4 ? 'white-dot' : 'none'}`}
+                  onClick={() => goToSlide(4)}></div>
             </div>
             <button className='right-button circle-button' onClick={slideRight}>
                <ArrowSVG />

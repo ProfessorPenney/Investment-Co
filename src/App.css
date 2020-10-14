@@ -1829,6 +1829,10 @@ body .font-caption-alt {
   margin-left: 8px;
 }
 
+.level6 .slider-placeholder .slider .bottom-flexbox .dots div:hover {
+  cursor: pointer;
+}
+
 .level6 .slider-placeholder .slider .bottom-flexbox .dots .dot1 {
   margin-left: 0;
 }

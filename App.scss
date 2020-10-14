@@ -1423,6 +1423,9 @@ body {
                   background-color: $dark-blue;
                   margin-left: 8px;
                }
+               div:hover {
+                  cursor: pointer;
+               }
                .dot1 {
                   margin-left: 0;
                }
