@@ -177,7 +177,6 @@ body {
    opacity: 1;
 }
 
-// .bg {
 .background1 {
    position: fixed;
    z-index: -1;
@@ -189,7 +188,6 @@ body {
    height: 100vh;
    top: 0;
    mix-blend-mode: hard-light;
-   // transition: background-image 500ms linear;
    background-image: url('./img/homepage/optimized/thematic-intro-bg.jpg');
 }
 .background2 {
@@ -1074,25 +1072,25 @@ body {
          color: $header-green;
       }
    }
-   .menu1 {
+   .tech1 {
       color: #00a799;
       svg {
          width: 28px;
       }
    }
-   .menu2 {
+   .tech2 {
       color: #f47a5d;
       svg {
          width: 34px;
       }
    }
-   .menu3 {
+   .tech3 {
       color: #f7941d;
       svg {
          width: 28px;
       }
    }
-   .menu4 {
+   .tech4 {
       color: #09b5ca;
       svg {
          width: 25px;

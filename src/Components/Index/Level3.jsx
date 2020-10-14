@@ -49,10 +49,10 @@ const Level3 = () => {
             </p>
          </div>
          <div className='content section2'>
-            <div className='menu1 menu-item'>
+            <div className='tech1 menu-item'>
                <FintechSVG />
                <p>
-                  FIN<span className='tech'>TECH</span>
+                  FIN<span className='tech-white'>TECH</span>
                </p>
             </div>
             <h3>FINANCIAL TECHNOLOGY</h3>
@@ -62,10 +62,10 @@ const Level3 = () => {
             </p>
          </div>
          <div className='content section3'>
-            <div className='menu2 menu-item'>
+            <div className='tech2 menu-item'>
                <RetechSVG />
                <p>
-                  RE<span className='tech'>TECH</span>
+                  RE<span className='tech-white'>TECH</span>
                </p>
             </div>
             <h3>REAL ESTATE TECHNOLOGY</h3>
@@ -75,10 +75,10 @@ const Level3 = () => {
             </p>
          </div>
          <div className='content section4'>
-            <div className='menu3 menu-item'>
+            <div className='tech3 menu-item'>
                <ExtechSVG />
                <p>
-                  EX<span className='tech'>TECH</span>
+                  EX<span className='tech-white'>TECH</span>
                </p>
             </div>
             <h3>EXPERIENCE TECHNOLOGY</h3>
@@ -88,10 +88,10 @@ const Level3 = () => {
             </p>
          </div>
          <div className='content section5'>
-            <div className='menu4 menu-item'>
+            <div className='tech4 menu-item'>
                <LifetechSVG />
                <p>
-                  LIFE<span className='tech'>TECH</span>
+                  LIFE<span className='tech-white'>TECH</span>
                </p>
             </div>
             <h3>LIFE SCIENCE TECHNOLOGY</h3>
