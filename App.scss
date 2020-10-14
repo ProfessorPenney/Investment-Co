@@ -211,6 +211,7 @@ body {
    height: 100vh;
    width: 100%;
    transition: opacity 500ms linear;
+   overflow: hidden;
 
    .hero-background {
       background-color: black;
@@ -221,6 +222,9 @@ body {
       opacity: 0;
       transition: transform 5s ease-out, opacity 1s linear;
       overflow: hidden;
+      background-image: url('./img/homepage/optimized/homepage-hero-bg.jpg');
+      background-size: cover;
+      background-position: center;
       img {
          width: 100%;
          height: 100%;
@@ -246,7 +250,7 @@ body {
       transition: opacity 1s linear 2s;
    }
 
-   h4.hero-subtitle {
+   .hero-subtitle {
       text-align: center;
       position: absolute;
       width: 80%;
@@ -319,7 +323,7 @@ body {
    }
 }
 
-.app-appear {
+.index-appear-active {
    .burger {
       transition: opacity 1s linear 2s, transform 100ms linear;
       opacity: 1;
@@ -350,6 +354,37 @@ body {
       }
    }
 }
+.index-appear-done {
+   .burger {
+      opacity: 1;
+   }
+   .main-header {
+      .hero-background {
+         transform: scale(1) rotate(0deg);
+         opacity: 1;
+      }
+      .compass-svg {
+         opacity: 1;
+      }
+      .main-logo {
+         transform: scale(1);
+         opacity: 1;
+      }
+      .header-links {
+         opacity: 1;
+      }
+      .hero-subtitle {
+         opacity: 1;
+      }
+      .coordinates {
+         opacity: 1;
+      }
+      .line {
+         height: 100%;
+      }
+   }
+}
+
 .main-header-disappear {
    opacity: 0;
 }
@@ -671,7 +706,6 @@ body {
       position: relative;
       height: 850px;
       width: 100%;
-      // margin-top: 30vh;
       .years-svg {
          position: absolute;
          width: 194px;
@@ -1830,6 +1864,13 @@ body {
       top: 40px;
    }
    .main-header {
+      .hero-background {
+         text-align: center;
+         img {
+            height: 100%;
+            width: auto;
+         }
+      }
       .main-logo {
          font-size: 50px;
          top: 25vh;

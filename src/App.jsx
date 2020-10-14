@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css'
 import ScrollToTop from './Components/UI/ScrollToTop'
 import Hamburger from './Components/UI/Hamburger'
@@ -16,9 +16,15 @@ function App() {
       <Router>
          <ScrollToTop />
          <div className='App'>
-            <Hamburger showMenu={showMenu} setshowMenu={setshowMenu} />
             <HeroMenu showMenu={showMenu} setshowMenu={setshowMenu} />
-            <Route exact path='/' component={Index} />
+            <Switch>
+               <Route
+                  exact
+                  path='/'
+                  render={() => <Index showMenu={showMenu} setshowMenu={setshowMenu} />}
+               />
+               <Route render={() => <Hamburger showMenu={showMenu} setshowMenu={setshowMenu} />} />
+            </Switch>
             <Route exact path='/portfolio' component={Portfolio} />
             <Route path='/portfolio/:company' component={PortfolioCompany} />
             <Route path='/contact' component={Contact} />

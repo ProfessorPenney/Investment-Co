@@ -223,6 +223,7 @@ body .font-caption-alt {
   width: 100%;
   -webkit-transition: opacity 500ms linear;
   transition: opacity 500ms linear;
+  overflow: hidden;
 }
 
 .main-header .hero-background {
@@ -238,6 +239,9 @@ body .font-caption-alt {
   transition: transform 5s ease-out, opacity 1s linear;
   transition: transform 5s ease-out, opacity 1s linear, -webkit-transform 5s ease-out;
   overflow: hidden;
+  background-image: url("./img/homepage/optimized/homepage-hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .main-header .hero-background img {
@@ -270,7 +274,7 @@ body .font-caption-alt {
   transition: opacity 1s linear 2s;
 }
 
-.main-header h4.hero-subtitle {
+.main-header .hero-subtitle {
   text-align: center;
   position: absolute;
   width: 80%;
@@ -281,7 +285,7 @@ body .font-caption-alt {
   transition: opacity 1s linear 2s;
 }
 
-.main-header h4.hero-subtitle em {
+.main-header .hero-subtitle em {
   font-style: normal;
   color: #09b5ca;
 }
@@ -353,7 +357,7 @@ body .font-caption-alt {
   bottom: 0;
 }
 
-.app-appear .burger {
+.index-appear-active .burger {
   -webkit-transition: opacity 1s linear 2s, -webkit-transform 100ms linear;
   transition: opacity 1s linear 2s, -webkit-transform 100ms linear;
   transition: opacity 1s linear 2s, transform 100ms linear;
@@ -361,35 +365,71 @@ body .font-caption-alt {
   opacity: 1;
 }
 
-.app-appear .main-header .hero-background {
+.index-appear-active .main-header .hero-background {
   -webkit-transform: scale(1) rotate(0deg);
           transform: scale(1) rotate(0deg);
   opacity: 1;
 }
 
-.app-appear .main-header .compass-svg {
+.index-appear-active .main-header .compass-svg {
   opacity: 1;
 }
 
-.app-appear .main-header .main-logo {
+.index-appear-active .main-header .main-logo {
   -webkit-transform: scale(1);
           transform: scale(1);
   opacity: 1;
 }
 
-.app-appear .main-header .header-links {
+.index-appear-active .main-header .header-links {
   opacity: 1;
 }
 
-.app-appear .main-header .hero-subtitle {
+.index-appear-active .main-header .hero-subtitle {
   opacity: 1;
 }
 
-.app-appear .main-header .coordinates {
+.index-appear-active .main-header .coordinates {
   opacity: 1;
 }
 
-.app-appear .main-header .line {
+.index-appear-active .main-header .line {
+  height: 100%;
+}
+
+.index-appear-done .burger {
+  opacity: 1;
+}
+
+.index-appear-done .main-header .hero-background {
+  -webkit-transform: scale(1) rotate(0deg);
+          transform: scale(1) rotate(0deg);
+  opacity: 1;
+}
+
+.index-appear-done .main-header .compass-svg {
+  opacity: 1;
+}
+
+.index-appear-done .main-header .main-logo {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+.index-appear-done .main-header .header-links {
+  opacity: 1;
+}
+
+.index-appear-done .main-header .hero-subtitle {
+  opacity: 1;
+}
+
+.index-appear-done .main-header .coordinates {
+  opacity: 1;
+}
+
+.index-appear-done .main-header .line {
   height: 100%;
 }
 
@@ -2369,6 +2409,13 @@ body .font-caption-alt {
   .burger {
     right: 40px;
     top: 40px;
+  }
+  .main-header .hero-background {
+    text-align: center;
+  }
+  .main-header .hero-background img {
+    height: 100%;
+    width: auto;
   }
   .main-header .main-logo {
     font-size: 50px;

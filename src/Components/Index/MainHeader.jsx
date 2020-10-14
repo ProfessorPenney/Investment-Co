@@ -16,19 +16,19 @@ const MainHeader = () => {
    //    console.log(pathname)
    // }, [pathname])
 
-   function animateHero() {
-      document.querySelector('.App').classList.add('app-appear')
-   }
+   // function animateHero() {
+   //    document.querySelector('.App').classList.add('app-appear')
+   // }
 
    return (
       <header className='main-header'>
          {/* <div ref={myRef} style={{ height: '100px', backgroundColor: 'red' }}></div> */}
-         <div className='hero-background' onLoad={animateHero}>
-            <img
+         <div className='hero-background'>
+            {/* <img
                src={require('../../img/homepage/optimized/homepage-hero-bg.jpg')}
                alt=''
-               onLoad={animateHero}
-            />
+               // onLoad={animateHero}
+            /> */}
          </div>
          <div className='line1 line'></div>
          <div className='line2 line'></div>
