@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
+import Swipe from 'react-easy-swipe'
 import Slider from './Slider'
 import Footer from '../UI/Footer'
 import slideContent from './slideData'
-import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 const Level6 = () => {
    const [slide, setslide] = useState(slideContent[0])
@@ -31,17 +32,26 @@ const Level6 = () => {
       }
    }, [slideLeft])
 
+   function swipeLeft() {
+      setslideLeft(true)
+   }
+   function swipeRight() {
+      setslideRight(true)
+   }
+
    return (
       <section className='level6'>
          <div className='level6-begin'></div>
          <div className='slider-placeholder'>
             <TransitionGroup>
                <CSSTransition timeout={350} key={slide.index} classNames='slide'>
-                  <Slider
-                     content={slide}
-                     setslideLeft={setslideLeft}
-                     setslideRight={setslideRight}
-                  />
+                  <Swipe onSwipeLeft={swipeLeft} onSwipeRight={swipeRight} tolerance='50'>
+                     <Slider
+                        content={slide}
+                        setslideLeft={setslideLeft}
+                        setslideRight={setslideRight}
+                     />
+                  </Swipe>
                </CSSTransition>
             </TransitionGroup>
          </div>
