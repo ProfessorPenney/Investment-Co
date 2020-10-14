@@ -819,7 +819,7 @@ body .font-caption-alt {
 .level2 {
   margin-top: -60vh;
   width: 100%;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
   overflow-x: hidden;
 }
 
@@ -937,6 +937,8 @@ body .font-caption-alt {
 
 .level2 .caption-20years-appear {
   opacity: 1;
+  -webkit-transition: opacity 1s linear;
+  transition: opacity 1s linear;
 }
 
 .level2 .investment-container {
@@ -947,12 +949,24 @@ body .font-caption-alt {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.level2 .investment-container .flex-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .level2 .investment-container .block {
+  margin: 0 12px;
   opacity: 0;
   -webkit-transition: opacity 1s linear;
   transition: opacity 1s linear;

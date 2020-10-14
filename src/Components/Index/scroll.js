@@ -79,29 +79,29 @@ const scroll = () => {
       document.querySelector('.sticky-menu').classList.add('menu-appear')
       document.querySelector('.menu1').classList.remove('menu-item-shaded')
       document.querySelectorAll('.tech').forEach(node => node.classList.add('font-green'))
-      document
-         .querySelector('.investment-container')
-         .classList.remove('investment-container-appear')
+      // document
+      // .querySelector('.investment-container')
+      // .classList.remove('investment-container-appear')
       document.querySelector('.burger').classList.remove('burger-blue')
-   } else if (
-      document.querySelector('.investment-container').getBoundingClientRect().top <=
-      window.innerHeight * (2 / 3)
-   ) {
-      document.querySelector('.background1').classList.remove('background-appear')
-      document.querySelector('.background-color').classList.add('background-color-appear')
-      document.querySelector('.sticky-menu').classList.remove('menu-appear')
-      document.querySelector('.investment-container').classList.add('investment-container-appear')
-      document.querySelector('.svg-container').classList.remove('svg-container-appear')
-      document.querySelector('.burger').classList.add('burger-blue')
       document.querySelector('.caption-20years').classList.remove('caption-20years-appear')
+      document.querySelector('.svg-container').classList.remove('svg-container-appear')
+      // } else if (
+      //    document.querySelector('.investment-container').getBoundingClientRect().top <=
+      //    window.innerHeight * (2 / 3)
+      // ) {
+      // document.querySelector('.investment-container').classList.add('investment-container-appear')
    } else if (
       document.querySelector('.caption-20years').getBoundingClientRect().top <=
       window.innerHeight * (9 / 10)
    ) {
+      document.querySelector('.background1').classList.remove('background-appear')
+      document.querySelector('.sticky-menu').classList.remove('menu-appear')
+      document.querySelector('.background-color').classList.add('background-color-appear')
+      document.querySelector('.burger').classList.add('burger-blue')
       document.querySelector('.caption-20years').classList.add('caption-20years-appear')
-      document
-         .querySelector('.investment-container')
-         .classList.remove('investment-container-appear')
+      // document
+      //    .querySelector('.investment-container')
+      //    .classList.remove('investment-container-appear')
       document.querySelector('.svg-container').classList.add('svg-container-appear')
    } else if (
       document.querySelector('.level2').getBoundingClientRect().top <=
