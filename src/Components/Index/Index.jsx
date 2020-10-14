@@ -22,11 +22,11 @@ const Index = () => {
    return (
       <React.Fragment>
          <div className='background-color'></div>
-         <div className='background1 bg'></div>
-         <div className='background2 bg'></div>
+         <div className='background1'></div>
+         {/* <div className='background2 bg'></div>
          <div className='background3 bg'></div>
          <div className='background4 bg'></div>
-         <div className='background5 bg'></div>
+         <div className='background5 bg'></div> */}
          <MainHeader />
          <Level2 />
          <Level3 />

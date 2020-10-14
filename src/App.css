@@ -183,21 +183,18 @@ body .font-caption-alt {
   opacity: 1;
 }
 
-.bg {
+.background1 {
   position: fixed;
   z-index: -1;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0;
-  -webkit-transition: opacity 500ms linear;
-  transition: opacity 500ms linear;
+  -webkit-transition: opacity 500ms linear, background-image 500ms linear;
+  transition: opacity 500ms linear, background-image 500ms linear;
   width: 100vw;
   height: 100vh;
   top: 0;
   mix-blend-mode: hard-light;
-}
-
-.background1 {
   background-image: url("./img/homepage/optimized/thematic-intro-bg.jpg");
 }
 

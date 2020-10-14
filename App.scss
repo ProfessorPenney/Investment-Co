@@ -177,20 +177,19 @@ body {
    opacity: 1;
 }
 
-.bg {
+// .bg {
+.background1 {
    position: fixed;
    z-index: -1;
    background-repeat: no-repeat;
    background-size: cover;
    opacity: 0;
-   transition: opacity 500ms linear;
+   transition: opacity 500ms linear, background-image 500ms linear;
    width: 100vw;
    height: 100vh;
    top: 0;
    mix-blend-mode: hard-light;
-   // overflow: hidden;
-}
-.background1 {
+   // transition: background-image 500ms linear;
    background-image: url('./img/homepage/optimized/thematic-intro-bg.jpg');
 }
 .background2 {
