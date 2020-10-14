@@ -2,6 +2,7 @@ body {
   font-family: Boston, Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body h1 {
@@ -169,7 +170,7 @@ body .font-caption-alt {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   -webkit-transition: background-color 1s linear, opacity 1s linear;
   transition: background-color 1s linear, opacity 1s linear;
 }
@@ -191,7 +192,7 @@ body .font-caption-alt {
   -webkit-transition: opacity 500ms linear, background-image 500ms linear;
   transition: opacity 500ms linear, background-image 500ms linear;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   top: 0;
   mix-blend-mode: hard-light;
   background-image: url("./img/homepage/optimized/thematic-intro-bg.jpg");
@@ -223,13 +224,12 @@ body .font-caption-alt {
   width: 100%;
   -webkit-transition: opacity 500ms linear;
   transition: opacity 500ms linear;
-  overflow: hidden;
 }
 
 .main-header .hero-background {
   background-color: black;
   position: fixed;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   -webkit-transform: scale(1.3) rotate(5deg);
           transform: scale(1.3) rotate(5deg);
@@ -238,15 +238,9 @@ body .font-caption-alt {
   transition: opacity 1s linear, -webkit-transform 5s ease-out;
   transition: transform 5s ease-out, opacity 1s linear;
   transition: transform 5s ease-out, opacity 1s linear, -webkit-transform 5s ease-out;
-  overflow: hidden;
   background-image: url("./img/homepage/optimized/homepage-hero-bg.jpg");
   background-size: cover;
   background-position: center;
-}
-
-.main-header .hero-background img {
-  width: 100%;
-  height: 100%;
 }
 
 .main-header .main-logo {
