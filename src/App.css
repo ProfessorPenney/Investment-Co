@@ -820,6 +820,7 @@ body .font-caption-alt {
   margin-top: -60vh;
   width: 100%;
   padding-bottom: 200px;
+  overflow-x: hidden;
 }
 
 .level2 .svg-container {
