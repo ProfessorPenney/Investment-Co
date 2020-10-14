@@ -231,8 +231,6 @@ body .font-caption-alt {
   position: fixed;
   height: 100%;
   width: 100%;
-  -webkit-transform: scale(1.3) rotate(5deg);
-          transform: scale(1.3) rotate(5deg);
   opacity: 0;
   -webkit-transition: opacity 1s linear, -webkit-transform 5s ease-out;
   transition: opacity 1s linear, -webkit-transform 5s ease-out;
@@ -349,6 +347,11 @@ body .font-caption-alt {
 .main-header .line5 {
   right: 5%;
   bottom: 0;
+}
+
+.index-appear .main-header .hero-background {
+  -webkit-transform: scale(1.3) rotate(5deg);
+          transform: scale(1.3) rotate(5deg);
 }
 
 .index-appear-active .burger {
