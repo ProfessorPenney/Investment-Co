@@ -496,9 +496,13 @@ body {
       top: 0;
       width: 100%;
       background-color: $dark-blue;
-      // transition: height 300ms linear, opacity 400ms ease-in;
       height: 0;
       opacity: 0.2;
+   }
+
+   .small-logo {
+      display: none;
+      opacity: 0;
    }
 
    .menu-flexbox {
@@ -514,30 +518,32 @@ body {
          height: 0;
 
          h4 {
-            position: absolute;
-            left: 2.5%;
+            position: relative;
+            width: 90%;
+            left: 5%;
             top: 5%;
             font-size: 60px;
+            line-height: 60px;
             opacity: 0;
          }
+      }
+      .address-flex {
+         display: flex;
+         justify-content: space-between;
+         max-width: 350px;
+         width: 40%;
+         position: absolute;
+         bottom: 5%;
+         left: 2.5%;
+         opacity: 0;
 
-         .address-flex {
-            display: flex;
-            justify-content: space-between;
-            width: 350px;
-            position: absolute;
-            bottom: 5%;
-            left: 2.5%;
-            opacity: 0;
-
-            address {
-               font-style: normal;
-               color: rgba(255, 255, 255, 0.4);
-               font-family: 'Roboto Mono', monospace;
-               font-size: 10px;
-               font-weight: 300;
-               line-height: 12px;
-            }
+         address {
+            font-style: normal;
+            color: rgba(255, 255, 255, 0.4);
+            font-family: 'Roboto Mono', monospace;
+            font-size: 10px;
+            font-weight: 300;
+            line-height: 12px;
          }
       }
 
@@ -545,18 +551,22 @@ body {
          width: 49%;
          padding: 0;
          margin: 0;
+         height: 100%;
          ul {
-            margin: 0 auto 0 15%;
-            width: 90%;
-            padding-top: 17%;
+            margin: 15vh auto 0 30%;
+            width: 72%;
+            height: 70%;
+            max-height: 400px;
+            padding-left: 0;
+            list-style-type: none;
             display: flex;
             flex-direction: column;
-            list-style-type: none;
+            flex-wrap: nowrap;
             text-transform: uppercase;
-            justify-content: flex-start;
+            justify-content: space-evenly;
 
             li {
-               padding: 3.5vh 0;
+               flex: 0 1 auto;
                font-weight: bold;
                font-size: 24px;
                letter-spacing: 0.24em;
@@ -581,9 +591,12 @@ body {
             }
 
             .borders {
+               flex-shrink: 0;
                background-color: rgba(255, 255, 255, 0.15);
                height: 0.5px;
+               width: 100%;
                transform: translateX(100%);
+               border: none;
             }
 
             .items {
@@ -606,6 +619,10 @@ body {
       height: 100vh;
       opacity: 1;
    }
+   .small-logo {
+      opacity: 1;
+      transition: opacity 300ms ease-in 100ms;
+   }
    .menu-flexbox {
       .left-menu {
          height: 100%;
@@ -613,10 +630,10 @@ body {
             opacity: 1;
             transition: opacity 300ms ease-in 100ms;
          }
-         .address-flex {
-            transition: opacity 300ms ease-in 200ms;
-            opacity: 1;
-         }
+      }
+      .address-flex {
+         transition: opacity 300ms ease-in 200ms;
+         opacity: 1;
       }
       .right-menu ul {
          .border1 {
@@ -670,15 +687,18 @@ body {
       height: 100vh;
       transition: opacity 300ms linear;
    }
+   .small-logo {
+      transition: opacity 300ms linear;
+   }
    .menu-flexbox {
       .left-menu {
          height: 100%;
          h4 {
             transition: opacity 300ms linear;
          }
-         .address-flex {
-            transition: opacity 300ms linear;
-         }
+      }
+      .address-flex {
+         transition: opacity 300ms linear;
       }
       .right-menu ul {
          .borders {
@@ -1854,6 +1874,13 @@ body {
    }
 }
 
+@media only screen and (max-width: 950px) {
+   .burger-menu .menu-flexbox .right-menu ul {
+      margin-left: 15%;
+      width: 86%;
+   }
+}
+
 @media only screen and (max-width: 760px) {
    .header-links {
       display: none;
@@ -1861,6 +1888,34 @@ body {
    .burger {
       right: 40px;
       top: 40px;
+   }
+   .burger-menu {
+      .small-logo {
+         display: block;
+         text-align: left;
+         left: 10%;
+         font-size: 20px;
+         top: 5vh;
+      }
+      .menu-flexbox {
+         .left-menu {
+            display: none;
+         }
+         .address-flex {
+            width: 80%;
+            justify-content: space-between;
+            max-width: none;
+            left: 10%;
+         }
+         .right-menu {
+            width: 100%;
+            height: 70%;
+            ul {
+               width: 90%;
+               margin-left: 10%;
+            }
+         }
+      }
    }
    .main-header {
       .hero-background {

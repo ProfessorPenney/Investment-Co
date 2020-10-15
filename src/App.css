@@ -576,6 +576,11 @@ body .font-caption-alt {
   opacity: 0.2;
 }
 
+.burger-menu .small-logo {
+  display: none;
+  opacity: 0;
+}
+
 .burger-menu .menu-flexbox {
   position: relative;
   height: 100%;
@@ -594,28 +599,31 @@ body .font-caption-alt {
 }
 
 .burger-menu .menu-flexbox .left-menu h4 {
-  position: absolute;
-  left: 2.5%;
+  position: relative;
+  width: 90%;
+  left: 5%;
   top: 5%;
   font-size: 60px;
+  line-height: 60px;
   opacity: 0;
 }
 
-.burger-menu .menu-flexbox .left-menu .address-flex {
+.burger-menu .menu-flexbox .address-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 350px;
+  max-width: 350px;
+  width: 40%;
   position: absolute;
   bottom: 5%;
   left: 2.5%;
   opacity: 0;
 }
 
-.burger-menu .menu-flexbox .left-menu .address-flex address {
+.burger-menu .menu-flexbox .address-flex address {
   font-style: normal;
   color: rgba(255, 255, 255, 0.4);
   font-family: 'Roboto Mono', monospace;
@@ -628,12 +636,16 @@ body .font-caption-alt {
   width: 49%;
   padding: 0;
   margin: 0;
+  height: 100%;
 }
 
 .burger-menu .menu-flexbox .right-menu ul {
-  margin: 0 auto 0 15%;
-  width: 90%;
-  padding-top: 17%;
+  margin: 15vh auto 0 30%;
+  width: 72%;
+  height: 70%;
+  max-height: 400px;
+  padding-left: 0;
+  list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -641,15 +653,18 @@ body .font-caption-alt {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  list-style-type: none;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   text-transform: uppercase;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .burger-menu .menu-flexbox .right-menu ul li {
-  padding: 3.5vh 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
   font-weight: bold;
   font-size: 24px;
   letter-spacing: 0.24em;
@@ -676,10 +691,14 @@ body .font-caption-alt {
 }
 
 .burger-menu .menu-flexbox .right-menu ul .borders {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   background-color: rgba(255, 255, 255, 0.15);
   height: 0.5px;
+  width: 100%;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
+  border: none;
 }
 
 .burger-menu .menu-flexbox .right-menu ul .items {
@@ -704,6 +723,12 @@ body .font-caption-alt {
   opacity: 1;
 }
 
+.burger-menu-appear .small-logo {
+  opacity: 1;
+  -webkit-transition: opacity 300ms ease-in 100ms;
+  transition: opacity 300ms ease-in 100ms;
+}
+
 .burger-menu-appear .menu-flexbox .left-menu {
   height: 100%;
 }
@@ -714,7 +739,7 @@ body .font-caption-alt {
   transition: opacity 300ms ease-in 100ms;
 }
 
-.burger-menu-appear .menu-flexbox .left-menu .address-flex {
+.burger-menu-appear .menu-flexbox .address-flex {
   -webkit-transition: opacity 300ms ease-in 200ms;
   transition: opacity 300ms ease-in 200ms;
   opacity: 1;
@@ -821,6 +846,11 @@ body .font-caption-alt {
   transition: opacity 300ms linear;
 }
 
+.burger-menu-disappear .small-logo {
+  -webkit-transition: opacity 300ms linear;
+  transition: opacity 300ms linear;
+}
+
 .burger-menu-disappear .menu-flexbox .left-menu {
   height: 100%;
 }
@@ -830,7 +860,7 @@ body .font-caption-alt {
   transition: opacity 300ms linear;
 }
 
-.burger-menu-disappear .menu-flexbox .left-menu .address-flex {
+.burger-menu-disappear .menu-flexbox .address-flex {
   -webkit-transition: opacity 300ms linear;
   transition: opacity 300ms linear;
 }
@@ -2399,6 +2429,13 @@ body .font-caption-alt {
   }
 }
 
+@media only screen and (max-width: 950px) {
+  .burger-menu .menu-flexbox .right-menu ul {
+    margin-left: 15%;
+    width: 86%;
+  }
+}
+
 @media only screen and (max-width: 760px) {
   .header-links {
     display: none;
@@ -2406,6 +2443,32 @@ body .font-caption-alt {
   .burger {
     right: 40px;
     top: 40px;
+  }
+  .burger-menu .small-logo {
+    display: block;
+    text-align: left;
+    left: 10%;
+    font-size: 20px;
+    top: 5vh;
+  }
+  .burger-menu .menu-flexbox .left-menu {
+    display: none;
+  }
+  .burger-menu .menu-flexbox .address-flex {
+    width: 80%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: none;
+    left: 10%;
+  }
+  .burger-menu .menu-flexbox .right-menu {
+    width: 100%;
+    height: 70%;
+  }
+  .burger-menu .menu-flexbox .right-menu ul {
+    width: 90%;
+    margin-left: 10%;
   }
   .main-header .hero-background {
     text-align: center;
