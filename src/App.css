@@ -130,7 +130,7 @@ body .font-caption-alt {
 
 .footer {
   position: relative;
-  height: 428px;
+  height: 300px;
   width: 100%;
   background-color: #0b2142;
   text-align: center;
@@ -146,18 +146,10 @@ body .font-caption-alt {
   border: none;
 }
 
-.footer img {
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  margin-left: -48px;
-  width: 96px;
-}
-
 .footer p {
   color: white;
   position: absolute;
-  top: 80%;
+  top: 45%;
   left: 0;
   width: 100%;
 }

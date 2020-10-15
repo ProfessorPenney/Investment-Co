@@ -131,7 +131,7 @@ body {
 
 .footer {
    position: relative;
-   height: 428px;
+   height: 300px;
    width: 100%;
    background-color: $dark-blue;
    text-align: center;
@@ -144,17 +144,10 @@ body {
       height: 1px;
       border: none;
    }
-   img {
-      position: absolute;
-      top: 35%;
-      left: 50%;
-      margin-left: -48px;
-      width: 96px;
-   }
    p {
       color: white;
       position: absolute;
-      top: 80%;
+      top: 45%;
       left: 0;
       width: 100%;
    }

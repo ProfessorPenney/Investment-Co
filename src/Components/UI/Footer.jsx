@@ -5,7 +5,6 @@ const Footer = () => {
    return (
       <footer className='footer'>
          <hr />
-         {/* <img src={WLogo} alt='' /> */}
          <p className='font-caption'>© 2020 Investment Co. Lorem ipsum, dolor sit amet</p>
       </footer>
    )
