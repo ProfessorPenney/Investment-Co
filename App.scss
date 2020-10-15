@@ -1823,6 +1823,10 @@ body {
    background-color: $dark-blue;
    color: white;
 
+   .mobile-version {
+      display: none;
+   }
+
    .contact-emails {
       display: flex;
       flex-direction: column;
@@ -1837,7 +1841,7 @@ body {
    }
 
    .address-box {
-      margin: 0 0 8% 35%;
+      margin: 0 0 15vh 35%;
       width: 60%;
       .address-flex {
          width: 100%;
@@ -1846,6 +1850,15 @@ body {
          justify-content: space-between;
          align-items: center;
          border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+         white-space: nowrap;
+         .coords-flex {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-end;
+         }
+         .coords {
+            text-align: right;
+         }
          h1 {
             margin: 0;
          }
@@ -1878,6 +1891,18 @@ body {
    .burger-menu .menu-flexbox .right-menu ul {
       margin-left: 15%;
       width: 86%;
+   }
+   .contact {
+      .contact-emails {
+         position: relative;
+         top: auto;
+         left: 10%;
+         margin-bottom: 100px;
+      }
+      .address-box {
+         margin-left: 10%;
+         width: 80%;
+      }
    }
 }
 
@@ -2055,6 +2080,26 @@ body {
                   display: none;
                }
             }
+         }
+      }
+   }
+
+   .contact {
+      .small-logo {
+         text-align: left;
+         left: 10%;
+         font-size: 20px;
+         top: 5vh;
+      }
+      .mobile-version {
+         display: block;
+      }
+      .desktop-version {
+         display: none;
+      }
+      .address-box .address-flex {
+         .coords-flex {
+            display: none;
          }
       }
    }
