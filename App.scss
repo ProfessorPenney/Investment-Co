@@ -5,11 +5,15 @@ $salmon: #f47a5d;
 $orange-yellow: #f7941d;
 $header-green: #09b5ca;
 
+html,
+body {
+   overflow-x: hidden;
+}
+
 body {
    font-family: Boston, Arial, Helvetica, sans-serif;
    margin: 0;
    padding: 0;
-   overflow-x: hidden;
 
    h1 {
       font-size: 52px;
@@ -148,8 +152,8 @@ body {
       color: white;
       position: absolute;
       top: 45%;
-      left: 0;
-      width: 100%;
+      left: 10%;
+      width: 80%;
    }
 }
 
@@ -1547,11 +1551,15 @@ body {
       height: 416px;
       width: 416px;
       transition: transform 100ms linear, background-color 100ms linear;
-      overflow: hidden;
+
+      .top {
+         position: relative;
+         overflow: hidden;
+      }
 
       h2 {
          position: relative;
-         left: 9%;
+         padding-left: 9%;
          padding-top: 9%;
          margin: 0;
          width: 82%;
@@ -1559,7 +1567,7 @@ body {
 
       p {
          position: relative;
-         left: 9%;
+         padding-left: 9%;
          width: 82%;
       }
 
@@ -1880,6 +1888,25 @@ body {
    }
 }
 
+@media only screen and (max-width: 1350px) {
+   .portfolio {
+      .investment-p {
+         width: 55%;
+      }
+      .investment-grid {
+         grid-template-columns: 1fr 1fr;
+         grid-template-areas:
+            'addepar bolt'
+            'addepar blueground'
+            'cerebral icapital'
+            'hopper skillz'
+            'stubhub skillz'
+            'sonder zupee';
+         width: 880px;
+      }
+   }
+}
+
 @media only screen and (max-width: 950px) {
    .burger-menu .menu-flexbox .right-menu ul {
       margin-left: 15%;
@@ -1897,11 +1924,24 @@ body {
          width: 80%;
       }
    }
+   .portfolio {
+      .investment-grid {
+         grid-template-columns: 1fr;
+         grid-template-areas: 'addepar' 'bolt' 'blueground' 'cerebral' 'skillz' 'icapital' 'hopper' 'stubhub' 'sonder' 'zupee';
+         width: 440px;
+      }
+   }
 }
 
 @media only screen and (max-width: 760px) {
    .header-links {
       display: none;
+   }
+   .small-logo {
+      text-align: left;
+      left: 10%;
+      font-size: 20px;
+      top: 5vh;
    }
    .burger {
       right: 40px;
@@ -1910,10 +1950,10 @@ body {
    .burger-menu {
       .small-logo {
          display: block;
-         text-align: left;
-         left: 10%;
-         font-size: 20px;
-         top: 5vh;
+         // text-align: left;
+         // left: 10%;
+         // font-size: 20px;
+         // top: 5vh;
       }
       .menu-flexbox {
          .left-menu {
@@ -1931,6 +1971,9 @@ body {
             ul {
                width: 90%;
                margin-left: 10%;
+               // .items {
+               //    width: ;
+               // }
             }
          }
       }
@@ -2078,12 +2121,12 @@ body {
    }
 
    .contact {
-      .small-logo {
-         text-align: left;
-         left: 10%;
-         font-size: 20px;
-         top: 5vh;
-      }
+      // .small-logo {
+      //    text-align: left;
+      //    left: 10%;
+      //    font-size: 20px;
+      //    top: 5vh;
+      // }
       .mobile-version {
          display: block;
       }
@@ -2125,6 +2168,44 @@ body {
          }
          .line2 {
             margin-top: 50%;
+         }
+      }
+   }
+   .portfolio {
+      text-align: left;
+      .our-investments {
+         margin-left: 10%;
+         padding-top: 160px;
+         width: 80%;
+      }
+      .investment-p {
+         margin-left: 10%;
+         width: 80%;
+      }
+      .investment-grid {
+         margin-top: 100px;
+         width: 350px;
+      }
+      .grid-item {
+         width: 327px;
+         height: 327px;
+      }
+      .addepar-grid {
+         height: 681px;
+         .portfolio-hero {
+            width: 500px;
+         }
+         .bottom {
+            height: 350px;
+         }
+      }
+      .skillz-grid {
+         height: 681px;
+         .portfolio-hero {
+            width: 650px;
+         }
+         .bottom {
+            height: 350px;
          }
       }
    }

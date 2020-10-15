@@ -1,8 +1,12 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: Boston, Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 body h1 {
@@ -150,8 +154,8 @@ body .font-caption-alt {
   color: white;
   position: absolute;
   top: 45%;
-  left: 0;
-  width: 100%;
+  left: 10%;
+  width: 80%;
 }
 
 .background-color {
@@ -1980,12 +1984,16 @@ body .font-caption-alt {
   transition: background-color 100ms linear, -webkit-transform 100ms linear;
   transition: transform 100ms linear, background-color 100ms linear;
   transition: transform 100ms linear, background-color 100ms linear, -webkit-transform 100ms linear;
+}
+
+.portfolio .grid-item .top {
+  position: relative;
   overflow: hidden;
 }
 
 .portfolio .grid-item h2 {
   position: relative;
-  left: 9%;
+  padding-left: 9%;
   padding-top: 9%;
   margin: 0;
   width: 82%;
@@ -1993,7 +2001,7 @@ body .font-caption-alt {
 
 .portfolio .grid-item p {
   position: relative;
-  left: 9%;
+  padding-left: 9%;
   width: 82%;
 }
 
@@ -2443,6 +2451,18 @@ body .font-caption-alt {
   }
 }
 
+@media only screen and (max-width: 1350px) {
+  .portfolio .investment-p {
+    width: 55%;
+  }
+  .portfolio .investment-grid {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'addepar bolt' 'addepar blueground' 'cerebral icapital' 'hopper skillz' 'stubhub skillz' 'sonder zupee';
+    width: 880px;
+  }
+}
+
 @media only screen and (max-width: 950px) {
   .burger-menu .menu-flexbox .right-menu ul {
     margin-left: 15%;
@@ -2458,11 +2478,23 @@ body .font-caption-alt {
     margin-left: 10%;
     width: 80%;
   }
+  .portfolio .investment-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'addepar' 'bolt' 'blueground' 'cerebral' 'skillz' 'icapital' 'hopper' 'stubhub' 'sonder' 'zupee';
+    width: 440px;
+  }
 }
 
 @media only screen and (max-width: 760px) {
   .header-links {
     display: none;
+  }
+  .small-logo {
+    text-align: left;
+    left: 10%;
+    font-size: 20px;
+    top: 5vh;
   }
   .burger {
     right: 40px;
@@ -2470,10 +2502,6 @@ body .font-caption-alt {
   }
   .burger-menu .small-logo {
     display: block;
-    text-align: left;
-    left: 10%;
-    font-size: 20px;
-    top: 5vh;
   }
   .burger-menu .menu-flexbox .left-menu {
     display: none;
@@ -2619,12 +2647,6 @@ body .font-caption-alt {
   .level6 .slider-placeholder .slider .bottom-flexbox .circle-button {
     display: none;
   }
-  .contact .small-logo {
-    text-align: left;
-    left: 10%;
-    font-size: 20px;
-    top: 5vh;
-  }
   .contact .mobile-version {
     display: block;
   }
@@ -2663,6 +2685,44 @@ body .font-caption-alt {
   }
   .level2 .svg-container .line2 {
     margin-top: 50%;
+  }
+  .portfolio {
+    text-align: left;
+  }
+  .portfolio .our-investments {
+    margin-left: 10%;
+    padding-top: 160px;
+    width: 80%;
+  }
+  .portfolio .investment-p {
+    margin-left: 10%;
+    width: 80%;
+  }
+  .portfolio .investment-grid {
+    margin-top: 100px;
+    width: 350px;
+  }
+  .portfolio .grid-item {
+    width: 327px;
+    height: 327px;
+  }
+  .portfolio .addepar-grid {
+    height: 681px;
+  }
+  .portfolio .addepar-grid .portfolio-hero {
+    width: 500px;
+  }
+  .portfolio .addepar-grid .bottom {
+    height: 350px;
+  }
+  .portfolio .skillz-grid {
+    height: 681px;
+  }
+  .portfolio .skillz-grid .portfolio-hero {
+    width: 650px;
+  }
+  .portfolio .skillz-grid .bottom {
+    height: 350px;
   }
 }
 /*# sourceMappingURL=App.css.map */
