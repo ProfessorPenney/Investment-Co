@@ -33,10 +33,10 @@ const Level6 = () => {
    }, [slideLeft])
 
    function swipeLeft() {
-      setslideLeft(true)
+      setslideRight(true)
    }
    function swipeRight() {
-      setslideRight(true)
+      setslideLeft(true)
    }
    function goToSlide(index) {
       setslide(slideContent[index])
