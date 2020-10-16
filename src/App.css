@@ -2202,6 +2202,7 @@ body .font-caption-alt {
 
 .portfolio-co .company {
   padding-top: 20vh;
+  overflow-x: hidden;
 }
 
 .portfolio-co .company .hero {
@@ -2262,6 +2263,7 @@ body .font-caption-alt {
   max-width: 966px;
   margin: auto;
   padding-bottom: 80px;
+  padding: 0 10% 80px 10%;
 }
 
 .portfolio-co .company .body p {
@@ -2328,6 +2330,7 @@ body .font-caption-alt {
 
 .portfolio-co .other-investments h1 {
   padding-top: 15vh;
+  padding-bottom: 20px;
 }
 
 .portfolio-co .other-investments .investment-flex {
@@ -2335,10 +2338,13 @@ body .font-caption-alt {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 1320px;
+  max-width: 1320px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-bottom: 10vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .contact {
@@ -2484,6 +2490,14 @@ body .font-caption-alt {
         grid-template-areas: 'addepar' 'bolt' 'blueground' 'cerebral' 'skillz' 'icapital' 'hopper' 'stubhub' 'sonder' 'zupee';
     width: 440px;
   }
+  .portfolio-co .company .hero .hopper-img {
+    height: 500px;
+  }
+  .portfolio-co .company .hero .title h1 {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -2px;
+  }
 }
 
 @media only screen and (max-width: 760px) {
@@ -2493,6 +2507,7 @@ body .font-caption-alt {
   .small-logo {
     text-align: left;
     left: 10%;
+    width: 80%;
     font-size: 20px;
     top: 5vh;
   }
@@ -2656,6 +2671,87 @@ body .font-caption-alt {
   .contact .address-box .address-flex .coords-flex {
     display: none;
   }
+  .portfolio-co .company .hero {
+    padding-left: 10%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: auto;
+    width: 80%;
+    margin: 0;
+  }
+  .portfolio-co .company .hero .title {
+    margin-top: 30px;
+  }
+  .portfolio-co .company .hero .hero-img {
+    height: 60vh;
+    -o-object-position: left;
+       object-position: left;
+  }
+  .portfolio-co .company .hero .hopper-img {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-left: 40%;
+  }
+  .portfolio-co .company .hero .skillz-img {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-right: 0;
+    margin-top: -50px;
+  }
+  .portfolio-co .company .hero .zupee-img {
+    height: 70vh;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-right: 0;
+    margin-top: -80px;
+    margin-bottom: -20px;
+  }
+  .portfolio-co .company .body p {
+    text-align: left;
+    margin: 50px 0 20px;
+  }
+  .portfolio-co .company .body .list-line {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 30px 0;
+  }
+  .portfolio-co .company .body .list-line h3 {
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .portfolio-co .company .body .list-line h2 {
+    text-align: left;
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .portfolio-co .company .body .list-line button {
+    width: 100%;
+  }
+  .portfolio-co .other-investments {
+    text-align: left;
+  }
+  .portfolio-co .other-investments .our-investments {
+    margin-left: 10%;
+    width: 80%;
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .portfolio-co .other-investments .investment-p {
+    width: 80%;
+    margin-left: 10%;
+  }
 }
 
 @media only screen and (max-width: 550px) {
@@ -2711,6 +2807,7 @@ body .font-caption-alt {
   }
   .portfolio .addepar-grid .portfolio-hero {
     width: 500px;
+    top: 35px;
   }
   .portfolio .addepar-grid .bottom {
     height: 350px;

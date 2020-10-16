@@ -1714,6 +1714,7 @@ body {
 
    .company {
       padding-top: 20vh;
+      overflow-x: hidden;
       .hero {
          margin-left: 5.5%;
          width: 102%;
@@ -1758,6 +1759,7 @@ body {
          max-width: 966px;
          margin: auto;
          padding-bottom: 80px;
+         padding: 0 10% 80px 10%;
 
          p {
             max-width: 792px;
@@ -1808,13 +1810,15 @@ body {
       margin-top: 0;
       h1 {
          padding-top: 15vh;
+         padding-bottom: 20px;
       }
       .investment-flex {
          margin: 15vh auto 0;
          display: flex;
-         width: 1320px;
+         max-width: 1320px;
          flex-wrap: wrap;
          padding-bottom: 10vh;
+         justify-content: center;
       }
    }
 }
@@ -1931,6 +1935,18 @@ body {
          width: 440px;
       }
    }
+   .portfolio-co .company .hero {
+      .hopper-img {
+         height: 500px;
+      }
+      .title {
+         h1 {
+            font-size: 40px;
+            line-height: 48px;
+            letter-spacing: -2px;
+         }
+      }
+   }
 }
 
 @media only screen and (max-width: 760px) {
@@ -1940,6 +1956,7 @@ body {
    .small-logo {
       text-align: left;
       left: 10%;
+      width: 80%;
       font-size: 20px;
       top: 5vh;
    }
@@ -2139,6 +2156,77 @@ body {
          }
       }
    }
+   .portfolio-co {
+      .company {
+         .hero {
+            padding-left: 10%;
+            flex-direction: column-reverse;
+            align-content: flex-start;
+            align-items: flex-start;
+            height: auto;
+            width: 80%;
+            margin: 0;
+            .title {
+               margin-top: 30px;
+            }
+            .hero-img {
+               height: 60vh;
+               object-position: left;
+            }
+            .hopper-img {
+               align-self: center;
+               margin-left: 40%;
+            }
+            .skillz-img {
+               align-self: center;
+               margin-right: 0;
+               margin-top: -50px;
+            }
+            .zupee-img {
+               height: 70vh;
+               align-self: center;
+               margin-right: 0;
+               margin-top: -80px;
+               margin-bottom: -20px;
+            }
+         }
+         .body {
+            p {
+               text-align: left;
+               margin: 50px 0 20px;
+            }
+            .list-line {
+               flex-direction: column;
+               padding: 30px 0;
+               h3 {
+                  font-size: 18px;
+                  line-height: 18px;
+               }
+               h2 {
+                  text-align: left;
+                  font-size: 32px;
+                  line-height: 48px;
+               }
+               button {
+                  width: 100%;
+               }
+            }
+         }
+      }
+      .other-investments {
+         text-align: left;
+         .our-investments {
+            margin-left: 10%;
+            width: 80%;
+            font-size: 40px;
+            line-height: 48px;
+         }
+         .investment-p {
+            width: 80%;
+            margin-left: 10%;
+         }
+      }
+   }
 }
 
 @media only screen and (max-width: 550px) {
@@ -2194,6 +2282,7 @@ body {
          height: 681px;
          .portfolio-hero {
             width: 500px;
+            top: 35px;
          }
          .bottom {
             height: 350px;
