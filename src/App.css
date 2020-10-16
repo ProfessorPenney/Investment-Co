@@ -1,11 +1,8 @@
 body {
-  overflow-x: hidden;
-}
-
-body {
   font-family: Boston, Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body h1 {
@@ -2659,6 +2656,10 @@ body .font-caption-alt {
   }
   .level6 .slider-placeholder .slider .investment-p {
     width: 90%;
+  }
+  .level6 .slider-placeholder .slider .see-portfolio {
+    position: relative;
+    z-index: 1;
   }
   .level6 .slider-placeholder .slider .hero-img {
     z-index: 0;
