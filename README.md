@@ -1,3 +1,3 @@
-# React-animated-project
+# Investment Co
 
 investmentco.penneyprojects.com
