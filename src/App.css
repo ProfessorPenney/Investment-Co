@@ -1,4 +1,3 @@
-html,
 body {
   overflow-x: hidden;
 }
@@ -1532,22 +1531,35 @@ body .font-caption-alt {
 }
 
 .level4 {
+  color: #0b2142;
   width: 100%;
-  padding-bottom: 5vh;
+  padding: 0 5% 5vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .level4 .sticky-left {
-  display: inline-block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
   opacity: 0;
   position: -webkit-sticky;
   position: sticky;
   top: 5vh;
-  max-width: 526px;
-  height: 166px;
-  margin-left: 5%;
-  padding-right: 50%;
+  width: 100%;
+  max-width: 615px;
   -webkit-transition: opacity 500ms linear;
   transition: opacity 500ms linear;
+  padding-right: 5%;
 }
 
 .level4 .sticky-left h2 {
@@ -1556,10 +1568,14 @@ body .font-caption-alt {
 
 .level4 .scrolling-right {
   opacity: 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  display: inline-block;
   position: relative;
-  margin-left: 55%;
-  margin-top: -156px;
-  width: 40%;
+  padding-left: 5%;
+  max-width: 615px;
+  width: 100%;
   -webkit-transition: opacity 500ms linear;
   transition: opacity 500ms linear;
 }
@@ -2501,6 +2517,9 @@ body .font-caption-alt {
 }
 
 @media only screen and (max-width: 760px) {
+  html {
+    overflow-x: hidden;
+  }
   .header-links {
     display: none;
   }
@@ -2594,15 +2613,23 @@ body .font-caption-alt {
   .level3 .menu-item svg {
     margin: 0 30px 0 0;
   }
-  .level4 .sticky-left {
-    position: relative;
+  .level4 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 0;
     padding-right: 0;
+  }
+  .level4 .sticky-left {
     margin-bottom: 150px;
-    top: 0;
+    padding-left: 5%;
+    width: auto;
+    max-width: none;
   }
   .level4 .scrolling-right {
-    margin: 0;
-    width: 100%;
+    max-width: none;
+    padding-left: 0;
     border: none;
   }
   .level4 .scrolling-right header {

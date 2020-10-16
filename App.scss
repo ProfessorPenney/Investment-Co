@@ -5,7 +5,7 @@ $salmon: #f47a5d;
 $orange-yellow: #f7941d;
 $header-green: #09b5ca;
 
-html,
+// html,
 body {
    overflow-x: hidden;
 }
@@ -1203,19 +1203,23 @@ body {
 }
 
 .level4 {
+   color: $dark-blue;
    width: 100%;
-   padding-bottom: 5vh;
+   padding: 0 5% 5vh;
+   box-sizing: border-box;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
 
    .sticky-left {
-      display: inline-block;
+      flex: 0 1 auto;
       opacity: 0;
       position: sticky;
       top: 5vh;
-      max-width: 526px;
-      height: 166px;
-      margin-left: 5%;
-      padding-right: 50%;
+      width: 100%;
+      max-width: 615px;
       transition: opacity 500ms linear;
+      padding-right: 5%;
 
       h2 {
          margin: 0;
@@ -1224,10 +1228,12 @@ body {
 
    .scrolling-right {
       opacity: 0;
+      flex: 0 1 auto;
+      display: inline-block;
       position: relative;
-      margin-left: 55%;
-      margin-top: -156px;
-      width: 40%;
+      padding-left: 5%;
+      max-width: 615px;
+      width: 100%;
       transition: opacity 500ms linear;
 
       header {
@@ -1950,6 +1956,9 @@ body {
 }
 
 @media only screen and (max-width: 760px) {
+   html {
+      overflow-x: hidden;
+   }
    .header-links {
       display: none;
    }
@@ -2061,15 +2070,19 @@ body {
       }
    }
    .level4 {
+      flex-direction: column;
+      padding-left: 0;
+      padding-right: 0;
       .sticky-left {
-         position: relative;
-         padding-right: 0;
          margin-bottom: 150px;
-         top: 0;
+         padding-left: 5%;
+         width: auto;
+         max-width: none;
       }
       .scrolling-right {
-         margin: 0;
-         width: 100%;
+         // width: 100%;
+         max-width: none;
+         padding-left: 0;
          border: none;
          header {
             border-radius: 0;
