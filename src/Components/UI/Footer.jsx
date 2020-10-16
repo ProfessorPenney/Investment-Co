@@ -1,5 +1,4 @@
 import React from 'react'
-import WLogo from '../../img/westcap logos/westcap-w-logo.png'
 
 const Footer = () => {
    return (

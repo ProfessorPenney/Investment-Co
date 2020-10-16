@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import FintechSVG from '../../SVGs/FintechSVG'
 import RetechSVG from '../../SVGs/RetechSVG'
 import ExtechSVG from '../../SVGs/ExtechSVG'
@@ -11,28 +11,36 @@ const Level3 = () => {
             <div className='vertical-line'></div>
             <div className='menu-flexbox font-subtitle'>
                <div className='menu1 menu-item'>
-                  <FintechSVG />
+                  <Suspense fallback={<div></div>}>
+                     <FintechSVG />
+                  </Suspense>
                   <p>
                      FIN<span className='tech'>TECH</span>
                   </p>
                </div>
                <div className='line1 h-line'></div>
                <div className='menu2 menu-item'>
-                  <RetechSVG />
+                  <Suspense fallback={<div></div>}>
+                     <RetechSVG />
+                  </Suspense>
                   <p>
                      RE<span className='tech'>TECH</span>
                   </p>
                </div>
                <div className='line2 h-line'></div>
                <div className='menu3 menu-item'>
-                  <ExtechSVG />
+                  <Suspense fallback={<div></div>}>
+                     <ExtechSVG />
+                  </Suspense>
                   <p>
                      EX<span className='tech'>TECH</span>
                   </p>
                </div>
                <div className='line3 h-line'></div>
                <div className='menu4 menu-item'>
-                  <LifetechSVG />
+                  <Suspense fallback={<div></div>}>
+                     <LifetechSVG />
+                  </Suspense>
                   <p>
                      LIFE<span className='tech'>TECH</span>
                   </p>
@@ -50,7 +58,9 @@ const Level3 = () => {
          </div>
          <div className='content section2'>
             <div className='tech1 menu-item'>
-               <FintechSVG />
+               <Suspense fallback={<div></div>}>
+                  <FintechSVG />
+               </Suspense>
                <p>
                   FIN<span className='tech-white'>TECH</span>
                </p>
@@ -63,7 +73,9 @@ const Level3 = () => {
          </div>
          <div className='content section3'>
             <div className='tech2 menu-item'>
-               <RetechSVG />
+               <Suspense fallback={<div></div>}>
+                  <RetechSVG />
+               </Suspense>
                <p>
                   RE<span className='tech-white'>TECH</span>
                </p>
@@ -76,7 +88,9 @@ const Level3 = () => {
          </div>
          <div className='content section4'>
             <div className='tech3 menu-item'>
-               <ExtechSVG />
+               <Suspense fallback={<div></div>}>
+                  <ExtechSVG />
+               </Suspense>
                <p>
                   EX<span className='tech-white'>TECH</span>
                </p>
@@ -89,7 +103,9 @@ const Level3 = () => {
          </div>
          <div className='content section5'>
             <div className='tech4 menu-item'>
-               <LifetechSVG />
+               <Suspense fallback={<div></div>}>
+                  <LifetechSVG />
+               </Suspense>
                <p>
                   LIFE<span className='tech-white'>TECH</span>
                </p>
@@ -99,6 +115,12 @@ const Level3 = () => {
                Supporting innovation to revolutionize healthcare by creating equitable access to the
                necessary care that will drive wider inclusion in a healthier world
             </p>
+         </div>
+         <div className='preload' style={{ display: 'none' }}>
+            <img src={require('../../img/homepage/optimized/fintech-bg.jpg')} alt='' />
+            <img src={require('../../img/homepage/optimized/retech-bg.jpg')} alt='' />
+            <img src={require('../../img/homepage/optimized/extech-bg.jpg')} alt='' />
+            <img src={require('../../img/homepage/optimized/lifetech-bg.jpg')} alt='' />
          </div>
       </section>
    )
