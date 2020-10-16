@@ -1,3 +1,1 @@
-# Investment Co
-
-investmentco.penneyprojects.com
+# investmentco.penneyprojects.com
