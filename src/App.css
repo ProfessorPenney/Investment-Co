@@ -216,6 +216,7 @@ body .font-caption-alt {
   width: 100%;
   -webkit-transition: opacity 500ms linear;
   transition: opacity 500ms linear;
+  background-color: black;
 }
 
 .main-header .hero-background {
