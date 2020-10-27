@@ -41,7 +41,7 @@ const Level6 = () => {
                   <Swipe
                      onSwipeLeft={() => setslideRight(true)}
                      onSwipeRight={() => setslideLeft(true)}
-                     tolerance={50}>
+                     tolerance='100'>
                      <Slider
                         content={slide}
                         setslideLeft={setslideLeft}
