@@ -265,8 +265,8 @@ body .font-caption-alt {
 .main-header .center-flex .main-logo {
   margin: 0;
   font-size: 100px;
-  -webkit-transform: scale(2);
-          transform: scale(2);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
   opacity: 0;
   -webkit-transition: opacity 1s linear, -webkit-transform 2s linear;
   transition: opacity 1s linear, -webkit-transform 2s linear;
@@ -2571,8 +2571,6 @@ body .font-caption-alt {
     margin-left: 10%;
   }
   .main-header .center-flex .main-logo {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
     font-size: 50px;
   }
   .main-header .line1 {
