@@ -236,7 +236,7 @@ body {
       .main-logo {
          margin: 0;
          font-size: 100px;
-         transform: scale(2);
+         transform: scale(1.2);
          opacity: 0;
          transition: transform 2s linear, opacity 1s linear;
          span {
@@ -1982,10 +1982,6 @@ body {
    .burger-menu {
       .small-logo {
          display: block;
-         // text-align: left;
-         // left: 10%;
-         // font-size: 20px;
-         // top: 5vh;
       }
       .menu-flexbox {
          .left-menu {
@@ -2003,16 +1999,12 @@ body {
             ul {
                width: 90%;
                margin-left: 10%;
-               // .items {
-               //    width: ;
-               // }
             }
          }
       }
    }
    .main-header {
       .center-flex .main-logo {
-         transform: scale(1.2);
          font-size: 50px;
       }
       .line1 {
