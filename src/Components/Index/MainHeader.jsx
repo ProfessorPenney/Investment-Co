@@ -11,13 +11,15 @@ const MainHeader = () => {
          <div className='line3 line'></div>
          <div className='line4 line'></div>
          <div className='line5 line'></div>
-         <h1 className='main-logo'>
-            Investment <span>Co</span>
-         </h1>
          <HeaderLinks />
-         <h4 className='hero-subtitle'>
-            We build companies that become <em>great</em> investments.
-         </h4>
+         <div className='center-flex'>
+            <h1 className='main-logo'>
+               Investment <span>Co</span>
+            </h1>
+            <h4 className='hero-subtitle'>
+               We build companies that become <em>great</em> investments.
+            </h4>
+         </div>
          <CompassSVG />
          <p className='coordinates'>
             SAN FRANCISCO

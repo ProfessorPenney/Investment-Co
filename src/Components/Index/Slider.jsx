@@ -3,13 +3,6 @@ import ArrowSVG from '../../SVGs/ArrowSVG'
 import { Link } from 'react-router-dom'
 
 const Slider = ({ content, setslideLeft, setslideRight, goToSlide }) => {
-   function slideRight() {
-      setslideRight(true)
-   }
-   function slideLeft() {
-      setslideLeft(true)
-   }
-
    return (
       <div className='slider' style={{ backgroundColor: `${content.backgroundColor}` }}>
          <h2>Our Investments</h2>
@@ -35,7 +28,7 @@ const Slider = ({ content, setslideLeft, setslideRight, goToSlide }) => {
          </Link>
          <hr />
          <div className='bottom-flexbox'>
-            <button className='left-button circle-button' onClick={slideLeft}>
+            <button className='left-button circle-button' onClick={() => setslideLeft(true)}>
                <ArrowSVG />
             </button>
             <div className='dots'>
@@ -55,7 +48,7 @@ const Slider = ({ content, setslideLeft, setslideRight, goToSlide }) => {
                   className={`dot5 ${content.index === 4 ? 'white-dot' : 'none'}`}
                   onClick={() => goToSlide(4)}></div>
             </div>
-            <button className='right-button circle-button' onClick={slideRight}>
+            <button className='right-button circle-button' onClick={() => setslideRight(true)}>
                <ArrowSVG />
             </button>
          </div>

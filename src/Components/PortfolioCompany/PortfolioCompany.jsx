@@ -92,8 +92,8 @@ const PortfolioCompany = ({ match }) => {
                <div className='founder list-line'>
                   <h3>{company.founderTitle}</h3>
                   <div className='founder-list'>
-                     {company.founders.map(founder => (
-                        <h2>{founder}</h2>
+                     {company.founders.map((founder, index) => (
+                        <h2 key={index}>{founder}</h2>
                      ))}
                   </div>
                </div>

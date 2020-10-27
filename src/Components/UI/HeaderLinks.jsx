@@ -5,7 +5,7 @@ const HeaderLinks = () => {
    return (
       <nav className='header-links font-caption'>
          <Link to='/contact'>contact us</Link>
-         <Link>investor login</Link>
+         <p>investor login</p>
       </nav>
    )
 }

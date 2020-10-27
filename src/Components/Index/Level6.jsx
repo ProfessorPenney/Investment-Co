@@ -19,7 +19,7 @@ const Level6 = () => {
             setslide(slideContent[slide.index + 1])
          }
       }
-   }, [slideRight])
+   }, [slideRight, slide])
 
    useEffect(() => {
       if (slideLeft === true) {
@@ -30,17 +30,7 @@ const Level6 = () => {
             setslide(slideContent[slide.index - 1])
          }
       }
-   }, [slideLeft])
-
-   function swipeLeft() {
-      setslideRight(true)
-   }
-   function swipeRight() {
-      setslideLeft(true)
-   }
-   function goToSlide(index) {
-      setslide(slideContent[index])
-   }
+   }, [slideLeft, slide])
 
    return (
       <section className='level6'>
@@ -48,12 +38,15 @@ const Level6 = () => {
          <div className='slider-placeholder'>
             <TransitionGroup>
                <CSSTransition timeout={350} key={slide.index} classNames='slide'>
-                  <Swipe onSwipeLeft={swipeLeft} onSwipeRight={swipeRight} tolerance={50}>
+                  <Swipe
+                     onSwipeLeft={() => setslideRight(true)}
+                     onSwipeRight={() => setslideLeft(true)}
+                     tolerance={50}>
                      <Slider
                         content={slide}
                         setslideLeft={setslideLeft}
                         setslideRight={setslideRight}
-                        goToSlide={goToSlide}
+                        goToSlide={index => setslide(slideContent[index])}
                      />
                   </Swipe>
                </CSSTransition>

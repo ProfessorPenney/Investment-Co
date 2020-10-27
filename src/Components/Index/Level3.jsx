@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react'
+import React from 'react'
 import FintechSVG from '../../SVGs/FintechSVG'
 import RetechSVG from '../../SVGs/RetechSVG'
 import ExtechSVG from '../../SVGs/ExtechSVG'
@@ -11,36 +11,28 @@ const Level3 = () => {
             <div className='vertical-line'></div>
             <div className='menu-flexbox font-subtitle'>
                <div className='menu1 menu-item'>
-                  <Suspense fallback={<div></div>}>
-                     <FintechSVG />
-                  </Suspense>
+                  <FintechSVG />
                   <p>
                      FIN<span className='tech'>TECH</span>
                   </p>
                </div>
                <div className='line1 h-line'></div>
                <div className='menu2 menu-item'>
-                  <Suspense fallback={<div></div>}>
-                     <RetechSVG />
-                  </Suspense>
+                  <RetechSVG />
                   <p>
                      RE<span className='tech'>TECH</span>
                   </p>
                </div>
                <div className='line2 h-line'></div>
                <div className='menu3 menu-item'>
-                  <Suspense fallback={<div></div>}>
-                     <ExtechSVG />
-                  </Suspense>
+                  <ExtechSVG />
                   <p>
                      EX<span className='tech'>TECH</span>
                   </p>
                </div>
                <div className='line3 h-line'></div>
                <div className='menu4 menu-item'>
-                  <Suspense fallback={<div></div>}>
-                     <LifetechSVG />
-                  </Suspense>
+                  <LifetechSVG />
                   <p>
                      LIFE<span className='tech'>TECH</span>
                   </p>
@@ -58,9 +50,7 @@ const Level3 = () => {
          </div>
          <div className='content section2'>
             <div className='tech1 menu-item'>
-               <Suspense fallback={<div></div>}>
-                  <FintechSVG />
-               </Suspense>
+               <FintechSVG />
                <p>
                   FIN<span className='tech-white'>TECH</span>
                </p>
@@ -73,9 +63,7 @@ const Level3 = () => {
          </div>
          <div className='content section3'>
             <div className='tech2 menu-item'>
-               <Suspense fallback={<div></div>}>
-                  <RetechSVG />
-               </Suspense>
+               <RetechSVG />
                <p>
                   RE<span className='tech-white'>TECH</span>
                </p>
@@ -88,9 +76,7 @@ const Level3 = () => {
          </div>
          <div className='content section4'>
             <div className='tech3 menu-item'>
-               <Suspense fallback={<div></div>}>
-                  <ExtechSVG />
-               </Suspense>
+               <ExtechSVG />
                <p>
                   EX<span className='tech-white'>TECH</span>
                </p>
@@ -103,9 +89,7 @@ const Level3 = () => {
          </div>
          <div className='content section5'>
             <div className='tech4 menu-item'>
-               <Suspense fallback={<div></div>}>
-                  <LifetechSVG />
-               </Suspense>
+               <LifetechSVG />
                <p>
                   LIFE<span className='tech-white'>TECH</span>
                </p>
